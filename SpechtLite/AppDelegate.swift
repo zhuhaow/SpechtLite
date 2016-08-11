@@ -1,8 +1,11 @@
 import Cocoa
 import NEKit
+import Sparkle
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
+
+    @IBOutlet weak var updater: SUUpdater!
     var barItem: NSStatusItem!
     var configurations: [String: (String, Bool)] = [:]
     var currentConfiguration: String?
@@ -48,6 +51,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         menu.addItemWithTitle("Disconnect", action: #selector(AppDelegate.disconnect(_:)), keyEquivalent: "d")
         menu.addItemWithTitle("Open config folder", action: #selector(AppDelegate.openConfigFolder(_:)), keyEquivalent: "c")
         menu.addItemWithTitle("Reload config", action: #selector(AppDelegate.reloadClicked(_:)), keyEquivalent: "r")
+        menu.addItem(NSMenuItem.separatorItem())
+        menu.addItemWithTitle("Check for updates", action: #selector(AppDelegate.update(_:)), keyEquivalent: "u")
         menu.addItem(NSMenuItem.separatorItem())
         menu.addItemWithTitle("Exit", action: #selector(AppDelegate.terminate(_:)), keyEquivalent: "q")
     }
@@ -142,6 +147,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
             configurations[name] = (content, true)
         }
+    }
+
+    func update(sender: AnyObject? = nil) {
+        updater.checkForUpdates(sender)
     }
 
     func alertError(errorDescription: String) {
