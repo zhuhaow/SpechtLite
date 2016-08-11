@@ -1,0 +1,13 @@
+language: objective-c
+osx_image: xcode7.3
+
+cache:
+  directories:
+  - Carthage
+
+install:
+- bin/bootstrap-if-needed
+
+script:
+- xctool -project SpechtLite.xcodeproj -scheme "SpechtLite" -sdk macosx10.11 -arch x86_64
+  build
