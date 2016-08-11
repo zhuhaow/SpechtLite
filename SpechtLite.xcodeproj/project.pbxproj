@@ -70,7 +70,6 @@
 		36A7196A1D5C4AB900DC35F5 /* bootstrap-if-needed */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "bootstrap-if-needed"; sourceTree = "<group>"; };
 		36A7196B1D5C4AB900DC35F5 /* publish_appcast */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = publish_appcast; sourceTree = "<group>"; };
 		36A719701D5C4B5100DC35F5 /* dsa_pub.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
-		36A719711D5C4B5100DC35F5 /* MacDistribution.p12.enc */ = {isa = PBXFileReference; lastKnownFileType = file; path = MacDistribution.p12.enc; sourceTree = "<group>"; };
 		36A719731D5C5B9200DC35F5 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Build/Mac/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 		36A719741D5C5B9200DC35F5 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Build/Mac/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		36A719751D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjackSwift.framework; path = Build/Mac/CocoaLumberjackSwift.framework; sourceTree = "<group>"; };
@@ -154,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				36A719701D5C4B5100DC35F5 /* dsa_pub.pem */,
-				36A719711D5C4B5100DC35F5 /* MacDistribution.p12.enc */,
 			);
 			path = cert;
 			sourceTree = "<group>";
