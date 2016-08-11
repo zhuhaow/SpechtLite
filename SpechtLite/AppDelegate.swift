@@ -30,6 +30,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         reloadAllConfigurationFiles()
         initMenuBar()
+        // force to update since this app is very likely to be buggy.
+        updater.automaticallyChecksForUpdates = true
     }
 
     func initMenuBar() {
