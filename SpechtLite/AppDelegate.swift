@@ -1,27 +1,160 @@
-//
-//  AppDelegate.swift
-//  SpechtLite
-//
-//  Created by Zhuhao Wang on 8/9/16.
-//  Copyright © 2016 Zhuhao Wang. All rights reserved.
-//
-
 import Cocoa
+import NEKit
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
+    var barItem: NSStatusItem!
+    var configurations: [String: (String, Bool)] = [:]
+    var currentConfiguration: String?
 
-    @IBOutlet weak var window: NSWindow!
+    var currentProxies: [ProxyServer] = []
+
+    var configFolder: String {
+        let path = (NSHomeDirectory() as NSString).stringByAppendingPathComponent(".SpechtLite")
+        var isDir: ObjCBool = false
+        let exist = NSFileManager.defaultManager().fileExistsAtPath(path, isDirectory: &isDir)
+        if exist && !isDir {
+            try! NSFileManager.defaultManager().removeItemAtPath(path)
+            try! NSFileManager.defaultManager().createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil)
+        }
+        if !exist {
+            try! NSFileManager.defaultManager().createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil)
+        }
+        return path
+    }
 
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        reloadAllConfigurationFiles()
+        initMenuBar()
+    }
+
+    func initMenuBar() {
+        barItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
+        barItem.title = "Sp"
+        barItem.menu = NSMenu()
+        barItem.menu!.delegate = self
+    }
+
+    func menuNeedsUpdate(menu: NSMenu) {
+        menu.removeAllItems()
+
+        for (name, info) in configurations {
+            let item = buildMenuItemForManager(name, valid: info.1)
+            menu.addItem(item)
+        }
+
+        menu.addItem(NSMenuItem.separatorItem())
+        menu.addItemWithTitle("Disconnect", action: #selector(AppDelegate.disconnect(_:)), keyEquivalent: "d")
+        menu.addItemWithTitle("Open config folder", action: #selector(AppDelegate.openConfigFolder(_:)), keyEquivalent: "c")
+        menu.addItemWithTitle("Reload config", action: #selector(AppDelegate.reloadClicked(_:)), keyEquivalent: "r")
+        menu.addItem(NSMenuItem.separatorItem())
+        menu.addItemWithTitle("Exit", action: #selector(AppDelegate.terminate(_:)), keyEquivalent: "q")
+    }
+
+    func buildMenuItemForManager(name: String, valid: Bool) -> NSMenuItem {
+        let item = NSMenuItem(title: name, action: #selector(AppDelegate.startConfiguration(_:)), keyEquivalent: "")
+
+        if name == currentConfiguration {
+            item.state = NSOnState
+        }
+
+        if !valid {
+            item.action = nil
+        }
+
+        return item
+    }
+
+    func startConfiguration(sender: NSMenuItem) {
+        if sender.title == currentConfiguration {
+            disconnect()
+            return
+        }
+
+        disconnect()
+
+        let configuration = Configuration()
+        try! configuration.load(fromConfigString: configurations[sender.title]!.0)
+        RuleManager.currentManager = configuration.ruleManager
+        let proxyPort = configuration.proxyPort ?? 9090
+
+        let httpServer = GCDHTTPProxyServer(address: IPv4Address(fromString: "127.0.0.1"), port: Port(port: UInt16(proxyPort)))
+        let socks5Server = GCDSOCKS5ProxyServer(address: IPv4Address(fromString: "127.0.0.1"), port: Port(port: UInt16(proxyPort + 1)))
+
+        do {
+            try httpServer.start()
+            try socks5Server.start()
+        } catch let error {
+            alertError("Encounter an error when starting proxy server. \(error)")
+            return
+        }
+
+        currentConfiguration = sender.title
+        currentProxies.append(httpServer)
+        currentProxies.append(socks5Server)
+    }
+
+    func disconnect(sender: AnyObject? = nil) {
+        for proxyServer in currentProxies {
+            proxyServer.stop()
+        }
+        currentProxies = []
+
+        currentConfiguration = nil
+    }
+
+    func openConfigFolder(sender: AnyObject) {
+        NSWorkspace.sharedWorkspace().openFile(configFolder)
+    }
+
+    func reloadClicked(sender: AnyObject) {
+        reloadAllConfigurationFiles()
+    }
+
+    func reloadAllConfigurationFiles() {
+        let paths = try! NSFileManager.defaultManager().contentsOfDirectoryAtPath(configFolder).filter {
+            ($0 as NSString).pathExtension == "yaml"
+        }
+
+        for path in paths {
+            let name = ((path as NSString).lastPathComponent as NSString).stringByDeletingPathExtension
+
+            let fullpath = (configFolder as NSString).stringByAppendingPathComponent(path)
+
+            var content: String
+            do {
+                content = try String(contentsOfFile: fullpath, encoding: NSUTF8StringEncoding)
+            } catch let error {
+                alertError("Error when loading config file: \(fullpath). \(error)")
+                configurations[name] = ("", false)
+                continue
+            }
+
+            let configuration = Configuration()
+            do {
+                try configuration.load(fromConfigString: content)
+            } catch let error {
+                alertError("Error when parsing config file: \(fullpath). \(error)")
+                configurations[name] = ("", false)
+                continue
+            }
+
+            configurations[name] = (content, true)
+        }
+    }
+
+    func alertError(errorDescription: String) {
+        let alert = NSAlert()
+        alert.messageText = errorDescription
+        alert.runModal()
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
+        disconnect()
     }
 
-
+    func terminate(sender: AnyObject? = nil) {
+        NSApp.terminate(self)
+    }
 }
-

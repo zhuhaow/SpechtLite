@@ -7,17 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36A719571D5B6A9500DC35F5 /* lwip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719541D5B6A9500DC35F5 /* lwip.framework */; };
+		36A719581D5B6A9500DC35F5 /* lwip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719541D5B6A9500DC35F5 /* lwip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36A719591D5B6A9500DC35F5 /* NEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719551D5B6A9500DC35F5 /* NEKit.framework */; };
+		36A7195A1D5B6A9500DC35F5 /* NEKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719551D5B6A9500DC35F5 /* NEKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36A7195B1D5B6A9500DC35F5 /* tun2socks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719561D5B6A9500DC35F5 /* tun2socks.framework */; };
+		36A7195C1D5B6A9500DC35F5 /* tun2socks.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719561D5B6A9500DC35F5 /* tun2socks.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36A7195F1D5B77F000DC35F5 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A7195E1D5B77F000DC35F5 /* Sparkle.framework */; };
+		36A719601D5B77F000DC35F5 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A7195E1D5B77F000DC35F5 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36BA0BF31D599FF40074BEBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BA0BF21D599FF40074BEBF /* AppDelegate.swift */; };
 		36BA0BF51D599FF40074BEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF41D599FF40074BEBF /* Assets.xcassets */; };
 		36BA0BF81D599FF40074BEBF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF61D599FF40074BEBF /* MainMenu.xib */; };
+		36BE112A1D59C97500CF7FCD /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36BE110E1D59C94B00CF7FCD /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36BE112C1D59C97500CF7FCD /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36BE110F1D59C94B00CF7FCD /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36BE112E1D59C97500CF7FCD /* CocoaLumberjackSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36BE11101D59C94B00CF7FCD /* CocoaLumberjackSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36BE11301D59C97500CF7FCD /* CommonCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36BE11111D59C94B00CF7FCD /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36BE11341D59C97600CF7FCD /* MMDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36BE11131D59C94B00CF7FCD /* MMDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36BE11381D59C97600CF7FCD /* Sodium.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36BE11151D59C94B00CF7FCD /* Sodium.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36BE113A1D59C97600CF7FCD /* Yaml.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36BE11161D59C94B00CF7FCD /* Yaml.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36BE113C1D59C98500CF7FCD /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BE110E1D59C94B00CF7FCD /* CocoaAsyncSocket.framework */; };
+		36BE113D1D59C98500CF7FCD /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BE110F1D59C94B00CF7FCD /* CocoaLumberjack.framework */; };
+		36BE113E1D59C98500CF7FCD /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BE11101D59C94B00CF7FCD /* CocoaLumberjackSwift.framework */; };
+		36BE113F1D59C98500CF7FCD /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BE11111D59C94B00CF7FCD /* CommonCrypto.framework */; };
+		36BE11411D59C98500CF7FCD /* MMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BE11131D59C94B00CF7FCD /* MMDB.framework */; };
+		36BE11431D59C98500CF7FCD /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BE11151D59C94B00CF7FCD /* Sodium.framework */; };
+		36BE11441D59C98500CF7FCD /* Yaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BE11161D59C94B00CF7FCD /* Yaml.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		36BE113B1D59C97600CF7FCD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				36A719601D5B77F000DC35F5 /* Sparkle.framework in Embed Frameworks */,
+				36A719581D5B6A9500DC35F5 /* lwip.framework in Embed Frameworks */,
+				36BE11301D59C97500CF7FCD /* CommonCrypto.framework in Embed Frameworks */,
+				36A7195C1D5B6A9500DC35F5 /* tun2socks.framework in Embed Frameworks */,
+				36BE113A1D59C97600CF7FCD /* Yaml.framework in Embed Frameworks */,
+				36BE112C1D59C97500CF7FCD /* CocoaLumberjack.framework in Embed Frameworks */,
+				36A7195A1D5B6A9500DC35F5 /* NEKit.framework in Embed Frameworks */,
+				36BE112A1D59C97500CF7FCD /* CocoaAsyncSocket.framework in Embed Frameworks */,
+				36BE11341D59C97600CF7FCD /* MMDB.framework in Embed Frameworks */,
+				36BE11381D59C97600CF7FCD /* Sodium.framework in Embed Frameworks */,
+				36BE112E1D59C97500CF7FCD /* CocoaLumberjackSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		36A719541D5B6A9500DC35F5 /* lwip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = lwip.framework; path = Carthage/Build/Mac/lwip.framework; sourceTree = "<group>"; };
+		36A719551D5B6A9500DC35F5 /* NEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NEKit.framework; path = Carthage/Build/Mac/NEKit.framework; sourceTree = "<group>"; };
+		36A719561D5B6A9500DC35F5 /* tun2socks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = tun2socks.framework; path = Carthage/Build/Mac/tun2socks.framework; sourceTree = "<group>"; };
+		36A7195E1D5B77F000DC35F5 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Carthage/Build/Mac/Sparkle.framework; sourceTree = "<group>"; };
 		36BA0BEF1D599FF40074BEBF /* SpechtLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpechtLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BA0BF21D599FF40074BEBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36BA0BF41D599FF40074BEBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36BA0BF71D599FF40074BEBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		36BA0BF91D599FF40074BEBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36BA0BFF1D59A0510074BEBF /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		36BE110E1D59C94B00CF7FCD /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		36BE110F1D59C94B00CF7FCD /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/Mac/CocoaLumberjack.framework; sourceTree = "<group>"; };
+		36BE11101D59C94B00CF7FCD /* CocoaLumberjackSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjackSwift.framework; path = Carthage/Build/Mac/CocoaLumberjackSwift.framework; sourceTree = "<group>"; };
+		36BE11111D59C94B00CF7FCD /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/Mac/CommonCrypto.framework; sourceTree = "<group>"; };
+		36BE11131D59C94B00CF7FCD /* MMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MMDB.framework; path = Carthage/Build/Mac/MMDB.framework; sourceTree = "<group>"; };
+		36BE11151D59C94B00CF7FCD /* Sodium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sodium.framework; path = Carthage/Build/Mac/Sodium.framework; sourceTree = "<group>"; };
+		36BE11161D59C94B00CF7FCD /* Yaml.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Yaml.framework; path = Carthage/Build/Mac/Yaml.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,15 +83,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A7195F1D5B77F000DC35F5 /* Sparkle.framework in Frameworks */,
+				36A719571D5B6A9500DC35F5 /* lwip.framework in Frameworks */,
+				36BE113C1D59C98500CF7FCD /* CocoaAsyncSocket.framework in Frameworks */,
+				36A7195B1D5B6A9500DC35F5 /* tun2socks.framework in Frameworks */,
+				36BE113D1D59C98500CF7FCD /* CocoaLumberjack.framework in Frameworks */,
+				36BE113E1D59C98500CF7FCD /* CocoaLumberjackSwift.framework in Frameworks */,
+				36A719591D5B6A9500DC35F5 /* NEKit.framework in Frameworks */,
+				36BE113F1D59C98500CF7FCD /* CommonCrypto.framework in Frameworks */,
+				36BE11411D59C98500CF7FCD /* MMDB.framework in Frameworks */,
+				36BE11431D59C98500CF7FCD /* Sodium.framework in Frameworks */,
+				36BE11441D59C98500CF7FCD /* Yaml.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36A7195D1D5B6EDB00DC35F5 /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				36A7195E1D5B77F000DC35F5 /* Sparkle.framework */,
+				36A719541D5B6A9500DC35F5 /* lwip.framework */,
+				36A719551D5B6A9500DC35F5 /* NEKit.framework */,
+				36A719561D5B6A9500DC35F5 /* tun2socks.framework */,
+				36BE110E1D59C94B00CF7FCD /* CocoaAsyncSocket.framework */,
+				36BE110F1D59C94B00CF7FCD /* CocoaLumberjack.framework */,
+				36BE11101D59C94B00CF7FCD /* CocoaLumberjackSwift.framework */,
+				36BE11111D59C94B00CF7FCD /* CommonCrypto.framework */,
+				36BE11131D59C94B00CF7FCD /* MMDB.framework */,
+				36BE11151D59C94B00CF7FCD /* Sodium.framework */,
+				36BE11161D59C94B00CF7FCD /* Yaml.framework */,
+			);
+			name = Carthage;
+			sourceTree = "<group>";
+		};
 		36BA0BE61D599FF40074BEBF = {
 			isa = PBXGroup;
 			children = (
+				36A7195D1D5B6EDB00DC35F5 /* Carthage */,
+				36BA0BFF1D59A0510074BEBF /* Cartfile */,
 				36BA0BF11D599FF40074BEBF /* SpechtLite */,
 				36BA0BF01D599FF40074BEBF /* Products */,
 			);
@@ -68,6 +157,7 @@
 				36BA0BEB1D599FF40074BEBF /* Sources */,
 				36BA0BEC1D599FF40074BEBF /* Frameworks */,
 				36BA0BED1D599FF40074BEBF /* Resources */,
+				36BE113B1D59C97600CF7FCD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -90,6 +180,7 @@
 				TargetAttributes = {
 					36BA0BEE1D599FF40074BEBF = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = H5443445N6;
 					};
 				};
 			};
@@ -232,7 +323,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = SpechtLite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.osx.SpechtLite;
@@ -244,7 +340,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = SpechtLite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.osx.SpechtLite;
@@ -271,6 +372,7 @@
 				36BA0BFE1D599FF40074BEBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
