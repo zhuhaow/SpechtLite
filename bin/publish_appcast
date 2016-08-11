@@ -8,6 +8,8 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]
     exit 0
 fi
 
+echo "Generating appcast file..."
+
 ruby -rerb -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\")).result" > appcast/latestappcast.xml
 
 # remove all redundant files
@@ -16,8 +18,11 @@ find . -not -name "appcast" -not -name ".git" -maxdepth 1 -print0 | xargs -0 rm 
 cp -r appcast/. .
 rm -rf appcast/
 
+echo "Publish appcast file..."
 # push update
 git checkout --orphan gh-pages
 git add .
 git -c user.name="Travis CI" commit -m "Publish appcast"
 git push --force --quiet https://$GITHUB_API_KEY@github.com/zhuhaow/SpechtLite.git gh-pages > /dev/null 2>&1
+
+echo "Done ^_^"
