@@ -10,9 +10,6 @@ script:
   x86_64 build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
   
 before_deploy:
-# fix git-revlist
-- git fetch --unshallow
-
 - openssl aes-256-cbc -K $encrypted_f333a4d93d89_key -iv $encrypted_f333a4d93d89_iv
   -in cert/MacDistribution.p12.enc -out cert/MacDistribution.p12 -d
 - security create-keychain -p mysecretpassword build.keychain
