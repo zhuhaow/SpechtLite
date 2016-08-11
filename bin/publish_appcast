@@ -1,13 +1,5 @@
 #!/usr/bin/env sh
 
-# only publish appcast for master branch
-export SOURCE_BRANCH="master"
-export APPCAST_BRANCH="gh-pages"
-
-if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
-    exit 0
-fi
-
 echo "Generating appcast file..."
 
 ruby -rerb -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\")).result" > appcast/latestappcast.xml
