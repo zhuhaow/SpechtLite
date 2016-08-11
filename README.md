@@ -1,6 +1,6 @@
 #Specht Lite
 [![Join the chat at https://gitter.im/zhuhaow/NEKit](https://badges.gitter.im/zhuhaow/NEKit.svg)](https://gitter.im/zhuhaow/NEKit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/zhuhaow/SpechtLite.svg?branch=master)](https://travis-ci.org/zhuhaow/SpechtLite) [![GitHub release](https://img.shields.io/github/release/zhuhaow/SpechtLite.svg?maxAge=2592000)](https://github.com/zhuhaow/SpechtLite/releases) [![GitHub license](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
-### A proxy app based on rules for macOS.
+### A rule-based proxy app for macOS.
 
 ![Splash image](imgs/splash.png)
 
