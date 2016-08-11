@@ -134,7 +134,7 @@ It's best if you can leave an issue relating to NEKit at [NEKit issues](https://
 ## Where is the "Full" version?
 <a id="full"></a>
 
-It's here. [Specht](https://github.com/zhuhaow/Specht). It is still free and open source. The difference is that Specht takes full advantage of Network Extension.
+Here it is. [Specht](https://github.com/zhuhaow/Specht). It is still free and open source. The difference is that Specht takes full advantage of Network Extension.
 
 **td;lr**
 
