@@ -29,7 +29,7 @@ deploy:
     repo: zhuhaow/SpechtLite
     tags: true
 after_deploy:
-  - openssl aes-256-cbc -K $encrypted_f333a4d93d89_key -iv $encrypted_f333a4d93d89_iv
+- openssl aes-256-cbc -K $encrypted_f333a4d93d89_key -iv $encrypted_f333a4d93d89_iv
   -in cert/dsa_priv.pem.enc -out cert/dsa_priv.pem -d
-  - bin/publish_appcast
+- bin/publish_appcast
 
