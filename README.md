@@ -11,7 +11,7 @@ SpechtLite is a simple proxy app built with [NEKit](https://github.com/zhuhaow/N
 
 SpechtLite comes with a simple GUI that helps you switch profiles with different rule settings.
 
-Download here. [![GitHub release](https://img.shields.io/github/release/zhuhaow/SpechtLite.svg?maxAge=2592000)](https://github.com/zhuhaow/SpechtLite/releases)
+Download here. [![GitHub release](https://img.shields.io/github/release/zhuhaow/SpechtLite.svg)](https://github.com/zhuhaow/SpechtLite/releases)
 
 SpechtLite can:
 
