@@ -20,6 +20,9 @@ before_deploy:
 - gym
 - zip -r SpechtLite.zip SpechtLite.app
 
+after_success:
+  - publish_appcast.sh
+
 deploy:
   provider: releases
   skip_cleanup: true
