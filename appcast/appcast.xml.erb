@@ -1,6 +1,6 @@
-<% git = `sh /etc/profile; which git`.strip %>
-<% version = `#{git} describe --tags --always --abbrev=0`.strip %>
-<% build_number = `#{git} rev-list HEAD --count`.strip %>
+<%- git = `sh /etc/profile; which git`.strip -%>
+<%- version = `#{git} describe --tags --always --abbrev=0`.strip -%>
+<%- build_number = `#{git} rev-list HEAD --count`.strip -%>
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel>
