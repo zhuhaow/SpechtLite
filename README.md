@@ -5,30 +5,32 @@
 ![Splash image](imgs/splash.png)
 
 ## Overview
-SpechtLite is a simple proxy app build with [NEKit](https://github.com/zhuhaow/NEKit).
+SpechtLite is a simple proxy app built with [NEKit](https://github.com/zhuhaow/NEKit).
 
 ![screenshot](imgs/screenshot.png)
 
 SpechtLite comes with a simple GUI that helps you switch profiles with different rule settings.
 
+Download here. [![GitHub release](https://img.shields.io/github/release/zhuhaow/SpechtLite.svg?maxAge=2592000)](https://github.com/zhuhaow/SpechtLite/releases)
+
 SpechtLite can:
 
-* Run as a HTTP/SOCKS5 proxy server locally to accect requests and then
+* Run HTTP/SOCKS5 proxy server locally to accept requests and then
 * Forward them to different remote HTTP proxy/HTTP over SSL proxy/Shadowsocks proxy or even select them automatically by
-* The geographical location, regular expressions or/and the speed of the connection.
+* The geographical location, regular expressions rule or/and the speed of the connection.
 
-The core of SpechtLite is just a few lines of code calling [NEKit](https://github.com/zhuhaow/NEKit). The main goal of this app is provided as a demo of how NEKit works and let people test it.
+The core of SpechtLite is just a few lines of code calling [NEKit](https://github.com/zhuhaow/NEKit). The app is provided as a demo of how NEKit works and let people test it though I thinks this app works well enough for real usage.
 
-Note there is no fancy GUI configuration panel. But no worry, you simply need some yaml files to get everything running. 
+Note there is no fancy GUI configuration panel. But no worry, you simply need some YAML files to get everything running. 
 
-If you do need a fancy GUI, consider come commercial alternatives such as the Mac version of [Surge](http://surge.run).
+If you do need a fancy GUI, consider some commercial alternatives such as the Mac version of [Surge](http://surge.run).
 
 ["Lite"? Is there a "Full" version?](#full)
 
-Download here. [![GitHub release](https://img.shields.io/github/release/zhuhaow/SpechtLite.svg?maxAge=2592000)](https://github.com/zhuhaow/SpechtLite/releases)
 
 ## Configuration File
 
+In case you do not know YAML, [read first](http://docs.ansible.com/ansible/YAMLSyntax.html).
 
 Below is a simple demo configuration file:
 
@@ -39,7 +41,7 @@ port: 9090
 # Adapter is the remote proxy server you want to connect to
 adapter:
      # id is used to distinguish adapter when defining rules.
-     # There is a 'direct' adapter that connect direct to target host without proxy.
+     # There is a 'direct' adapter that connect directly to target host without proxy.
   - id: adapter1
      # HTTP server is a http proxy server.
     type: HTTP
@@ -65,7 +67,7 @@ adapter:
     method: AES-128-CFB
     password: ss_password
   # Speed adapter automatically connects to all specified adapters (with given delay) 
-  # and use the fastest one that becomes ready.
+  # and uses the fastest one that becomes ready.
   - id: speed
     type: SPEED
     adapters:
@@ -90,7 +92,7 @@ rule:
     # Define which adapter should we use.
     adapter: direct
   - type: country
-    # When the location is unknown. Usually this means this is an Intranet IP.
+    # When the location is unknown. Usually this means this is resolved an Intranet IP.
     country: --
     match: true
     adapter: direct
@@ -113,50 +115,52 @@ The `listfile` in `list` rule is a file containing a set regular expressions:
 zhihu\.com
 ```
 
-Each regex is initlized with `NSRegularExpression(pattern: $0, options: .CaseInsensitive)` then matched with `firstMatchInString(host, options: [], range: NSRange(location: 0, length: host.utf16.count))`, so you can give anything that is supported by `NSRegularExpression`.
+Each regex is initlized with `NSRegularExpression(pattern: pattern, options: .CaseInsensitive)` then matched with `firstMatchInString(host, options: [], range: NSRange(location: 0, length: host.utf16.count))`, so you can give anything that is supported by `NSRegularExpression`.
 
 ## Up and Running
 Click `Open config folder` and save you configuration into some `xxxx.yaml` file, then `Reload config`. 
 
-Finally, start proxy by click the name, and setting system HTTP/HTTPS proxy to `127.0.0.1:port`, SOCKS5 proxy (this will proxy things as Mail.app) to `127.0.0.1:port+1` in System Preferences. 
+Finally, start proxy by click the name, and setting system HTTP/HTTPS proxy to `127.0.0.1:port`, SOCKS5 proxy (this will proxy things such as Mail.app) to `127.0.0.1:port+1` in System Preferences. 
 
 Yatta!
 
 ## But I still need help ...
-If you have questions, please ask at [![Join the chat at https://gitter.im/zhuhaow/NEKit](https://badges.gitter.im/zhuhaow/NEKit.svg)](https://gitter.im/zhuhaow/NEKit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge).
+If you have any questions, please ask at [![Join the chat at https://gitter.im/zhuhaow/NEKit](https://badges.gitter.im/zhuhaow/NEKit.svg)](https://gitter.im/zhuhaow/NEKit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge).
 
 Do not open an issue unless it is one.
+
+It's best if you can leave an issue relating to NEKit at [NEKit issues](https://github.com/zhuhaow/NEKit/issues).
 
 ## Where is the "Full" version?
 <a id="full"></a>
 
-[Here](https://github.com/zhuhaow/Specht). It is still free and open source. The difference is that Specht takes full advantage of Network Extension.
+It's here. [Specht](https://github.com/zhuhaow/Specht). It is still free and open source. The difference is that Specht takes full advantage of Network Extension.
 
 **td;lr**
 
 As you can infer from the name of NEKit, it is designed for develop app based on [Network Extension](https://developer.apple.com/library/ios/documentation/NetworkExtension/Reference/Network_Extension_Framework_Reference/). 
 
-About two years ago, I wrote an iOS app [Soca](https://github.com/zhuhaow/Soca-iOS) which worked exactly as what SpechtLite does, but on iOS. Later, I extracted the core of Soca into [SocaCore](https://github.com/zhuhaow/Soca-iOS), which was the predecessor of NEKit. One drawback of Soca was that you had to use some dirty hack (play empty mp3 for every several minutes) to stay running in the background. But at that time, there was no alternatives.
+About two years ago, I wrote an iOS app called [Soca](https://github.com/zhuhaow/Soca-iOS) which worked exactly as what SpechtLite does, but on iOS. Later, I extracted the core of Soca into [SocaCore](https://github.com/zhuhaow/Soca-iOS), which was the predecessor of NEKit. One drawback of Soca was that you had to use some dirty hack (play empty mp3 for every several minutes) to stay running in the background. But at that time, there was no alternatives.
 
-That was one year before the release of Network Extension, so when Apple released iOS 9, I stopped developing Soca and changed to Surge iOS since I do not have a developer account so I cound not apply for a Network Extension entitlement. 
+That was one year before the release of Network Extension, so when Apple released iOS 9, I stopped developing Soca and changed to Surge iOS since I did not have a developer account which meant I could not apply for a Network Extension entitlement. 
 
 But there is no limit of background running on OS X and I've been using the OS X version of Soca (never released) until now. Since Surge OS X does not use Network Extension, there is no reason to switch.
 
-Anyway, there were somethings I did not like about Surge (probably because it was not geek enough?) and I really do like to use open source things. So I decided to continue the development of Soca. NEKit is the successor of Soca which is heavily refactored and enhanced to be used with Network Extension, and of cource, without it.
+Anyway, there were somethings I did not like about Surge (probably because it was not geek enough?) and I really do like to use open source things. So I decided to continue the development of Soca. I got to admit that it was harder than I thought. NEKit is the successor of Soca which is heavily refactored and enhanced to be used with Network Extension, and of cource, without it.
 
-But things only get better when people are using it, and someone asked me for a demo. I'm just to lazy to write test code and even tests can not guarantee correction. So I build Specht using the exact same GUI of Soca OS X which I think is good enough.
+There were people asking for demo. And things only get better when people are using it. I'm just to lazy to write test code and even tests can not guarantee correction. So I build Specht using the exact same GUI of Soca OS X which I think is good enough.
 
-But apple does not allow developer to distribute Mac app with network extension by themselve, which means there are only two ways to use Specht:
+But apple does not allow developers to distribute Mac app with network extension by themselve, which means there are only two ways to use Specht:
 
 * You have to have a developer account ($99/year) and request an explicit entitlement from Apple, then compile and sign the app yourself.
-* I upload Specht to Mac App Store.
+* I upload Specht to the Mac App Store.
 
 Well, I do not think many people would love to do the first and I'm just too lazy to do the second. 
 
 So here we are, Specht and SpechtLite. Anyone can use SpechtLite, but the limitations are:
 
 * You have to set the proxy configuration in System Preferences yourself.
-* Only things support HTTP and SOCKS5 proxy are proxied.
+* Only things supporting HTTP and SOCKS5 proxy are proxied.
 
 While Specht does not have these limitations, you do have to sign the app yourself and there's nothing I can do since even Testflight does not support OS X.
 
