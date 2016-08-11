@@ -8,6 +8,8 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]
     exit 0
 fi
 
+ruby -rerb -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\")).result" > appcast/latestappcast.xml
+
 # remove all redundant files
 find . -not -name "appcast" -not -name ".git" -maxdepth 1 -print0 | xargs -0 rm -rf --
 # copy appcast files to root

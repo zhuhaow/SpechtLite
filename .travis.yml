@@ -8,21 +8,17 @@ install:
 script:
 - xctool -project SpechtLite.xcodeproj -scheme "SpechtLite" -sdk macosx10.11 -arch
   x86_64 build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
-  
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_f333a4d93d89_key -iv $encrypted_f333a4d93d89_iv
   -in cert/MacDistribution.p12.enc -out cert/MacDistribution.p12 -d
 - security create-keychain -p mysecretpassword build.keychain
 - security default-keychain -s build.keychain
 - security unlock-keychain -p mysecretpassword build.keychain
-- security import cert/MacDistribution.p12 -k build.keychain -T /usr/bin/codesign -P ""
+- security import cert/MacDistribution.p12 -k build.keychain -T /usr/bin/codesign
+  -P ""
 - gem install gym --no-ri --no-rdoc
 - gym
 - ditto -c -k --sequesterRsrc --keepParent SpechtLite.app SpechtLite.zip
-
-after_success:
-  - publish_appcast.sh
-
 deploy:
   provider: releases
   skip_cleanup: true
@@ -32,3 +28,8 @@ deploy:
   on:
     repo: zhuhaow/SpechtLite
     tags: true
+after_deploy:
+  - openssl aes-256-cbc -K $encrypted_f333a4d93d89_key -iv $encrypted_f333a4d93d89_iv
+  -in cert/dsa_priv.pem.enc -out cert/dsa_priv.pem -d
+  - bin/publish_appcast
+
