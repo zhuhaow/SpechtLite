@@ -125,7 +125,7 @@ Finally, start proxy by click the name, and setting system HTTP/HTTPS proxy to `
 Yatta!
 
 ## But I still need help ...
-If you have any questions, please ask at [![Join the chat at https://gitter.im/zhuhaow/NEKit](https://badges.gitter.im/zhuhaow/NEKit.svg)](https://gitter.im/zhuhaow/NEKit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge).
+If you have any questions, please ask at [![Join the chat at https://gitter.im/zhuhaow/NEKit](https://badges.gitter.im/zhuhaow/NEKit.svg)](https://gitter.im/zhuhaow/NEKit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge). And yes, you can ask in Chinese.
 
 Do not open an issue unless it is one.
 
