@@ -2,7 +2,7 @@
 
 echo "Generating appcast file..."
 
-ruby -rerb -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\")).result" > appcast/latestappcast.xml
+ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\")).result"> appcast/latestappcast.xml
 
 # remove all redundant files
 find . -not -name "appcast" -not -name ".git" -maxdepth 1 -print0 | xargs -0 rm -rf --
