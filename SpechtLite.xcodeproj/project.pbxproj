@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36A7196C1D5C4AB900DC35F5 /* bootstrap in Resources */ = {isa = PBXBuildFile; fileRef = 36A719691D5C4AB900DC35F5 /* bootstrap */; };
-		36A7196D1D5C4AB900DC35F5 /* bootstrap-if-needed in Resources */ = {isa = PBXBuildFile; fileRef = 36A7196A1D5C4AB900DC35F5 /* bootstrap-if-needed */; };
-		36A7196E1D5C4AB900DC35F5 /* publish_appcast in Resources */ = {isa = PBXBuildFile; fileRef = 36A7196B1D5C4AB900DC35F5 /* publish_appcast */; };
 		36A719721D5C4B5600DC35F5 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 36A719701D5C4B5100DC35F5 /* dsa_pub.pem */; };
 		36A7197E1D5C5B9200DC35F5 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719731D5C5B9200DC35F5 /* CocoaAsyncSocket.framework */; };
 		36A7197F1D5C5B9200DC35F5 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719731D5C5B9200DC35F5 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -254,12 +251,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36A7196E1D5C4AB900DC35F5 /* publish_appcast in Resources */,
 				36A719721D5C4B5600DC35F5 /* dsa_pub.pem in Resources */,
 				36BA0BF51D599FF40074BEBF /* Assets.xcassets in Resources */,
 				36BA0BF81D599FF40074BEBF /* MainMenu.xib in Resources */,
-				36A7196C1D5C4AB900DC35F5 /* bootstrap in Resources */,
-				36A7196D1D5C4AB900DC35F5 /* bootstrap-if-needed in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
