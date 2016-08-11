@@ -9,5 +9,5 @@ install:
 - bin/bootstrap-if-needed
 
 script:
-- xctool -project SpechtLite.xcodeproj -scheme "SpechtLite" -sdk macosx10.11 -arch x86_64
-  build
+  - xctool -project SpechtLite.xcodeproj -scheme "SpechtLite" -sdk macosx10.11 -arch
+    x86_64 build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
