@@ -138,7 +138,7 @@ Here it is. [Specht](https://github.com/zhuhaow/Specht). It is still free and op
 
 **td;lr**
 
-As you can infer from the name of NEKit, it is designed for develop app based on [Network Extension](https://developer.apple.com/library/ios/documentation/NetworkExtension/Reference/Network_Extension_Framework_Reference/). 
+As you can infer from the name of NEKit, it is designed for developing app based on [Network Extension](https://developer.apple.com/library/ios/documentation/NetworkExtension/Reference/Network_Extension_Framework_Reference/). 
 
 About two years ago, I wrote an iOS app called [Soca](https://github.com/zhuhaow/Soca-iOS) which worked exactly as what SpechtLite does, but on iOS. Later, I extracted the core of Soca into [SocaCore](https://github.com/zhuhaow/Soca-iOS), which was the predecessor of NEKit. One drawback of Soca was that you had to use some dirty hack (play empty mp3 for every several minutes) to stay running in the background. But at that time, there was no alternatives.
 
