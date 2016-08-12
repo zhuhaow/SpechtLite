@@ -19,7 +19,7 @@ SpechtLite can:
 * Forward them to different remote HTTP proxy/HTTP over SSL proxy/Shadowsocks proxy or even select them automatically by
 * The geographical location, regular expressions rule or/and the speed of the connection.
 
-The core of SpechtLite is just a few lines of code calling [NEKit](https://github.com/zhuhaow/NEKit). The app is provided as a demo of how NEKit works and let people test it though I thinks this app works well enough for real usage.
+The core of SpechtLite consists just a few lines of code invoking [NEKit](https://github.com/zhuhaow/NEKit). The app is provided as a demo of how NEKit works and let people test it though I thinks this app works well enough for real usage.
 
 Note there is no fancy GUI configuration panel. But no worry, you simply need some YAML files to get everything running. 
 
