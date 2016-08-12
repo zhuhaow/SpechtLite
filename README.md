@@ -59,7 +59,7 @@ adapter:
     username: proxy_username
     password: proxy_password
   - id: adapter3
-    type: shadowsocks
+    type: ss
     host: http.proxy.connect.via.https
     port: 3128
     # Currently support: AES-128-CFB, AES-192-CFB, AES-256-CFB, chacha20, salsa20, rc4-md5
