@@ -32,6 +32,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         initMenuBar()
         // force to update since this app is very likely to be buggy.
         updater.automaticallyChecksForUpdates = true
+        // check for updates every hour
+        updater.updateCheckInterval = 3600
     }
 
     func initMenuBar() {
