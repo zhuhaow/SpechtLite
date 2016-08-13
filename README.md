@@ -165,6 +165,14 @@ So here we are, Specht and SpechtLite. Anyone can use SpechtLite, but the limita
 While Specht does not have these limitations, you do have to sign the app yourself and there's nothing I can do since even Testflight does not support OS X.
 
 ## Can I upload this to the Mac App Store?
-SpechtLite is published under GPLv3. 
+SpechtLite is published under GPLv3. Considering App Store license is not compatible with GPL (see VLC for example), you probably can't. 
 
-But please do not use the icon and the name if you do want to redistribute it.
+NEKit is licensed under BSD 3-clause, so you can build an app with it and publish it on App Store instead.
+
+If you know a way which guarantees that:
+
+* If an app is derived from SpechtLite it must be open sourced when it is distributed.
+* Such app can be pubished on App Store.
+* I can make sure that it does not use the name and icon of SpechtLite.
+
+Please do let me know.
