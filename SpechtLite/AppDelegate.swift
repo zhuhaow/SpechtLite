@@ -175,11 +175,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
 
     func saveCurrentConfigurationToDefaults() {
-        UserDefault.setString(currentConfiguration, forKey: "currentConfiguration")
+        Preference.defaultConfiguration = currentConfiguration
     }
 
     func runConfigurationInDefaults() -> Bool {
-        guard let configName = UserDefault.stringForKey("currentConfiguration") else {
+        guard let configName = Preference.defaultConfiguration else {
             return false
         }
 

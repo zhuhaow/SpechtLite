@@ -31,6 +31,7 @@
 		36A719921D5C5B9200DC35F5 /* Yaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A7197D1D5C5B9200DC35F5 /* Yaml.framework */; };
 		36A719931D5C5B9200DC35F5 /* Yaml.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A7197D1D5C5B9200DC35F5 /* Yaml.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36A719BD1D5F040400DC35F5 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A719BC1D5F040400DC35F5 /* UserDefault.swift */; };
+		36A719BF1D5F0A9400DC35F5 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A719BE1D5F0A9400DC35F5 /* Preference.swift */; };
 		36BA0BF31D599FF40074BEBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BA0BF21D599FF40074BEBF /* AppDelegate.swift */; };
 		36BA0BF51D599FF40074BEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF41D599FF40074BEBF /* Assets.xcassets */; };
 		36BA0BF81D599FF40074BEBF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF61D599FF40074BEBF /* MainMenu.xib */; };
@@ -80,6 +81,7 @@
 		36A7197C1D5C5B9200DC35F5 /* tun2socks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = tun2socks.framework; path = Build/Mac/tun2socks.framework; sourceTree = "<group>"; };
 		36A7197D1D5C5B9200DC35F5 /* Yaml.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Yaml.framework; path = Build/Mac/Yaml.framework; sourceTree = "<group>"; };
 		36A719BC1D5F040400DC35F5 /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		36A719BE1D5F0A9400DC35F5 /* Preference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		36BA0BEF1D599FF40074BEBF /* SpechtLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpechtLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BA0BF21D599FF40074BEBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36BA0BF41D599FF40074BEBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				36BA0BF91D599FF40074BEBF /* Info.plist */,
 				36BA0BF61D599FF40074BEBF /* MainMenu.xib */,
 				36A719BC1D5F040400DC35F5 /* UserDefault.swift */,
+				36A719BE1D5F0A9400DC35F5 /* Preference.swift */,
 			);
 			path = SpechtLite;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36A719BD1D5F040400DC35F5 /* UserDefault.swift in Sources */,
+				36A719BF1D5F0A9400DC35F5 /* Preference.swift in Sources */,
 				36BA0BF31D599FF40074BEBF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
