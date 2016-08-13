@@ -83,8 +83,21 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
         disconnect()
 
+        runConfiguration(sender.title)
+    }
+
+    func runConfiguration(name: String) -> Bool {
         let configuration = Configuration()
-        try! configuration.load(fromConfigString: configurations[sender.title]!.0)
+
+        guard let config = configurations[name] else {
+            return false
+        }
+
+        guard config.1 else {
+            return false
+        }
+
+        try! configuration.load(fromConfigString: config.0)
         RuleManager.currentManager = configuration.ruleManager
         let proxyPort = configuration.proxyPort ?? 9090
 
@@ -96,12 +109,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             try socks5Server.start()
         } catch let error {
             alertError("Encounter an error when starting proxy server. \(error)")
-            return
+            return false
         }
 
-        currentConfiguration = sender.title
+        currentConfiguration = name
         currentProxies.append(httpServer)
         currentProxies.append(socks5Server)
+
+        saveCurrentConfigurationToDefaults()
+        return true
     }
 
     func disconnect(sender: AnyObject? = nil) {
@@ -121,7 +137,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         reloadAllConfigurationFiles()
     }
 
-    func reloadAllConfigurationFiles() {
+    func reloadAllConfigurationFiles(runDefault: Bool = true) {
         let paths = try! NSFileManager.defaultManager().contentsOfDirectoryAtPath(configFolder).filter {
             ($0 as NSString).pathExtension == "yaml"
         }
@@ -151,6 +167,23 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
             configurations[name] = (content, true)
         }
+
+        disconnect()
+        if runDefault {
+            runConfigurationInDefaults()
+        }
+    }
+
+    func saveCurrentConfigurationToDefaults() {
+        UserDefault.setString(currentConfiguration, forKey: "currentConfiguration")
+    }
+
+    func runConfigurationInDefaults() -> Bool {
+        guard let configName = UserDefault.stringForKey("currentConfiguration") else {
+            return false
+        }
+
+        return runConfiguration(configName)
     }
 
     func update(sender: AnyObject? = nil) {
