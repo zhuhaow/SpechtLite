@@ -57,6 +57,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         menu.addItemWithTitle("Reload config", action: #selector(AppDelegate.reloadClicked(_:)), keyEquivalent: "r")
         menu.addItem(NSMenuItem.separatorItem())
         menu.addItemWithTitle("Check for updates", action: #selector(AppDelegate.update(_:)), keyEquivalent: "u")
+        menu.addItemWithTitle("About", action: #selector(AppDelegate.showAbout(_:)), keyEquivalent: "")
         menu.addItem(NSMenuItem.separatorItem())
         menu.addItemWithTitle("Exit", action: #selector(AppDelegate.terminate(_:)), keyEquivalent: "q")
     }
@@ -188,6 +189,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     func update(sender: AnyObject? = nil) {
         updater.checkForUpdates(sender)
+    }
+
+    func showAbout(sender: AnyObject? = nil) {
+        NSApplication.sharedApplication().orderFrontStandardAboutPanel(sender)
     }
 
     func alertError(errorDescription: String) {
