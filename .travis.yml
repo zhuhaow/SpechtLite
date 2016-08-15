@@ -9,8 +9,7 @@ script:
 - xctool -project SpechtLite.xcodeproj -scheme "SpechtLite" -sdk macosx10.11 -arch
   x86_64 build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 before_deploy:
-- openssl aes-256-cbc -K $encrypted_f333a4d93d89_key -iv $encrypted_f333a4d93d89_iv
-  -in secret.tar.enc -out cert/secret.tar -d
+- openssl aes-256-cbc -K $encrypted_f333a4d93d89_key -iv $encrypted_f333a4d93d89_iv -in secret.tar.enc -out cert/secret.tar -d
 - tar xvf cert/secret.tar
 - security create-keychain -p mysecretpassword build.keychain
 - security default-keychain -s build.keychain
