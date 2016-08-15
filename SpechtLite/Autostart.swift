@@ -2,7 +2,7 @@ import Foundation
 import ServiceManagement
 
 class Autostart {
-    static let identifier = "me.zhuhaow.osx.SpechtLiteLaunchHelper"
+    static let identifier = "me.zhuhaow.osx.SpechtLite.LaunchHelper"
 
     static func enable() -> Bool {
         return SMLoginItemSetEnabled(identifier, true)
