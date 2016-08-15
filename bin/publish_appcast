@@ -23,3 +23,13 @@ git -c user.name="Travis CI" commit -m "Publish appcast"
 git push --force --quiet https://$GITHUB_API_KEY@github.com/zhuhaow/SpechtLite.git gh-pages > /dev/null 2>&1
 
 echo "Done ^_^"
+
+echo "Validate signature..."
+echo "The MD5 of archive:"
+md5 SpechtLite.zip
+
+echo "Validating..."
+echo "Public cert:"
+cat cert/dsa_pub.pem
+
+openssl dgst -sha1 -binary < SpechtLite.zip | openssl dgst -dss1 -verify cert/dsa_pub.pem -signature signature
