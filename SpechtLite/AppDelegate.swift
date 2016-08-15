@@ -34,6 +34,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         updater.automaticallyChecksForUpdates = true
         // check for updates every hour
         updater.updateCheckInterval = 3600
+
+        setUpAutostart()
     }
 
     func initMenuBar() {
@@ -56,6 +58,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         menu.addItemWithTitle("Open config folder", action: #selector(AppDelegate.openConfigFolder(_:)), keyEquivalent: "c")
         menu.addItemWithTitle("Reload config", action: #selector(AppDelegate.reloadClicked(_:)), keyEquivalent: "r")
         menu.addItem(NSMenuItem.separatorItem())
+        let item = NSMenuItem(title: "Autostart at login", action: #selector(AppDelegate.autostartClicked(_:)), keyEquivalent: "")
+        if Preference.autostart {
+            item.state = NSOnState
+        }
+        menu.addItem(item)
         menu.addItemWithTitle("Check for updates", action: #selector(AppDelegate.update(_:)), keyEquivalent: "u")
         menu.addItemWithTitle("About", action: #selector(AppDelegate.showAbout(_:)), keyEquivalent: "")
         menu.addItem(NSMenuItem.separatorItem())
@@ -136,6 +143,19 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     func reloadClicked(sender: AnyObject) {
         reloadAllConfigurationFiles()
+    }
+
+    func autostartClicked(sender: AnyObject) {
+        Preference.autostart = !Preference.autostart
+        setUpAutostart()
+    }
+
+    func setUpAutostart() {
+        if Preference.autostart {
+            Autostart.enable()
+        } else {
+            Autostart.disable()
+        }
     }
 
     func reloadAllConfigurationFiles(runDefault: Bool = true) {

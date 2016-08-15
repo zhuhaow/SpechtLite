@@ -9,4 +9,13 @@ class Preference {
             UserDefault.setString(newValue, forKey: "defaultConfiguration")
         }
     }
+
+    static var autostart: Bool {
+        get {
+            return UserDefault.boolForKey("autostart")
+        }
+        set {
+            UserDefault.setBool(newValue, forKey: "autostart")
+        }
+    }
 }

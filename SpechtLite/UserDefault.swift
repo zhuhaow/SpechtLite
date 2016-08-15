@@ -9,6 +9,14 @@ class UserDefault {
         return NSUserDefaults.standardUserDefaults().objectForKey(key) as? String
     }
 
+    static func setBool(value: Bool, forKey: String) {
+        NSUserDefaults.standardUserDefaults().setBool(value, forKey: forKey)
+    }
+
+    static func boolForKey(key: String) -> Bool {
+        return NSUserDefaults.standardUserDefaults().boolForKey(key)
+    }
+
     static func synchronize() {
         NSUserDefaults.standardUserDefaults().synchronize()
     }

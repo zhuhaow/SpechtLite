@@ -32,12 +32,28 @@
 		36A719931D5C5B9200DC35F5 /* Yaml.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A7197D1D5C5B9200DC35F5 /* Yaml.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36A719BD1D5F040400DC35F5 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A719BC1D5F040400DC35F5 /* UserDefault.swift */; };
 		36A719BF1D5F0A9400DC35F5 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A719BE1D5F0A9400DC35F5 /* Preference.swift */; };
+		36A719DD1D6178E500DC35F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A719DC1D6178E500DC35F5 /* AppDelegate.m */; };
+		36A719E01D6178E500DC35F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A719DF1D6178E500DC35F5 /* main.m */; };
+		36A719E21D6178E500DC35F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A719E11D6178E500DC35F5 /* Assets.xcassets */; };
+		36A719E51D6178E500DC35F5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A719E31D6178E500DC35F5 /* MainMenu.xib */; };
+		36A719EA1D61791900DC35F5 /* SpechtLiteLaunchHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 36A719D91D6178E500DC35F5 /* SpechtLiteLaunchHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		36A719EC1D617A4A00DC35F5 /* Autostart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A719EB1D617A4A00DC35F5 /* Autostart.swift */; };
 		36BA0BF31D599FF40074BEBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BA0BF21D599FF40074BEBF /* AppDelegate.swift */; };
 		36BA0BF51D599FF40074BEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF41D599FF40074BEBF /* Assets.xcassets */; };
 		36BA0BF81D599FF40074BEBF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF61D599FF40074BEBF /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		36A719D31D61771C00DC35F5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				36A719EA1D61791900DC35F5 /* SpechtLiteLaunchHelper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		36BE113B1D59C97600CF7FCD /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,6 +98,14 @@
 		36A7197D1D5C5B9200DC35F5 /* Yaml.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Yaml.framework; path = Build/Mac/Yaml.framework; sourceTree = "<group>"; };
 		36A719BC1D5F040400DC35F5 /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		36A719BE1D5F0A9400DC35F5 /* Preference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
+		36A719D91D6178E500DC35F5 /* SpechtLiteLaunchHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpechtLiteLaunchHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A719DB1D6178E500DC35F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		36A719DC1D6178E500DC35F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		36A719DF1D6178E500DC35F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		36A719E11D6178E500DC35F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		36A719E41D6178E500DC35F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		36A719E61D6178E500DC35F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36A719EB1D617A4A00DC35F5 /* Autostart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Autostart.swift; sourceTree = "<group>"; };
 		36BA0BEF1D599FF40074BEBF /* SpechtLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpechtLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BA0BF21D599FF40074BEBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36BA0BF41D599FF40074BEBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +115,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		36A719D61D6178E500DC35F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		36BA0BEC1D599FF40074BEBF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -158,11 +189,33 @@
 			path = cert;
 			sourceTree = "<group>";
 		};
+		36A719DA1D6178E500DC35F5 /* SpechtLiteLaunchHelper */ = {
+			isa = PBXGroup;
+			children = (
+				36A719DB1D6178E500DC35F5 /* AppDelegate.h */,
+				36A719DC1D6178E500DC35F5 /* AppDelegate.m */,
+				36A719E11D6178E500DC35F5 /* Assets.xcassets */,
+				36A719E31D6178E500DC35F5 /* MainMenu.xib */,
+				36A719E61D6178E500DC35F5 /* Info.plist */,
+				36A719DE1D6178E500DC35F5 /* Supporting Files */,
+			);
+			path = SpechtLiteLaunchHelper;
+			sourceTree = "<group>";
+		};
+		36A719DE1D6178E500DC35F5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				36A719DF1D6178E500DC35F5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		36BA0BE61D599FF40074BEBF = {
 			isa = PBXGroup;
 			children = (
 				36A7196F1D5C4B5100DC35F5 /* cert */,
 				36A7195D1D5B6EDB00DC35F5 /* Carthage */,
+				36A719DA1D6178E500DC35F5 /* SpechtLiteLaunchHelper */,
 				36BA0BF01D599FF40074BEBF /* Products */,
 				36BA0BF11D599FF40074BEBF /* SpechtLite */,
 				36A719611D5C2ED500DC35F5 /* appcast */,
@@ -178,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				36BA0BEF1D599FF40074BEBF /* SpechtLite.app */,
+				36A719D91D6178E500DC35F5 /* SpechtLiteLaunchHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,6 +245,7 @@
 				36BA0BF61D599FF40074BEBF /* MainMenu.xib */,
 				36A719BC1D5F040400DC35F5 /* UserDefault.swift */,
 				36A719BE1D5F0A9400DC35F5 /* Preference.swift */,
+				36A719EB1D617A4A00DC35F5 /* Autostart.swift */,
 			);
 			path = SpechtLite;
 			sourceTree = "<group>";
@@ -198,6 +253,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		36A719D81D6178E500DC35F5 /* SpechtLiteLaunchHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36A719E71D6178E500DC35F5 /* Build configuration list for PBXNativeTarget "SpechtLiteLaunchHelper" */;
+			buildPhases = (
+				36A719D51D6178E500DC35F5 /* Sources */,
+				36A719D61D6178E500DC35F5 /* Frameworks */,
+				36A719D71D6178E500DC35F5 /* Resources */,
+				F57AD3C9B6C017522DCEEC82 /* Warn for TODO and FIXME comments */,
+				96F28E8AE005D69D3A0B636D /* Set version number */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpechtLiteLaunchHelper;
+			productName = SpechtLiteLaunchHelper;
+			productReference = 36A719D91D6178E500DC35F5 /* SpechtLiteLaunchHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
 		36BA0BEE1D599FF40074BEBF /* SpechtLite */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36BA0BFC1D599FF40074BEBF /* Build configuration list for PBXNativeTarget "SpechtLite" */;
@@ -208,6 +282,7 @@
 				36BE113B1D59C97600CF7FCD /* Embed Frameworks */,
 				D46517B046B7AA200DA7B59F /* Warn for TODO and FIXME comments */,
 				EED21ADB33E81805BA20719B /* Set version number */,
+				36A719D31D61771C00DC35F5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -228,6 +303,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Zhuhao Wang";
 				TargetAttributes = {
+					36A719D81D6178E500DC35F5 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = H5443445N6;
+					};
 					36BA0BEE1D599FF40074BEBF = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = H5443445N6;
@@ -248,11 +327,21 @@
 			projectRoot = "";
 			targets = (
 				36BA0BEE1D599FF40074BEBF /* SpechtLite */,
+				36A719D81D6178E500DC35F5 /* SpechtLiteLaunchHelper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		36A719D71D6178E500DC35F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36A719E21D6178E500DC35F5 /* Assets.xcassets in Resources */,
+				36A719E51D6178E500DC35F5 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		36BA0BED1D599FF40074BEBF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -266,6 +355,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		96F28E8AE005D69D3A0B636D /* Set version number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Set version number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "git=$(sh /etc/profile; which git)\ngit_release_version=$(\"$git\" describe --tags --always --abbrev=0)\nnumber_of_commits=$(\"$git\" rev-list master --count)\ntarget_plist=\"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\ndsym_plist=\"$DWARF_DSYM_FOLDER_PATH/$DWARF_DSYM_FILE_NAME/Contents/Info.plist\"\n\nfor plist in \"$target_plist\" \"$dsym_plist\"; do\n  if [ -f \"$plist\" ]; then\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $number_of_commits\" \"$plist\"\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString ${git_release_version#*v}\" \"$plist\"\n  fi\ndone\n";
+		};
 		D46517B046B7AA200DA7B59F /* Warn for TODO and FIXME comments */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -294,14 +397,38 @@
 			shellPath = /bin/sh;
 			shellScript = "git=$(sh /etc/profile; which git)\ngit_release_version=$(\"$git\" describe --tags --always --abbrev=0)\nnumber_of_commits=$(\"$git\" rev-list HEAD --count)\ntarget_plist=\"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\ndsym_plist=\"$DWARF_DSYM_FOLDER_PATH/$DWARF_DSYM_FILE_NAME/Contents/Info.plist\"\n\nfor plist in \"$target_plist\" \"$dsym_plist\"; do\n  if [ -f \"$plist\" ]; then\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $number_of_commits\" \"$plist\"\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString ${git_release_version#*v}\" \"$plist\"\n  fi\ndone\n";
 		};
+		F57AD3C9B6C017522DCEEC82 /* Warn for TODO and FIXME comments */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Warn for TODO and FIXME comments";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"swift|h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/Carthage\" -prune -o -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		36A719D51D6178E500DC35F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36A719E01D6178E500DC35F5 /* main.m in Sources */,
+				36A719DD1D6178E500DC35F5 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		36BA0BEB1D599FF40074BEBF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				36A719BD1D5F040400DC35F5 /* UserDefault.swift in Sources */,
+				36A719EC1D617A4A00DC35F5 /* Autostart.swift in Sources */,
 				36A719BF1D5F0A9400DC35F5 /* Preference.swift in Sources */,
 				36BA0BF31D599FF40074BEBF /* AppDelegate.swift in Sources */,
 			);
@@ -310,6 +437,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		36A719E31D6178E500DC35F5 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36A719E41D6178E500DC35F5 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		36BA0BF61D599FF40074BEBF /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -322,6 +457,37 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		36A719E81D6178E500DC35F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				INFOPLIST_FILE = SpechtLiteLaunchHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.osx.SpechtLiteLaunchHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		36A719E91D6178E500DC35F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				INFOPLIST_FILE = SpechtLiteLaunchHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.osx.SpechtLiteLaunchHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		36BA0BFA1D599FF40074BEBF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -446,6 +612,7 @@
 				);
 				INFOPLIST_FILE = SpechtLite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.osx.SpechtLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -464,6 +631,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = SpechtLite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.osx.SpechtLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -472,6 +640,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		36A719E71D6178E500DC35F5 /* Build configuration list for PBXNativeTarget "SpechtLiteLaunchHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36A719E81D6178E500DC35F5 /* Debug */,
+				36A719E91D6178E500DC35F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		36BA0BEA1D599FF40074BEBF /* Build configuration list for PBXProject "SpechtLite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
