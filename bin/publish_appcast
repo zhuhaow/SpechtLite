@@ -2,11 +2,6 @@
 
 echo "Generating appcast file..."
 
-# unshallow repository
-if [ -f $(git rev-parse --git-dir)/shallow ]; then
-git fetch --unshallow;
-fi
-
 ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\"), nil, '-').result" > appcast/latestappcast.xml
 
 echo "Validate signature..."
