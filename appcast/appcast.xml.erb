@@ -18,6 +18,7 @@
 <enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/<%= version %>/SpechtLite.zip"
 sparkle:version="<%= build_number %>"
 sparkle:shortVersionString="<%= version %>"
+sparkle:dsaSignature="<%= `./bin/sign_update SpechtLite.zip cert/dsa_priv.pem`.strip %>"
 length="<%= `stat -f%z SpechtLite.zip`.strip %>"
 type="application/octet-stream" />
 </item>
