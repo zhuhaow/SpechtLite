@@ -98,3 +98,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+/cert/secret.tar
+/cert/MacDistribution.p12
+/cert/dsa_priv.pem
