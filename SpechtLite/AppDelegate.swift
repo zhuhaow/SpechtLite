@@ -30,10 +30,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         reloadAllConfigurationFiles()
         initMenuBar()
+
+        let sharedUpdater = SUUpdater.sharedUpdater()
         // force to update since this app is very likely to be buggy.
-        updater.automaticallyChecksForUpdates = true
+        sharedUpdater.automaticallyChecksForUpdates = true
         // check for updates every hour
-        updater.updateCheckInterval = 3600
+        sharedUpdater.updateCheckInterval = 3600
 
         setUpAutostart()
     }
