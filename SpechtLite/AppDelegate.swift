@@ -216,8 +216,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
 
     func showAbout(sender: AnyObject? = nil) {
-        NSApplication.sharedApplication().orderFrontStandardAboutPanel(sender)
         NSApplication.sharedApplication().activateIgnoringOtherApps(true)
+        NSApplication.sharedApplication().orderFrontStandardAboutPanel(sender)
     }
 
     func alertError(errorDescription: String) {
