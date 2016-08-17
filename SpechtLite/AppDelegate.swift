@@ -5,7 +5,6 @@ import Sparkle
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
-    @IBOutlet weak var updater: SUUpdater!
     var barItem: NSStatusItem!
     var configurations: [String: (String, Bool)] = [:]
     var currentConfiguration: String?
@@ -212,7 +211,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
 
     func update(sender: AnyObject? = nil) {
-        updater.checkForUpdates(sender)
+        SUUpdater.sharedUpdater().checkForUpdates(sender)
     }
 
     func showAbout(sender: AnyObject? = nil) {
