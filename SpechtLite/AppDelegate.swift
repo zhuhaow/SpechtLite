@@ -41,8 +41,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
 
     func initMenuBar() {
+        let icon = NSImage(named: "StatusIcon")
+        icon?.template = true
         barItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
-        barItem.title = "Sp"
+        barItem.image = icon
         barItem.menu = NSMenu()
         barItem.menu!.delegate = self
     }
