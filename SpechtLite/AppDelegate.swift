@@ -9,6 +9,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     var configurations: [String: (String, Bool)] = [:]
     var currentConfiguration: String?
 
+    var currentProxyPort = 9090
     var currentProxies: [ProxyServer] = []
 
     var configFolder: String {
@@ -37,6 +38,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         sharedUpdater.updateCheckInterval = 3600
 
         setUpAutostart()
+        ProxyHelper.install()
+        if Preference.setProxy {
+            setProxy(Preference.setProxy)
+        }
     }
 
     func initMenuBar() {
@@ -60,6 +65,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         menu.addItemWithTitle("Disconnect", action: #selector(AppDelegate.disconnect(_:)), keyEquivalent: "d")
         menu.addItemWithTitle("Open config folder", action: #selector(AppDelegate.openConfigFolder(_:)), keyEquivalent: "c")
         menu.addItemWithTitle("Reload config", action: #selector(AppDelegate.reloadClicked(_:)), keyEquivalent: "r")
+        menu.addItem(NSMenuItem.separatorItem())
+        let proxyItem = NSMenuItem(title: "Set as system proxy", action: #selector(AppDelegate.didSetProxy(_:)), keyEquivalent: "")
+        if Preference.setProxy {
+            proxyItem.state = NSOnState
+        }
+        menu.addItem(proxyItem)
+        menu.addItemWithTitle("Copy shell export command", action: #selector(AppDelegate.copyCommand(_:)), keyEquivalent: "")
         menu.addItem(NSMenuItem.separatorItem())
         let item = NSMenuItem(title: "Autostart at login", action: #selector(AppDelegate.autostartClicked(_:)), keyEquivalent: "")
         if Preference.autostart {
@@ -123,6 +135,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             return false
         }
 
+        currentProxyPort = proxyPort
         currentConfiguration = name
         currentProxies.append(httpServer)
         currentProxies.append(socks5Server)
@@ -146,6 +159,24 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     func reloadClicked(sender: AnyObject) {
         reloadAllConfigurationFiles()
+    }
+
+    func didSetProxy(sender: AnyObject) {
+        Preference.setProxy = !Preference.setProxy
+        if let item = sender as? NSMenuItem {
+            item.state = Preference.setProxy ? NSOnState : NSOffState
+        }
+        setProxy(Preference.setProxy)
+    }
+
+    func setProxy(enable: Bool) {
+        ProxyHelper.setSystemProxy(currentProxyPort, enable: enable)
+    }
+
+    func copyCommand(sender: AnyObject) {
+        let pasteboard = NSPasteboard.generalPasteboard()
+        pasteboard.declareTypes([NSStringPboardType], owner: nil)
+        pasteboard.setString("export https_proxy=http://127.0.0.1:\(currentProxyPort);export http_proxy=http://127.0.0.1:\(currentProxyPort)", forType: NSStringPboardType)
     }
 
     func autostartClicked(sender: AnyObject) {
@@ -226,6 +257,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
+        setProxy(false)
         disconnect()
     }
 
