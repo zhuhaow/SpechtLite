@@ -42,6 +42,10 @@
 		36BA0BF31D599FF40074BEBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BA0BF21D599FF40074BEBF /* AppDelegate.swift */; };
 		36BA0BF51D599FF40074BEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF41D599FF40074BEBF /* Assets.xcassets */; };
 		36BA0BF81D599FF40074BEBF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF61D599FF40074BEBF /* MainMenu.xib */; };
+		C859077D1D67195B0046F665 /* ProxyConfig in Resources */ = {isa = PBXBuildFile; fileRef = C8A7E1461D66FCD300E713F5 /* ProxyConfig */; };
+		C8A7E13D1D66FC8E00E713F5 /* install_proxy.sh in Resources */ = {isa = PBXBuildFile; fileRef = C8A7E13B1D66FC8E00E713F5 /* install_proxy.sh */; };
+		C8A7E13E1D66FC8E00E713F5 /* ProxyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A7E13C1D66FC8E00E713F5 /* ProxyHelper.swift */; };
+		C8A7E1491D66FCD300E713F5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A7E1481D66FCD300E713F5 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,6 +79,15 @@
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8A7E1441D66FCD300E713F5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -114,6 +127,10 @@
 		36BA0BF71D599FF40074BEBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		36BA0BF91D599FF40074BEBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36BA0BFF1D59A0510074BEBF /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		C8A7E13B1D66FC8E00E713F5 /* install_proxy.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_proxy.sh; sourceTree = "<group>"; };
+		C8A7E13C1D66FC8E00E713F5 /* ProxyHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyHelper.swift; sourceTree = "<group>"; };
+		C8A7E1461D66FCD300E713F5 /* ProxyConfig */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProxyConfig; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8A7E1481D66FCD300E713F5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +156,13 @@
 				36A719901D5C5B9200DC35F5 /* tun2socks.framework in Frameworks */,
 				36A7198A1D5C5B9200DC35F5 /* NEKit.framework in Frameworks */,
 				36A719821D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8A7E1431D66FCD300E713F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +243,7 @@
 				36A7196F1D5C4B5100DC35F5 /* cert */,
 				36A7195D1D5B6EDB00DC35F5 /* Carthage */,
 				36A719DA1D6178E500DC35F5 /* SpechtLiteLaunchHelper */,
+				C8A7E1471D66FCD300E713F5 /* ProxyConfig */,
 				36BA0BF01D599FF40074BEBF /* Products */,
 				36BA0BF11D599FF40074BEBF /* SpechtLite */,
 				36A719611D5C2ED500DC35F5 /* appcast */,
@@ -235,6 +260,7 @@
 			children = (
 				36BA0BEF1D599FF40074BEBF /* SpechtLite.app */,
 				36A719D91D6178E500DC35F5 /* SpechtLiteLaunchHelper.app */,
+				C8A7E1461D66FCD300E713F5 /* ProxyConfig */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,6 +268,8 @@
 		36BA0BF11D599FF40074BEBF /* SpechtLite */ = {
 			isa = PBXGroup;
 			children = (
+				C8A7E13B1D66FC8E00E713F5 /* install_proxy.sh */,
+				C8A7E13C1D66FC8E00E713F5 /* ProxyHelper.swift */,
 				36BA0BF21D599FF40074BEBF /* AppDelegate.swift */,
 				36BA0BF41D599FF40074BEBF /* Assets.xcassets */,
 				36BA0BF91D599FF40074BEBF /* Info.plist */,
@@ -251,6 +279,14 @@
 				36A719EB1D617A4A00DC35F5 /* Autostart.swift */,
 			);
 			path = SpechtLite;
+			sourceTree = "<group>";
+		};
+		C8A7E1471D66FCD300E713F5 /* ProxyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				C8A7E1481D66FCD300E713F5 /* main.swift */,
+			);
+			path = ProxyConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +332,23 @@
 			productReference = 36BA0BEF1D599FF40074BEBF /* SpechtLite.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C8A7E1451D66FCD300E713F5 /* ProxyConfig */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8A7E14A1D66FCD300E713F5 /* Build configuration list for PBXNativeTarget "ProxyConfig" */;
+			buildPhases = (
+				C8A7E1421D66FCD300E713F5 /* Sources */,
+				C8A7E1431D66FCD300E713F5 /* Frameworks */,
+				C8A7E1441D66FCD300E713F5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProxyConfig;
+			productName = ProxyConfig;
+			productReference = C8A7E1461D66FCD300E713F5 /* ProxyConfig */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -308,11 +361,14 @@
 				TargetAttributes = {
 					36A719D81D6178E500DC35F5 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = H5443445N6;
+						DevelopmentTeam = TH2Q5PL4G4;
 					};
 					36BA0BEE1D599FF40074BEBF = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = H5443445N6;
+						DevelopmentTeam = TH2Q5PL4G4;
+					};
+					C8A7E1451D66FCD300E713F5 = {
+						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
@@ -331,6 +387,7 @@
 			targets = (
 				36BA0BEE1D599FF40074BEBF /* SpechtLite */,
 				36A719D81D6178E500DC35F5 /* SpechtLiteLaunchHelper */,
+				C8A7E1451D66FCD300E713F5 /* ProxyConfig */,
 			);
 		};
 /* End PBXProject section */
@@ -349,6 +406,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C859077D1D67195B0046F665 /* ProxyConfig in Resources */,
+				C8A7E13D1D66FC8E00E713F5 /* install_proxy.sh in Resources */,
 				36A719721D5C4B5600DC35F5 /* dsa_pub.pem in Resources */,
 				36A719F51D63FB3500DC35F5 /* Credits.rtf in Resources */,
 				36BA0BF51D599FF40074BEBF /* Assets.xcassets in Resources */,
@@ -431,10 +490,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8A7E13E1D66FC8E00E713F5 /* ProxyHelper.swift in Sources */,
 				36A719BD1D5F040400DC35F5 /* UserDefault.swift in Sources */,
 				36A719EC1D617A4A00DC35F5 /* Autostart.swift in Sources */,
 				36A719BF1D5F0A9400DC35F5 /* Preference.swift in Sources */,
 				36BA0BF31D599FF40074BEBF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8A7E1421D66FCD300E713F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8A7E1491D66FCD300E713F5 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,6 +709,24 @@
 			};
 			name = Release;
 		};
+		C8A7E14B1D66FCD300E713F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C8A7E14C1D66FCD300E713F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -667,6 +753,15 @@
 			buildConfigurations = (
 				36BA0BFD1D599FF40074BEBF /* Debug */,
 				36BA0BFE1D599FF40074BEBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8A7E14A1D66FCD300E713F5 /* Build configuration list for PBXNativeTarget "ProxyConfig" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8A7E14B1D66FCD300E713F5 /* Debug */,
+				C8A7E14C1D66FCD300E713F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
