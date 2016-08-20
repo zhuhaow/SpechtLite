@@ -361,11 +361,11 @@
 				TargetAttributes = {
 					36A719D81D6178E500DC35F5 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = TH2Q5PL4G4;
+						DevelopmentTeam = H5443445N6;
 					};
 					36BA0BEE1D599FF40074BEBF = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = TH2Q5PL4G4;
+						DevelopmentTeam = H5443445N6;
 					};
 					C8A7E1451D66FCD300E713F5 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -533,7 +533,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				INFOPLIST_FILE = SpechtLiteLaunchHelper/Info.plist;
@@ -548,7 +547,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -676,7 +674,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -694,7 +691,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

@@ -71,6 +71,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             proxyItem.state = NSOnState
         }
         menu.addItem(proxyItem)
+        menu.addItemWithTitle("Copy shell export command", action: #selector(AppDelegate.copyCommand(_:)), keyEquivalent: "")
+        menu.addItem(NSMenuItem.separatorItem())
         let item = NSMenuItem(title: "Autostart at login", action: #selector(AppDelegate.autostartClicked(_:)), keyEquivalent: "")
         if Preference.autostart {
             item.state = NSOnState
@@ -169,6 +171,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     func setProxy(enable: Bool) {
         ProxyHelper.setSystemProxy(currentProxyPort, enable: enable)
+    }
+
+    func copyCommand(sender: AnyObject) {
+        let pasteboard = NSPasteboard.generalPasteboard()
+        pasteboard.declareTypes([NSStringPboardType], owner: nil)
+        pasteboard.setString("export https_proxy=http://127.0.0.1:\(currentProxyPort);export http_proxy=http://127.0.0.1:\(currentProxyPort)", forType: NSStringPboardType)
     }
 
     func autostartClicked(sender: AnyObject) {
