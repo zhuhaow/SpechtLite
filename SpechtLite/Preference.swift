@@ -19,12 +19,12 @@ class Preference {
         }
     }
 
-    static var setProxy: Bool {
+    static var setUpSystemProxy: Bool {
         get {
-            return UserDefault.boolForKey("setProxy")
+            return UserDefault.boolForKey("setUpSystemProxy")
         }
         set {
-            UserDefault.setBool(newValue, forKey: "setProxy")
+            UserDefault.setBool(newValue, forKey: "setUpSystemProxy")
         }
     }
 }

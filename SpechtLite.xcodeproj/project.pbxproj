@@ -43,7 +43,7 @@
 		36BA0BF51D599FF40074BEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF41D599FF40074BEBF /* Assets.xcassets */; };
 		36BA0BF81D599FF40074BEBF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF61D599FF40074BEBF /* MainMenu.xib */; };
 		C859077D1D67195B0046F665 /* ProxyConfig in Resources */ = {isa = PBXBuildFile; fileRef = C8A7E1461D66FCD300E713F5 /* ProxyConfig */; };
-		C8A7E13D1D66FC8E00E713F5 /* install_proxy.sh in Resources */ = {isa = PBXBuildFile; fileRef = C8A7E13B1D66FC8E00E713F5 /* install_proxy.sh */; };
+		C8A7E13D1D66FC8E00E713F5 /* install_proxy_helper.sh in Resources */ = {isa = PBXBuildFile; fileRef = C8A7E13B1D66FC8E00E713F5 /* install_proxy_helper.sh */; };
 		C8A7E13E1D66FC8E00E713F5 /* ProxyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A7E13C1D66FC8E00E713F5 /* ProxyHelper.swift */; };
 		C8A7E1491D66FCD300E713F5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A7E1481D66FCD300E713F5 /* main.swift */; };
 /* End PBXBuildFile section */
@@ -127,7 +127,7 @@
 		36BA0BF71D599FF40074BEBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		36BA0BF91D599FF40074BEBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36BA0BFF1D59A0510074BEBF /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		C8A7E13B1D66FC8E00E713F5 /* install_proxy.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_proxy.sh; sourceTree = "<group>"; };
+		C8A7E13B1D66FC8E00E713F5 /* install_proxy_helper.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_proxy_helper.sh; sourceTree = "<group>"; };
 		C8A7E13C1D66FC8E00E713F5 /* ProxyHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyHelper.swift; sourceTree = "<group>"; };
 		C8A7E1461D66FCD300E713F5 /* ProxyConfig */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProxyConfig; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A7E1481D66FCD300E713F5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -268,7 +268,7 @@
 		36BA0BF11D599FF40074BEBF /* SpechtLite */ = {
 			isa = PBXGroup;
 			children = (
-				C8A7E13B1D66FC8E00E713F5 /* install_proxy.sh */,
+				C8A7E13B1D66FC8E00E713F5 /* install_proxy_helper.sh */,
 				C8A7E13C1D66FC8E00E713F5 /* ProxyHelper.swift */,
 				36BA0BF21D599FF40074BEBF /* AppDelegate.swift */,
 				36BA0BF41D599FF40074BEBF /* Assets.xcassets */,
@@ -407,7 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C859077D1D67195B0046F665 /* ProxyConfig in Resources */,
-				C8A7E13D1D66FC8E00E713F5 /* install_proxy.sh in Resources */,
+				C8A7E13D1D66FC8E00E713F5 /* install_proxy_helper.sh in Resources */,
 				36A719721D5C4B5600DC35F5 /* dsa_pub.pem in Resources */,
 				36A719F51D63FB3500DC35F5 /* Credits.rtf in Resources */,
 				36BA0BF51D599FF40074BEBF /* Assets.xcassets in Resources */,

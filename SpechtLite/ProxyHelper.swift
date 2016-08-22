@@ -1,13 +1,4 @@
-//
-//  ProxyHelper.swift
-//  SpechtLite
-//
-//  Created by 周斌佳 on 16/8/17.
-//  Copyright © 2016年 Zhuhao Wang. All rights reserved.
-//
-
 import Foundation
-import SystemConfiguration
 
 public class ProxyHelper {
 
@@ -37,26 +28,26 @@ public class ProxyHelper {
         return false
     }
 
-    public static func install() {
+    public static func install() -> Bool {
         let fileManager = NSFileManager.defaultManager()
         if !fileManager.fileExistsAtPath(kProxyConfigPath) || !checkVersion() {
-            let scriptPath = "\(NSBundle.mainBundle().resourcePath!)/install_proxy.sh"
+            let scriptPath = "\(NSBundle.mainBundle().resourcePath!)/install_proxy_helper.sh"
             let appleScriptStr = "do shell script \"bash \(scriptPath)\" with administrator privileges"
             let appleScript = NSAppleScript(source: appleScriptStr)
             var dict: NSDictionary?
             if let _ = appleScript?.executeAndReturnError(&dict) {
-                print("install script success")
+                return true
             } else {
-                print(dict)
-                print("install script failed")
+                return false
             }
         }
+        return true
     }
 
-    public static func setSystemProxy(port: Int, enable: Bool) -> Bool {
+    public static func setUpSystemProxy(port: Int, enabled: Bool) -> Bool {
         let task = NSTask()
         task.launchPath = kProxyConfigPath
-        task.arguments = [String(port), enable ? "enable" : "disable"]
+        task.arguments = [String(port), enabled ? "enable" : "disable"]
 
         task.launch()
 

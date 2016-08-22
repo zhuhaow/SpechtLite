@@ -38,9 +38,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         sharedUpdater.updateCheckInterval = 3600
 
         setUpAutostart()
-        ProxyHelper.install()
-        if Preference.setProxy {
-            setProxy(Preference.setProxy)
+
+        if Preference.setUpSystemProxy {
+            if !ProxyHelper.install() {
+                alertError("Failed to install helper script to set up system proxy.")
+                Preference.setUpSystemProxy = false
+            } else {
+                setUpSystemProxy(Preference.setUpSystemProxy)
+            }
         }
     }
 
@@ -66,8 +71,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         menu.addItemWithTitle("Open config folder", action: #selector(AppDelegate.openConfigFolder(_:)), keyEquivalent: "c")
         menu.addItemWithTitle("Reload config", action: #selector(AppDelegate.reloadClicked(_:)), keyEquivalent: "r")
         menu.addItem(NSMenuItem.separatorItem())
-        let proxyItem = NSMenuItem(title: "Set as system proxy", action: #selector(AppDelegate.didSetProxy(_:)), keyEquivalent: "")
-        if Preference.setProxy {
+        let proxyItem = NSMenuItem(title: "Set as system proxy", action: #selector(AppDelegate.setProxyClicked(_:)), keyEquivalent: "")
+        if Preference.setUpSystemProxy {
             proxyItem.state = NSOnState
         }
         menu.addItem(proxyItem)
@@ -161,16 +166,21 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         reloadAllConfigurationFiles()
     }
 
-    func didSetProxy(sender: AnyObject) {
-        Preference.setProxy = !Preference.setProxy
-        if let item = sender as? NSMenuItem {
-            item.state = Preference.setProxy ? NSOnState : NSOffState
+    func setProxyClicked(sender: AnyObject) {
+        if !ProxyHelper.install() {
+            alertError("Failed to install helper script to set up system proxy.")
+            Preference.setUpSystemProxy = false
+        } else {
+            Preference.setUpSystemProxy = !Preference.setUpSystemProxy
+            setUpSystemProxy(Preference.setUpSystemProxy)
         }
-        setProxy(Preference.setProxy)
     }
 
-    func setProxy(enable: Bool) {
-        ProxyHelper.setSystemProxy(currentProxyPort, enable: enable)
+    func setUpSystemProxy(enabled: Bool) {
+        if !ProxyHelper.setUpSystemProxy(currentProxyPort, enabled: enabled) {
+            alertError("Failed to set up system proxy.")
+            Preference.setUpSystemProxy = false
+        }
     }
 
     func copyCommand(sender: AnyObject) {
@@ -257,7 +267,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
-        setProxy(false)
+        if Preference.setUpSystemProxy {
+            ProxyHelper.setUpSystemProxy(currentProxyPort, enabled: false)
+        }
         disconnect()
     }
 
