@@ -12,6 +12,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     var currentProxyPort = 9090
     var currentProxies: [ProxyServer] = []
 
+    var updater: SUUpdater!
+
     var configFolder: String {
         let path = (NSHomeDirectory() as NSString).stringByAppendingPathComponent(".SpechtLite")
         var isDir: ObjCBool = false
@@ -31,11 +33,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         reloadAllConfigurationFiles()
         initMenuBar()
 
-        let sharedUpdater = SUUpdater.sharedUpdater()
+        updater = SUUpdater.sharedUpdater()
         // force to update since this app is very likely to be buggy.
-        sharedUpdater.automaticallyChecksForUpdates = true
+        updater.automaticallyChecksForUpdates = true
         // check for updates every hour
-        sharedUpdater.updateCheckInterval = 3600
+        updater.updateCheckInterval = 3600
 
         setUpAutostart()
 
@@ -252,7 +254,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
 
     func update(sender: AnyObject? = nil) {
-        SUUpdater.sharedUpdater().checkForUpdates(sender)
+        updater.checkForUpdates(sender)
     }
 
     func showAbout(sender: AnyObject? = nil) {
