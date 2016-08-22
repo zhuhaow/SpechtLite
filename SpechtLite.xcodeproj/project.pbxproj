@@ -48,6 +48,23 @@
 		C8A7E1491D66FCD300E713F5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A7E1481D66FCD300E713F5 /* main.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3629507A1D6B4536001A30F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36BA0BE71D599FF40074BEBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36A719D81D6178E500DC35F5;
+			remoteInfo = SpechtLiteLaunchHelper;
+		};
+		3629507C1D6B4536001A30F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36BA0BE71D599FF40074BEBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8A7E1451D66FCD300E713F5;
+			remoteInfo = ProxyConfig;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		36A719D31D61771C00DC35F5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -326,6 +343,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				3629507B1D6B4536001A30F6 /* PBXTargetDependency */,
+				3629507D1D6B4536001A30F6 /* PBXTargetDependency */,
 			);
 			name = SpechtLite;
 			productName = SpechtLite;
@@ -507,6 +526,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3629507B1D6B4536001A30F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36A719D81D6178E500DC35F5 /* SpechtLiteLaunchHelper */;
+			targetProxy = 3629507A1D6B4536001A30F6 /* PBXContainerItemProxy */;
+		};
+		3629507D1D6B4536001A30F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8A7E1451D66FCD300E713F5 /* ProxyConfig */;
+			targetProxy = 3629507C1D6B4536001A30F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		36A719E31D6178E500DC35F5 /* MainMenu.xib */ = {
