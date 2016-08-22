@@ -185,7 +185,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     func copyCommand(sender: AnyObject) {
         let pasteboard = NSPasteboard.generalPasteboard()
-        pasteboard.declareTypes([NSStringPboardType], owner: nil)
+        pasteboard.clearContents()
         pasteboard.setString("export https_proxy=http://127.0.0.1:\(currentProxyPort);export http_proxy=http://127.0.0.1:\(currentProxyPort)", forType: NSStringPboardType)
     }
 
