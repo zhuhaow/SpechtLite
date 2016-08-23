@@ -96,10 +96,14 @@ rule:
     country: --
     match: true
     adapter: direct
-  # Forward requests based on whether the host matches the given regular expressions.
+  # Forward requests based on whether the host domain matches the given regular expressions.
   - type: list
     file: ~/.SpechtLite/directlist
     adapter: direct
+  # Forward requests based on the IP address of the host.
+  - type: iplist
+    adapter: direct
+    file: ~/.SpechtLite/directiprange
   # When the DNS lookup of the host fails.
   - type: DNSFail
     adapter: speed
@@ -108,7 +112,7 @@ rule:
     adapter: speed
 ```
 
-The `listfile` in `list` rule is a file containing a set regular expressions:
+The `file` in `list` rule is a file containing a set of regular expressions to match the domain name of the host:
 
 ```
 \.cn
@@ -116,6 +120,8 @@ zhihu\.com
 ```
 
 Each regex is initlized with `NSRegularExpression(pattern: pattern, options: .CaseInsensitive)` then matched with `firstMatchInString(host, options: [], range: NSRange(location: 0, length: host.utf16.count))`, so you can give anything that is supported by `NSRegularExpression`.
+
+The `file` in `iplist` rule is a file containing a set of IP ranges, each one is either represented as the standard CIDR form `127.0.0.1/8` or the custom range form `127.0.0.1+16777216`.
 
 ## Up and Running
 Click `Open config folder` and save you configuration into some `xxxx.yaml` file, then `Reload config`. 
