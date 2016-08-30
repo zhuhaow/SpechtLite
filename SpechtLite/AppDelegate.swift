@@ -39,6 +39,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         fileLogger.logFileManager.maximumNumberOfLogFiles = 1
         DDLog.addLogger(fileLogger, withLevel: .Info)
 
+        ObserverFactory.currentFactory = SPObserverFactory()
+
         reloadAllConfigurationFiles()
         initMenuBar()
 
