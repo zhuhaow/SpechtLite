@@ -42,6 +42,7 @@
 		36BA0BF31D599FF40074BEBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BA0BF21D599FF40074BEBF /* AppDelegate.swift */; };
 		36BA0BF51D599FF40074BEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF41D599FF40074BEBF /* Assets.xcassets */; };
 		36BA0BF81D599FF40074BEBF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF61D599FF40074BEBF /* MainMenu.xib */; };
+		C83FB9621D753D3300718382 /* SPObserverFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83FB9611D753D3300718382 /* SPObserverFactory.swift */; };
 		C859077D1D67195B0046F665 /* ProxyConfig in Resources */ = {isa = PBXBuildFile; fileRef = C8A7E1461D66FCD300E713F5 /* ProxyConfig */; };
 		C8A7E13D1D66FC8E00E713F5 /* install_proxy_helper.sh in Resources */ = {isa = PBXBuildFile; fileRef = C8A7E13B1D66FC8E00E713F5 /* install_proxy_helper.sh */; };
 		C8A7E13E1D66FC8E00E713F5 /* ProxyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A7E13C1D66FC8E00E713F5 /* ProxyHelper.swift */; };
@@ -144,6 +145,7 @@
 		36BA0BF71D599FF40074BEBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		36BA0BF91D599FF40074BEBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36BA0BFF1D59A0510074BEBF /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		C83FB9611D753D3300718382 /* SPObserverFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPObserverFactory.swift; sourceTree = "<group>"; };
 		C8A7E13B1D66FC8E00E713F5 /* install_proxy_helper.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_proxy_helper.sh; sourceTree = "<group>"; };
 		C8A7E13C1D66FC8E00E713F5 /* ProxyHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyHelper.swift; sourceTree = "<group>"; };
 		C8A7E1461D66FCD300E713F5 /* ProxyConfig */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProxyConfig; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -294,6 +296,7 @@
 				36A719BC1D5F040400DC35F5 /* UserDefault.swift */,
 				36A719BE1D5F0A9400DC35F5 /* Preference.swift */,
 				36A719EB1D617A4A00DC35F5 /* Autostart.swift */,
+				C83FB9611D753D3300718382 /* SPObserverFactory.swift */,
 			);
 			path = SpechtLite;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8A7E13E1D66FC8E00E713F5 /* ProxyHelper.swift in Sources */,
+				C83FB9621D753D3300718382 /* SPObserverFactory.swift in Sources */,
 				36A719BD1D5F040400DC35F5 /* UserDefault.swift in Sources */,
 				36A719EC1D617A4A00DC35F5 /* Autostart.swift in Sources */,
 				36A719BF1D5F0A9400DC35F5 /* Preference.swift in Sources */,

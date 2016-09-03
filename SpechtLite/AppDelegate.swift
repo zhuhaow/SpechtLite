@@ -1,10 +1,12 @@
 import Cocoa
 import NEKit
 import Sparkle
+import CocoaLumberjackSwift
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
+    var fileLogger: DDFileLogger!
     var barItem: NSStatusItem!
     var configurations: [String: (String, Bool)] = [:]
     var currentConfiguration: String?
@@ -30,6 +32,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        DDLog.addLogger(DDTTYLogger.sharedInstance(),withLevel: .Info)
+
+        fileLogger = DDFileLogger()
+        fileLogger.rollingFrequency = 60*60*3
+        fileLogger.logFileManager.maximumNumberOfLogFiles = 1
+        DDLog.addLogger(fileLogger, withLevel: .Info)
+
+        ObserverFactory.currentFactory = SPObserverFactory()
+
         reloadAllConfigurationFiles()
         initMenuBar()
 
@@ -86,6 +97,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         }
         menu.addItem(item)
         menu.addItemWithTitle("Check for updates", action: #selector(AppDelegate.update(_:)), keyEquivalent: "u")
+        menu.addItemWithTitle("Show log", action: #selector(AppDelegate.showLogfile(_:)), keyEquivalent: "")
         menu.addItemWithTitle("About", action: #selector(AppDelegate.showAbout(_:)), keyEquivalent: "")
         menu.addItem(NSMenuItem.separatorItem())
         menu.addItemWithTitle("Exit", action: #selector(AppDelegate.terminate(_:)), keyEquivalent: "q")
@@ -201,6 +213,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             Autostart.enable()
         } else {
             Autostart.disable()
+        }
+    }
+
+    func showLogfile(sender: AnyObject) {
+        if let logfile = fileLogger.logFileManager.sortedLogFilePaths().first as? String {
+            NSWorkspace.sharedWorkspace().selectFile(nil, inFileViewerRootedAtPath: logfile)
         }
     }
 
