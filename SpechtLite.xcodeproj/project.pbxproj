@@ -237,12 +237,12 @@
 		36A719DA1D6178E500DC35F5 /* SpechtLiteLaunchHelper */ = {
 			isa = PBXGroup;
 			children = (
+				36A719DE1D6178E500DC35F5 /* Supporting Files */,
 				36A719DB1D6178E500DC35F5 /* AppDelegate.h */,
 				36A719DC1D6178E500DC35F5 /* AppDelegate.m */,
 				36A719E11D6178E500DC35F5 /* Assets.xcassets */,
-				36A719E31D6178E500DC35F5 /* MainMenu.xib */,
 				36A719E61D6178E500DC35F5 /* Info.plist */,
-				36A719DE1D6178E500DC35F5 /* Supporting Files */,
+				36A719E31D6178E500DC35F5 /* MainMenu.xib */,
 			);
 			path = SpechtLiteLaunchHelper;
 			sourceTree = "<group>";
@@ -252,22 +252,22 @@
 			children = (
 				36A719DF1D6178E500DC35F5 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		36BA0BE61D599FF40074BEBF = {
 			isa = PBXGroup;
 			children = (
-				36A719F41D63FB3500DC35F5 /* Credits.rtf */,
-				36A7196F1D5C4B5100DC35F5 /* cert */,
 				36A7195D1D5B6EDB00DC35F5 /* Carthage */,
-				36A719DA1D6178E500DC35F5 /* SpechtLiteLaunchHelper */,
-				C8A7E1471D66FCD300E713F5 /* ProxyConfig */,
 				36BA0BF01D599FF40074BEBF /* Products */,
+				C8A7E1471D66FCD300E713F5 /* ProxyConfig */,
 				36BA0BF11D599FF40074BEBF /* SpechtLite */,
+				36A719DA1D6178E500DC35F5 /* SpechtLiteLaunchHelper */,
 				36A719611D5C2ED500DC35F5 /* appcast */,
 				36A719681D5C4AB900DC35F5 /* bin */,
+				36A7196F1D5C4B5100DC35F5 /* cert */,
 				36BA0BFF1D59A0510074BEBF /* Cartfile */,
+				36A719F41D63FB3500DC35F5 /* Credits.rtf */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -287,16 +287,16 @@
 		36BA0BF11D599FF40074BEBF /* SpechtLite */ = {
 			isa = PBXGroup;
 			children = (
-				C8A7E13B1D66FC8E00E713F5 /* install_proxy_helper.sh */,
-				C8A7E13C1D66FC8E00E713F5 /* ProxyHelper.swift */,
 				36BA0BF21D599FF40074BEBF /* AppDelegate.swift */,
 				36BA0BF41D599FF40074BEBF /* Assets.xcassets */,
+				36A719EB1D617A4A00DC35F5 /* Autostart.swift */,
 				36BA0BF91D599FF40074BEBF /* Info.plist */,
 				36BA0BF61D599FF40074BEBF /* MainMenu.xib */,
-				36A719BC1D5F040400DC35F5 /* UserDefault.swift */,
 				36A719BE1D5F0A9400DC35F5 /* Preference.swift */,
-				36A719EB1D617A4A00DC35F5 /* Autostart.swift */,
+				C8A7E13C1D66FC8E00E713F5 /* ProxyHelper.swift */,
 				C83FB9611D753D3300718382 /* SPObserverFactory.swift */,
+				36A719BC1D5F040400DC35F5 /* UserDefault.swift */,
+				C8A7E13B1D66FC8E00E713F5 /* install_proxy_helper.sh */,
 			);
 			path = SpechtLite;
 			sourceTree = "<group>";
@@ -551,6 +551,7 @@
 				36A719E41D6178E500DC35F5 /* Base */,
 			);
 			name = MainMenu.xib;
+			path = .;
 			sourceTree = "<group>";
 		};
 		36BA0BF61D599FF40074BEBF /* MainMenu.xib */ = {
