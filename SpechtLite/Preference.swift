@@ -27,4 +27,13 @@ class Preference {
             UserDefault.setBool(newValue, forKey: "setUpSystemProxy")
         }
     }
+
+    static var allowFromLan: Bool {
+        get {
+            return UserDefault.boolForKey("allowFromLan")
+        }
+        set {
+            UserDefault.setBool(newValue, forKey: "allowFromLan")
+        }
+    }
 }

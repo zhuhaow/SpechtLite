@@ -90,12 +90,17 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         }
         menu.addItem(proxyItem)
         menu.addItemWithTitle("Copy shell export command", action: #selector(AppDelegate.copyCommand(_:)), keyEquivalent: "")
-        menu.addItem(NSMenuItem.separatorItem())
-        let item = NSMenuItem(title: "Autostart at login", action: #selector(AppDelegate.autostartClicked(_:)), keyEquivalent: "")
-        if Preference.autostart {
-            item.state = NSOnState
+        let lanItem = NSMenuItem(title: "Allow Clients From Lan", action: #selector(AppDelegate.allowClientsFromLanClicked(_:)), keyEquivalent: "")
+        if Preference.allowFromLan {
+            lanItem.state = NSOnState
         }
-        menu.addItem(item)
+        menu.addItem(lanItem)
+        menu.addItem(NSMenuItem.separatorItem())
+        let autostartItem = NSMenuItem(title: "Autostart at login", action: #selector(AppDelegate.autostartClicked(_:)), keyEquivalent: "")
+        if Preference.autostart {
+            autostartItem.state = NSOnState
+        }
+        menu.addItem(autostartItem)
         menu.addItemWithTitle("Check for updates", action: #selector(AppDelegate.update(_:)), keyEquivalent: "u")
         menu.addItemWithTitle("Show log", action: #selector(AppDelegate.showLogfile(_:)), keyEquivalent: "")
         menu.addItemWithTitle("About", action: #selector(AppDelegate.showAbout(_:)), keyEquivalent: "")
@@ -143,8 +148,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         RuleManager.currentManager = configuration.ruleManager
         let proxyPort = configuration.proxyPort ?? 9090
 
-        let httpServer = GCDHTTPProxyServer(address: IPv4Address(fromString: "127.0.0.1"), port: Port(port: UInt16(proxyPort)))
-        let socks5Server = GCDSOCKS5ProxyServer(address: IPv4Address(fromString: "127.0.0.1"), port: Port(port: UInt16(proxyPort + 1)))
+        let address = Preference.allowFromLan ? nil : IPv4Address(fromString: "127.0.0.1")
+        let httpServer = GCDHTTPProxyServer(address: address, port: Port(port: UInt16(proxyPort)))
+        let socks5Server = GCDSOCKS5ProxyServer(address: address, port: Port(port: UInt16(proxyPort + 1)))
 
         do {
             try httpServer.start()
@@ -201,6 +207,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         let pasteboard = NSPasteboard.generalPasteboard()
         pasteboard.clearContents()
         pasteboard.setString("export https_proxy=http://127.0.0.1:\(currentProxyPort);export http_proxy=http://127.0.0.1:\(currentProxyPort)", forType: NSStringPboardType)
+    }
+
+    func allowClientsFromLanClicked(sender: AnyObject) {
+        Preference.allowFromLan = !Preference.allowFromLan
+        disconnect()
+        runConfigurationInDefaults()
     }
 
     func autostartClicked(sender: AnyObject) {
