@@ -13,7 +13,7 @@ class SPObserverFactory: ObserverFactory {
         override func signal(event: AdapterSocketEvent) {
             switch event {
             case .SocketOpened(let socket, let request):
-                DDLogInfo("Request: \(request.host) Type: \(socket.type) Rule: \(request.matchedRule)")
+                DDLogInfo("Request: \(request.host) Type: \(socket.type) Rule: \(request.matchedRule?.description ?? "")")
                 break
             default:
                 break
