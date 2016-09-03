@@ -32,7 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        DDLog.addLogger(DDTTYLogger.sharedInstance(),withLevel: .Info)
+        DDLog.addLogger(DDTTYLogger.sharedInstance(), withLevel: .Info)
 
         fileLogger = DDFileLogger()
         fileLogger.rollingFrequency = 60*60*3
