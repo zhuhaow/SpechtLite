@@ -121,7 +121,7 @@ zhihu\.com
 
 Each regex is initlized with `NSRegularExpression(pattern: pattern, options: .CaseInsensitive)` then matched with `firstMatchInString(host, options: [], range: NSRange(location: 0, length: host.utf16.count))`, so you can give anything that is supported by `NSRegularExpression`.
 
-The `file` in `iplist` rule is a file containing a set of IP ranges, each one is either represented as the standard CIDR form `127.0.0.1/8` or the custom range form `127.0.0.1+16777216`.
+The `file` in `iplist` rule is a file containing a set of IP ranges, each one is either represented as the standard CIDR form `127.0.0.0/8` or the custom range form `127.0.0.0+16777216`.
 
 ## Up and Running
 Click `Open config folder` and save you configuration into some `xxxx.yaml` file, then `Reload config`. 
