@@ -211,8 +211,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     func allowClientsFromLanClicked(sender: AnyObject) {
         Preference.allowFromLan = !Preference.allowFromLan
-        disconnect()
-        runConfigurationInDefaults()
+        if currentProxies.count > 0 {
+            disconnect()
+            runConfigurationInDefaults()
+        }
     }
 
     func autostartClicked(sender: AnyObject) {
