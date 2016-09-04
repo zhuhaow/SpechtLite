@@ -95,6 +95,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             lanItem.state = NSOnState
         }
         menu.addItem(lanItem)
+        menu.addItem(NSMenuItem(title: "Speed test", action: #selector(AppDelegate.speedTestClicked(_:)), keyEquivalent: ""))
         menu.addItem(NSMenuItem.separatorItem())
         let autostartItem = NSMenuItem(title: "Autostart at login", action: #selector(AppDelegate.autostartClicked(_:)), keyEquivalent: "")
         if Preference.autostart {
@@ -215,6 +216,33 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             disconnect()
             runConfigurationInDefaults()
         }
+    }
+
+    func speedTestClicked(sender: AnyObject) {
+        let t1 = NSDate().timeIntervalSince1970
+        let proxySessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        proxySessionConfiguration.connectionProxyDictionary = [
+            kCFNetworkProxiesHTTPEnable: true,
+            kCFNetworkProxiesHTTPPort: currentProxyPort,
+            kCFNetworkProxiesHTTPProxy: "127.0.0.1"
+        ]
+        let urlSession = NSURLSession(configuration: proxySessionConfiguration)
+        let task = urlSession.dataTaskWithURL(NSURL(string: "https://www.google.com/generate_204")!) {
+            (data, response, error) in
+            let notification = NSUserNotification()
+            notification.soundName = NSUserNotificationDefaultSoundName
+            notification.title = "Speed Test"
+            if let res = response as? NSHTTPURLResponse where res.statusCode == 204 {
+                let time = Int((NSDate().timeIntervalSince1970 - t1) * 1000)
+                notification.informativeText = "Response time: \(time)ms"
+            } else {
+                print("HTTP Request Failed")
+                print(error)
+                notification.informativeText = "Speed test failed!"
+            }
+            NSUserNotificationCenter.defaultUserNotificationCenter().deliverNotification(notification)
+        }
+        task.resume()
     }
 
     func autostartClicked(sender: AnyObject) {
