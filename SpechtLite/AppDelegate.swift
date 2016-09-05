@@ -220,11 +220,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     func speedTestClicked(sender: AnyObject) {
         let t1 = NSDate().timeIntervalSince1970
-        let proxySessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let proxySessionConfiguration = NSURLSessionConfiguration.ephemeralSessionConfiguration()
         proxySessionConfiguration.connectionProxyDictionary = [
-            kCFNetworkProxiesHTTPEnable: true,
-            kCFNetworkProxiesHTTPPort: currentProxyPort,
-            kCFNetworkProxiesHTTPProxy: "127.0.0.1"
+            kCFNetworkProxiesHTTPSEnable: 1,
+            kCFNetworkProxiesHTTPSPort: currentProxyPort,
+            kCFNetworkProxiesHTTPSProxy: "127.0.0.1"
         ]
         let urlSession = NSURLSession(configuration: proxySessionConfiguration)
         let task = urlSession.dataTaskWithURL(NSURL(string: "https://www.google.com/generate_204")!) {
