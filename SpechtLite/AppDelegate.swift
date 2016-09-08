@@ -90,12 +90,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         }
         menu.addItem(proxyItem)
         menu.addItemWithTitle("Copy shell export command", action: #selector(AppDelegate.copyCommand(_:)), keyEquivalent: "")
-        menu.addItem(NSMenuItem.separatorItem())
-        let item = NSMenuItem(title: "Autostart at login", action: #selector(AppDelegate.autostartClicked(_:)), keyEquivalent: "")
-        if Preference.autostart {
-            item.state = NSOnState
+        let lanItem = NSMenuItem(title: "Allow Clients From Lan", action: #selector(AppDelegate.allowClientsFromLanClicked(_:)), keyEquivalent: "")
+        if Preference.allowFromLan {
+            lanItem.state = NSOnState
         }
-        menu.addItem(item)
+        menu.addItem(lanItem)
+        menu.addItem(NSMenuItem(title: "Speed test", action: #selector(AppDelegate.speedTestClicked(_:)), keyEquivalent: ""))
+        menu.addItem(NSMenuItem.separatorItem())
+        let autostartItem = NSMenuItem(title: "Autostart at login", action: #selector(AppDelegate.autostartClicked(_:)), keyEquivalent: "")
+        if Preference.autostart {
+            autostartItem.state = NSOnState
+        }
+        menu.addItem(autostartItem)
         menu.addItemWithTitle("Check for updates", action: #selector(AppDelegate.update(_:)), keyEquivalent: "u")
         menu.addItemWithTitle("Show log", action: #selector(AppDelegate.showLogfile(_:)), keyEquivalent: "")
         menu.addItemWithTitle("About", action: #selector(AppDelegate.showAbout(_:)), keyEquivalent: "")
@@ -143,8 +149,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         RuleManager.currentManager = configuration.ruleManager
         let proxyPort = configuration.proxyPort ?? 9090
 
-        let httpServer = GCDHTTPProxyServer(address: IPv4Address(fromString: "127.0.0.1"), port: Port(port: UInt16(proxyPort)))
-        let socks5Server = GCDSOCKS5ProxyServer(address: IPv4Address(fromString: "127.0.0.1"), port: Port(port: UInt16(proxyPort + 1)))
+        let address = Preference.allowFromLan ? nil : IPv4Address(fromString: "127.0.0.1")
+        let httpServer = GCDHTTPProxyServer(address: address, port: Port(port: UInt16(proxyPort)))
+        let socks5Server = GCDSOCKS5ProxyServer(address: address, port: Port(port: UInt16(proxyPort + 1)))
 
         do {
             try httpServer.start()
@@ -201,6 +208,41 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         let pasteboard = NSPasteboard.generalPasteboard()
         pasteboard.clearContents()
         pasteboard.setString("export https_proxy=http://127.0.0.1:\(currentProxyPort);export http_proxy=http://127.0.0.1:\(currentProxyPort)", forType: NSStringPboardType)
+    }
+
+    func allowClientsFromLanClicked(sender: AnyObject) {
+        Preference.allowFromLan = !Preference.allowFromLan
+        if currentProxies.count > 0 {
+            disconnect()
+            runConfigurationInDefaults()
+        }
+    }
+
+    func speedTestClicked(sender: AnyObject) {
+        let t1 = NSDate().timeIntervalSince1970
+        let proxySessionConfiguration = NSURLSessionConfiguration.ephemeralSessionConfiguration()
+        proxySessionConfiguration.connectionProxyDictionary = [
+            kCFNetworkProxiesHTTPSEnable: 1,
+            kCFNetworkProxiesHTTPSPort: currentProxyPort,
+            kCFNetworkProxiesHTTPSProxy: "127.0.0.1"
+        ]
+        let urlSession = NSURLSession(configuration: proxySessionConfiguration)
+        let task = urlSession.dataTaskWithURL(NSURL(string: "https://www.google.com/generate_204")!) {
+            (data, response, error) in
+            let notification = NSUserNotification()
+            notification.soundName = NSUserNotificationDefaultSoundName
+            notification.title = "Speed Test"
+            if let res = response as? NSHTTPURLResponse where res.statusCode == 204 {
+                let time = Int((NSDate().timeIntervalSince1970 - t1) * 1000)
+                notification.informativeText = "Response time: \(time)ms"
+            } else {
+                print("HTTP Request Failed")
+                print(error)
+                notification.informativeText = "Speed test failed!"
+            }
+            NSUserNotificationCenter.defaultUserNotificationCenter().deliverNotification(notification)
+        }
+        task.resume()
     }
 
     func autostartClicked(sender: AnyObject) {
