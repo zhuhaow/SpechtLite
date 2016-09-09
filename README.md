@@ -128,7 +128,7 @@ The `file` in `iplist` rule is a file containing a set of IP ranges, each one is
 ## Up and Running
 Click `Open config folder` and save you configuration into some `xxxx.yaml` file, then `Reload config`. 
 
-Finally, start proxy by click the name, and setting system HTTP/HTTPS proxy to `127.0.0.1:port`, SOCKS5 proxy (this will proxy things such as Mail.app) to `127.0.0.1:port+1` in System Preferences. 
+Finally, start proxy by click the name, and check `Set as system proxy`. Or you can set it yourself by setting system HTTP/HTTPS proxy to `127.0.0.1:port`, SOCKS5 proxy (this will proxy things such as Mail.app) to `127.0.0.1:port+1` in System Preferences. 
 
 Yatta!
 
