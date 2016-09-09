@@ -30,6 +30,8 @@ If you do need a fancy GUI, consider some commercial alternatives such as the Ma
 
 ## Configuration File
 
+[中文说明](https://github.com/zhuhaow/SpechtLite/wiki/如何配置Specht-Lite)
+
 In case you do not know YAML, [read first](http://docs.ansible.com/ansible/YAMLSyntax.html).
 
 Below is a simple demo configuration file:
