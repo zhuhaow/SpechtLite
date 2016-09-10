@@ -82,9 +82,17 @@ adapter:
         delay: 300
       - id: direct
         delay: 0
+  - id: reject
+    type: reject
+    # It's very important to set a delay since some apps may try to reconnect repeatedly.
+    delay: 300
 # Here defines how things should work.
 # Rule will be matched one by one.
 rule:
+  # Forward requests based on whether the host domain matches the given regular expressions.
+  - type: list
+    file: ~/.SpechtLite/adlist
+    adapter: reject
   # Forward requests based on geographical location.
   - type: country
     # ISO country code
@@ -97,10 +105,6 @@ rule:
     # When the location is unknown. Usually this means this is resolved an Intranet IP.
     country: --
     match: true
-    adapter: direct
-  # Forward requests based on whether the host domain matches the given regular expressions.
-  - type: list
-    file: ~/.SpechtLite/directlist
     adapter: direct
   # Forward requests based on the IP address of the host.
   - type: iplist
