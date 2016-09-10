@@ -82,6 +82,7 @@ adapter:
         delay: 300
       - id: direct
         delay: 0
+  # Disconnect after given delay without connecting to remote.
   - id: reject
     type: reject
     # It's very important to set a delay since some apps may try to reconnect repeatedly.
