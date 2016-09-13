@@ -141,6 +141,8 @@
 		36A719EB1D617A4A00DC35F5 /* Autostart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Autostart.swift; sourceTree = "<group>"; };
 		36A719F41D63FB3500DC35F5 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		36AD37A81D8833490063BC4E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		36AD37AA1D88464A0063BC4E /* Changelog.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Changelog.md; sourceTree = "<group>"; };
+		36AD37AB1D8847DC0063BC4E /* compile_changelog.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = compile_changelog.rb; sourceTree = "<group>"; };
 		36BA0BEF1D599FF40074BEBF /* SpechtLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpechtLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BA0BF21D599FF40074BEBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36BA0BF41D599FF40074BEBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				36A719661D5C4A0B00DC35F5 /* generate_keys */,
 				36A7196B1D5C4AB900DC35F5 /* publish_appcast */,
 				36A719671D5C4A6E00DC35F5 /* sign_update */,
+				36AD37AB1D8847DC0063BC4E /* compile_changelog.rb */,
 			);
 			path = bin;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 		36BA0BE61D599FF40074BEBF = {
 			isa = PBXGroup;
 			children = (
+				36AD37AA1D88464A0063BC4E /* Changelog.md */,
 				36AD37A81D8833490063BC4E /* README.md */,
 				36A7195D1D5B6EDB00DC35F5 /* Carthage */,
 				36BA0BF01D599FF40074BEBF /* Products */,
