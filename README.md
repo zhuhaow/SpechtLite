@@ -16,7 +16,7 @@ Download here. [![GitHub release](https://img.shields.io/github/release/zhuhaow/
 SpechtLite can:
 
 * Run HTTP/SOCKS5 proxy server locally to accept requests and then
-* Forward them to different remote HTTP proxy/HTTP over SSL proxy/Shadowsocks proxy or even select them automatically by
+* Forward them to different remote HTTP/HTTP over SSL/SOCKS5/Shadowsocks proxy or even select them automatically by
 * The geographical location, regular expressions rule or/and the speed of the connection.
 
 The core of SpechtLite consists just a few lines of code invoking [NEKit](https://github.com/zhuhaow/NEKit). The app is provided as a demo of how NEKit works and let people test it though I thinks this app works well enough for real usage.
@@ -64,12 +64,16 @@ adapter:
     password: proxy_password
   - id: adapter3
     type: ss
-    host: http.proxy.connect.via.https
+    host: ss.server
     port: 3128
     # Currently support: AES-128-CFB, AES-192-CFB, AES-256-CFB, chacha20, salsa20, rc4-md5
     # Shadowsocks encryption methods are not fully tested, please report if there is anything not working.
     method: AES-128-CFB
     password: ss_password
+  - id: adapter4
+    type: socks5
+    host: socks5.server
+    port 3128
   # Speed adapter automatically connects to all specified adapters (with given delay) 
   # and uses the fastest one that becomes ready.
   - id: speed

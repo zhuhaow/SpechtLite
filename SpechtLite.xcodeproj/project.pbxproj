@@ -39,6 +39,7 @@
 		36A719EA1D61791900DC35F5 /* SpechtLiteLaunchHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 36A719D91D6178E500DC35F5 /* SpechtLiteLaunchHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		36A719EC1D617A4A00DC35F5 /* Autostart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A719EB1D617A4A00DC35F5 /* Autostart.swift */; };
 		36A719F51D63FB3500DC35F5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 36A719F41D63FB3500DC35F5 /* Credits.rtf */; };
+		36AD37A91D8833490063BC4E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 36AD37A81D8833490063BC4E /* README.md */; };
 		36BA0BF31D599FF40074BEBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BA0BF21D599FF40074BEBF /* AppDelegate.swift */; };
 		36BA0BF51D599FF40074BEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF41D599FF40074BEBF /* Assets.xcassets */; };
 		36BA0BF81D599FF40074BEBF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF61D599FF40074BEBF /* MainMenu.xib */; };
@@ -139,6 +140,7 @@
 		36A719E61D6178E500DC35F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36A719EB1D617A4A00DC35F5 /* Autostart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Autostart.swift; sourceTree = "<group>"; };
 		36A719F41D63FB3500DC35F5 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		36AD37A81D8833490063BC4E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		36BA0BEF1D599FF40074BEBF /* SpechtLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpechtLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BA0BF21D599FF40074BEBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36BA0BF41D599FF40074BEBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 		36BA0BE61D599FF40074BEBF = {
 			isa = PBXGroup;
 			children = (
+				36AD37A81D8833490063BC4E /* README.md */,
 				36A7195D1D5B6EDB00DC35F5 /* Carthage */,
 				36BA0BF01D599FF40074BEBF /* Products */,
 				C8A7E1471D66FCD300E713F5 /* ProxyConfig */,
@@ -515,6 +518,7 @@
 				C8A7E13E1D66FC8E00E713F5 /* ProxyHelper.swift in Sources */,
 				C83FB9621D753D3300718382 /* SPObserverFactory.swift in Sources */,
 				36A719BD1D5F040400DC35F5 /* UserDefault.swift in Sources */,
+				36AD37A91D8833490063BC4E /* README.md in Sources */,
 				36A719EC1D617A4A00DC35F5 /* Autostart.swift in Sources */,
 				36A719BF1D5F0A9400DC35F5 /* Preference.swift in Sources */,
 				36BA0BF31D599FF40074BEBF /* AppDelegate.swift in Sources */,
