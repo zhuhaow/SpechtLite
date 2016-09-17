@@ -77,7 +77,7 @@ adapter:
     host: socks5.server
     port 3128
   # Speed adapter automatically connects to all specified adapters (with given delay) 
-  # and uses the fastest one that becomes ready.
+  # and uses the one that becomes ready first.
   - id: speed
     type: SPEED
     adapters:
