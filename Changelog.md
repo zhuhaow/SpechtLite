@@ -1,3 +1,8 @@
+## 0.4.2
+
+### Fixed
+- Fixed a bug when the http request has no header field the parsing of the header fails.
+
 ## 0.4.1
 
 ### Fixed
