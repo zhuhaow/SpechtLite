@@ -1,3 +1,8 @@
+## 0.4.5
+
+### Fixed
+- Fixed a bug that remove configuration is not removed in the menu after reloading.
+
 ## 0.4.4
 
 ### Fixed

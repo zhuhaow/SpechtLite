@@ -265,6 +265,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
     
     func reloadAllConfigurationFiles(runDefault: Bool = true) {
+        configurations.removeAll()
+        
         let paths = try! NSFileManager.defaultManager().contentsOfDirectoryAtPath(configFolder).filter {
             ($0 as NSString).pathExtension == "yaml"
         }
