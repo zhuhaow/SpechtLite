@@ -265,9 +265,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
 
     func reloadAllConfigurationFiles(runDefault: Bool = true) {
-        let paths = try! NSFileManager.defaultManager().contentsOfDirectoryAtPath(configFolder).filter {
+        var paths = try! NSFileManager.defaultManager().contentsOfDirectoryAtPath(configFolder).filter {
             ($0 as NSString).pathExtension == "yaml"
         }
+        
+        paths.sortInPlace()
 
         for path in paths {
             let name = ((path as NSString).lastPathComponent as NSString).stringByDeletingPathExtension
