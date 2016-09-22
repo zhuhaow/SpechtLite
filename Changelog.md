@@ -1,3 +1,8 @@
+## 0.4.4
+
+### Fixed
+- Now the config names will be sorted correctly.
+
 ## 0.4.3
 
 ### Changed
