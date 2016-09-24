@@ -1,3 +1,8 @@
+## 0.4.6
+
+### Fixed
+- Now the privilege permission dialog will only appear for the first time you try to set system proxy. You may have to authorize SpechteLite again.
+
 ## 0.4.5
 
 ### Fixed

@@ -3,7 +3,7 @@ import Foundation
 public class ProxyHelper {
 
     static let kProxyConfigPath = "/Library/Application Support/SpechtLite/ProxyConfig"
-    static let kVersion = "0.1.0"
+    static let kVersion = "0.2.0"
 
     public static func checkVersion() -> Bool {
         let task = NSTask()
