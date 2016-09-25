@@ -74,6 +74,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     func menuNeedsUpdate(menu: NSMenu) {
         menu.removeAllItems()
         
+        if configurations.count == 0 {
+            let buildItem = buildMenuItemForExampleConfig()
+            menu.addItem(buildItem)
+        }
+        
         for name in configurations.keys.sort() {
             let item = buildMenuItemForManager(name, valid: configurations[name]!.1)
             menu.addItem(item)
@@ -132,6 +137,21 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         disconnect()
         
         runConfiguration(sender.title)
+    }
+    
+    func buildMenuItemForExampleConfig() -> NSMenuItem {
+        let item = NSMenuItem(title: "Create example_config.yaml", action: #selector(AppDelegate.createExampleConfig(_:)), keyEquivalent: "")
+        
+        return item
+    }
+    
+    func createExampleConfig(sender: NSMenuItem) {
+        let exampleConfigFilePath = NSBundle.mainBundle().pathForResource("example_config", ofType: "yaml")!
+        let targetFilePath = configFolder + "/example_config.yaml"
+        guard NSFileManager.defaultManager().fileExistsAtPath(exampleConfigFilePath) else { return }
+        
+        _ = try? NSFileManager.defaultManager().copyItemAtPath(exampleConfigFilePath, toPath: targetFilePath)
+        openConfigFolder(sender)
     }
     
     func runConfiguration(name: String) -> Bool {
@@ -268,7 +288,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         configurations.removeAll()
         
         let paths = try! NSFileManager.defaultManager().contentsOfDirectoryAtPath(configFolder).filter {
-            ($0 as NSString).pathExtension == "yaml"
+            return ($0 as NSString).pathExtension == "yaml"
+            &&
+            ($0 as NSString).pathComponents.last != "example_config.yaml"
         }
         
         for path in paths {

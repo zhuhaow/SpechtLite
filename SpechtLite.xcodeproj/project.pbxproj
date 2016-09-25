@@ -47,6 +47,7 @@
 		C8A7E13D1D66FC8E00E713F5 /* install_proxy_helper.sh in Resources */ = {isa = PBXBuildFile; fileRef = C8A7E13B1D66FC8E00E713F5 /* install_proxy_helper.sh */; };
 		C8A7E13E1D66FC8E00E713F5 /* ProxyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A7E13C1D66FC8E00E713F5 /* ProxyHelper.swift */; };
 		C8A7E1491D66FCD300E713F5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A7E1481D66FCD300E713F5 /* main.swift */; };
+		D7B88FFF1D98249500C6A3FA /* example_config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = D7B88FFD1D9822E800C6A3FA /* example_config.yaml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +154,7 @@
 		C8A7E13C1D66FC8E00E713F5 /* ProxyHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyHelper.swift; sourceTree = "<group>"; };
 		C8A7E1461D66FCD300E713F5 /* ProxyConfig */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProxyConfig; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A7E1481D66FCD300E713F5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D7B88FFD1D9822E800C6A3FA /* example_config.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = example_config.yaml; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +305,7 @@
 				C83FB9611D753D3300718382 /* SPObserverFactory.swift */,
 				36A719BC1D5F040400DC35F5 /* UserDefault.swift */,
 				C8A7E13B1D66FC8E00E713F5 /* install_proxy_helper.sh */,
+				D7B88FFD1D9822E800C6A3FA /* example_config.yaml */,
 			);
 			path = SpechtLite;
 			sourceTree = "<group>";
@@ -384,7 +387,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Zhuhao Wang";
 				TargetAttributes = {
 					36A719D81D6178E500DC35F5 = {
@@ -445,6 +448,7 @@
 				36A719F51D63FB3500DC35F5 /* Credits.rtf in Resources */,
 				36BA0BF51D599FF40074BEBF /* Assets.xcassets in Resources */,
 				36BA0BF81D599FF40074BEBF /* MainMenu.xib in Resources */,
+				D7B88FFF1D98249500C6A3FA /* example_config.yaml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,10 +632,12 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -688,10 +694,12 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -721,6 +729,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
