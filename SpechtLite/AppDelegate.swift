@@ -104,6 +104,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         menu.addItem(autostartItem)
         menu.addItemWithTitle("Check for updates", action: #selector(AppDelegate.update(_:)), keyEquivalent: "u")
         menu.addItemWithTitle("Show log", action: #selector(AppDelegate.showLogfile(_:)), keyEquivalent: "")
+        menu.addItemWithTitle("Help", action: #selector(AppDelegate.openHelp(_:)), keyEquivalent: "")
         menu.addItemWithTitle("About", action: #selector(AppDelegate.showAbout(_:)), keyEquivalent: "")
         menu.addItem(NSMenuItem.separatorItem())
         menu.addItemWithTitle("Exit", action: #selector(AppDelegate.terminate(_:)), keyEquivalent: "q")
@@ -322,6 +323,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     func showAbout(sender: AnyObject? = nil) {
         NSApplication.sharedApplication().activateIgnoringOtherApps(true)
         NSApplication.sharedApplication().orderFrontStandardAboutPanel(sender)
+    }
+    
+    func openHelp(sender: AnyObject? = nil) {
+        NSWorkspace.sharedWorkspace().openURL(NSURL(string: "https://github.com/zhuhaow/SpechtLite")!)
     }
     
     func alertError(errorDescription: String) {
