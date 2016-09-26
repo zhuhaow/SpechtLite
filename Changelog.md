@@ -1,3 +1,8 @@
+## 0.4.7
+
+### Added
+- Add "Help" in menu.
+
 ## 0.4.6
 
 ### Fixed
