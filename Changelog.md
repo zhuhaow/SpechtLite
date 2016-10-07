@@ -1,4 +1,4 @@
-## Unreleased
+## 0.4.8
 
 ### Fixed 
 - Parse error when HTTP header contains non-ascii characters.
