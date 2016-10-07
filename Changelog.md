@@ -1,3 +1,8 @@
+## Unreleased
+
+### Fixed 
+- Parse error when HTTP header contains non-ascii characters.
+
 ## 0.4.7
 
 ### Added
