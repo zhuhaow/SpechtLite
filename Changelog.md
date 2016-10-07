@@ -1,3 +1,8 @@
+## 0.4.9
+
+### Fixed
+- Correctly handle empty line in list files.
+
 ## 0.4.8
 
 ### Fixed 
