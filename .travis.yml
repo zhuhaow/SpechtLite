@@ -1,13 +1,12 @@
 language: objective-c
-osx_image: xcode7.3
+osx_image: xcode8
 cache:
   directories:
   - Carthage
 install:
 - bin/bootstrap-if-needed
 script:
-- xctool -project SpechtLite.xcodeproj -scheme "SpechtLite" -sdk macosx10.11 -arch
-  x86_64 build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+- xcodebuild -project SpechtLite.xcodeproj -scheme "SpechtLite" build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_f333a4d93d89_key -iv $encrypted_f333a4d93d89_iv -in secret.tar.enc -out cert/secret.tar -d
 - tar xvf cert/secret.tar
@@ -18,7 +17,7 @@ before_deploy:
   -P ""
 # unshallow repository
 - "[ -f $(git rev-parse --git-dir)/shallow ] && git fetch --unshallow"
-- gem install gym --no-ri --no-rdoc
+- gem install gym github-markup redcarpet --no-ri --no-rdoc
 - gym
 - ditto -c -k --sequesterRsrc --keepParent SpechtLite.app SpechtLite.zip
 deploy:

@@ -1,5 +1,5 @@
 #Specht Lite
-[![Join the chat at https://gitter.im/zhuhaow/NEKit](https://badges.gitter.im/zhuhaow/NEKit.svg)](https://gitter.im/zhuhaow/NEKit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/zhuhaow/SpechtLite.svg?branch=master)](https://travis-ci.org/zhuhaow/SpechtLite) [![GitHub release](https://img.shields.io/github/release/zhuhaow/SpechtLite.svg)](https://github.com/zhuhaow/SpechtLite/releases) [![GitHub license](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
+[![Join the chat at https://gitter.im/zhuhaow/NEKit](https://badges.gitter.im/zhuhaow/NEKit.svg)](https://gitter.im/zhuhaow/NEKit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Join the chat at https://telegram.me/NEKitGroup](https://img.shields.io/badge/chat-on%20Telegram-blue.svg)](https://telegram.me/NEKitGroup) [![Build Status](https://travis-ci.org/zhuhaow/SpechtLite.svg?branch=master)](https://travis-ci.org/zhuhaow/SpechtLite) [![GitHub release](https://img.shields.io/github/release/zhuhaow/SpechtLite.svg)](https://github.com/zhuhaow/SpechtLite/releases) [![GitHub license](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
 ### A rule-based proxy app for macOS.
 
 ![Splash image](imgs/splash.png)
@@ -16,7 +16,7 @@ Download here. [![GitHub release](https://img.shields.io/github/release/zhuhaow/
 SpechtLite can:
 
 * Run HTTP/SOCKS5 proxy server locally to accept requests and then
-* Forward them to different remote HTTP proxy/HTTP over SSL proxy/Shadowsocks proxy or even select them automatically by
+* Forward them to different remote HTTP/HTTP over SSL/SOCKS5/Shadowsocks proxy or even select them automatically by
 * The geographical location, regular expressions rule or/and the speed of the connection.
 
 The core of SpechtLite consists just a few lines of code invoking [NEKit](https://github.com/zhuhaow/NEKit). The app is provided as a demo of how NEKit works and let people test it though I thinks this app works well enough for real usage.
@@ -25,10 +25,16 @@ Note there is no fancy GUI configuration panel. But no worry, you simply need so
 
 If you do need a fancy GUI, consider some commercial alternatives such as the Mac version of [Surge](http://surge.run).
 
+**[Wingy](https://itunes.apple.com/cn/app/wingy-mian-fei-banvpn-ke-hu/id1148026741?mt=8) is a free app built with NEKit available on App Store for your iDevice.** Note Wingy is not created by or affiliated with me.
+
 ["Lite"? Is there a "Full" version?](#full)
 
 
 ## Configuration File
+
+[中文说明](https://github.com/zhuhaow/SpechtLite/wiki/如何配置Specht-Lite)
+
+There is a template for Chinese users [here](https://github.com/HoonHwang/SpechtLiteConf), which is not maintained by me.
 
 In case you do not know YAML, [read first](http://docs.ansible.com/ansible/YAMLSyntax.html).
 
@@ -60,14 +66,18 @@ adapter:
     password: proxy_password
   - id: adapter3
     type: ss
-    host: http.proxy.connect.via.https
+    host: ss.server
     port: 3128
     # Currently support: AES-128-CFB, AES-192-CFB, AES-256-CFB, chacha20, salsa20, rc4-md5
     # Shadowsocks encryption methods are not fully tested, please report if there is anything not working.
     method: AES-128-CFB
     password: ss_password
+  - id: adapter4
+    type: socks5
+    host: socks5.server
+    port 3128
   # Speed adapter automatically connects to all specified adapters (with given delay) 
-  # and uses the fastest one that becomes ready.
+  # and uses the one that becomes ready first.
   - id: speed
     type: SPEED
     adapters:
@@ -80,9 +90,18 @@ adapter:
         delay: 300
       - id: direct
         delay: 0
+  # Disconnect after given delay without connecting to remote.
+  - id: reject
+    type: reject
+    # It's very important to set a delay since some apps may try to reconnect repeatedly.
+    delay: 300
 # Here defines how things should work.
 # Rule will be matched one by one.
 rule:
+  # Forward requests based on whether the host domain matches the given regular expressions.
+  - type: list
+    file: ~/.SpechtLite/adlist
+    adapter: reject
   # Forward requests based on geographical location.
   - type: country
     # ISO country code
@@ -95,10 +114,6 @@ rule:
     # When the location is unknown. Usually this means this is resolved an Intranet IP.
     country: --
     match: true
-    adapter: direct
-  # Forward requests based on whether the host domain matches the given regular expressions.
-  - type: list
-    file: ~/.SpechtLite/directlist
     adapter: direct
   # Forward requests based on the IP address of the host.
   - type: iplist
@@ -121,17 +136,17 @@ zhihu\.com
 
 Each regex is initlized with `NSRegularExpression(pattern: pattern, options: .CaseInsensitive)` then matched with `firstMatchInString(host, options: [], range: NSRange(location: 0, length: host.utf16.count))`, so you can give anything that is supported by `NSRegularExpression`.
 
-The `file` in `iplist` rule is a file containing a set of IP ranges, each one is either represented as the standard CIDR form `127.0.0.1/8` or the custom range form `127.0.0.1+16777216`.
+The `file` in `iplist` rule is a file containing a set of IP ranges, each one is either represented as the standard CIDR form `127.0.0.0/8` or the custom range form `127.0.0.0+16777216`.
 
 ## Up and Running
 Click `Open config folder` and save you configuration into some `xxxx.yaml` file, then `Reload config`. 
 
-Finally, start proxy by click the name, and setting system HTTP/HTTPS proxy to `127.0.0.1:port`, SOCKS5 proxy (this will proxy things such as Mail.app) to `127.0.0.1:port+1` in System Preferences. 
+Finally, start proxy by click the name, and check `Set as system proxy`. Or you can set it yourself by setting system HTTP/HTTPS proxy to `127.0.0.1:port`, SOCKS5 proxy (this will proxy things such as Mail.app) to `127.0.0.1:port+1` in System Preferences. 
 
 Yatta!
 
 ## But I still need help ...
-If you have any questions, please ask at [![Join the chat at https://gitter.im/zhuhaow/NEKit](https://badges.gitter.im/zhuhaow/NEKit.svg)](https://gitter.im/zhuhaow/NEKit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge). And yes, you can ask in Chinese.
+If you have any questions, please ask at [![Join the chat at https://gitter.im/zhuhaow/NEKit](https://badges.gitter.im/zhuhaow/NEKit.svg)](https://gitter.im/zhuhaow/NEKit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) or [![Join the chat at https://telegram.me/NEKitGroup](https://img.shields.io/badge/chat-on%20Telegram-blue.svg)](https://telegram.me/NEKitGroup). And yes, you can ask in Chinese.
 
 Do not open an issue unless it is one.
 

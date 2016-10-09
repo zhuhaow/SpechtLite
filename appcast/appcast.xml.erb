@@ -12,7 +12,7 @@
 <title>SpechtLite <%= version %></title>
 <pubDate><%= DateTime.now() %></pubDate>
 <description><![CDATA[
-<%= `git cat-file -p $(git rev-parse #{version}) | tail -n +6` %>
+<%= `ruby bin/compile_changelog.rb` %>
 ]]>
 </description>
 <enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/<%= version %>/SpechtLite.zip"
