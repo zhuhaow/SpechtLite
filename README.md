@@ -157,7 +157,7 @@ It's best if you can leave an issue relating to NEKit at [NEKit issues](https://
 
 Here it is. [Specht](https://github.com/zhuhaow/Specht). It is still free and open source. The difference is that Specht takes full advantage of Network Extension.
 
-**td;lr**
+**tl;dr**
 
 As you can infer from the name of NEKit, it is designed for developing app based on [Network Extension](https://developer.apple.com/library/ios/documentation/NetworkExtension/Reference/Network_Extension_Framework_Reference/). 
 
