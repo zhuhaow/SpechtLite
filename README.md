@@ -23,7 +23,7 @@ The core of SpechtLite consists just a few lines of code invoking [NEKit](https:
 
 Note there is no fancy GUI configuration panel. But no worry, you simply need some YAML files to get everything running. 
 
-If you do need a fancy GUI, consider some commercial alternatives such as the Mac version of [Surge](http://surge.run).
+If you do need a fancy GUI, consider some commercial alternatives such as the Mac version of [Surge](http://nssurge.com).
 
 **[Wingy](https://itunes.apple.com/cn/app/wingy-mian-fei-banvpn-ke-hu/id1148026741?mt=8) is a free app built with NEKit available on App Store for your iDevice.** Note Wingy is not created by or affiliated with me.
 
