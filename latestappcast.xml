@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel>
 <title>SpechtLite</title>
-
-<link>https://zhuhaow.github.io/SpechtLite/devappcast.xml</link>
-<description>The dev channel of SpechtLite.</description>
+d
+<link>https://zhuhaow.github.io/SpechtLite/stableappcast.xml</link>
+<description>The stable channel of SpechtLite.</description>
 
 <language>en</language>
 <item>
-<title>SpechtLite 0.6.0.beta1</title>
-<pubDate>2016-11-21T15:27:45+00:00</pubDate>
+<title>SpechtLite 0.5.1</title>
+<pubDate>2016-11-21T15:39:12+00:00</pubDate>
 <description><![CDATA[
 <h2>0.5.1</h2>
 
@@ -117,11 +117,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.0.beta1/SpechtLite.zip"
-sparkle:version="150"
-sparkle:shortVersionString="0.6.0.beta1"
-sparkle:dsaSignature="MC0CFQC/FQ68PNEOk4yJOKt5bDZyhCe6PAIUbQOrFrPFhatTCVzKTnUJW2YP0VI="
-length="7488913"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.5.1/SpechtLite.zip"
+sparkle:version="149"
+sparkle:shortVersionString="0.5.1"
+sparkle:dsaSignature="MC0CFQDTK5r570zCdU1MWDSLWVonzceMkwIUSMJ69WgmvvSSUpqHYWqDk6FFEfg="
+length="7488904"
 type="application/octet-stream" />
 </item>
 </channel>
