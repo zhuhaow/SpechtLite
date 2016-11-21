@@ -9,7 +9,7 @@ d
 <language>en</language>
 <item>
 <title>SpechtLite 0.5.1</title>
-<pubDate>2016-11-21T15:39:10+00:00</pubDate>
+<pubDate>2016-11-21T16:29:33+00:00</pubDate>
 <description><![CDATA[
 <h2>0.5.1</h2>
 
@@ -120,8 +120,8 @@ d
 <enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.5.1/SpechtLite.zip"
 sparkle:version="149"
 sparkle:shortVersionString="0.5.1"
-sparkle:dsaSignature="MCwCFEYUgR1CC1LWuc9au0TXZkjPsqKfAhQJ7rlAEWiLQ/LTFkBTnPQ1fK3F6w=="
-length="7488904"
+sparkle:dsaSignature="MC0CFDcVedG/jQvLt04ASPhbLARV2J4cAhUAp/2CYzUMUb4jeKWaUmxBsrc0y2c="
+length="7488905"
 type="application/octet-stream" />
 </item>
 </channel>
