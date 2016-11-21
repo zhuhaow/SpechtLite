@@ -9,7 +9,7 @@
 <language>en</language>
 <item>
 <title>SpechtLite 0.6.0.beta1</title>
-<pubDate>2016-11-21T15:27:44+00:00</pubDate>
+<pubDate>2016-11-21T15:27:45+00:00</pubDate>
 <description><![CDATA[
 <h2>0.5.1</h2>
 
@@ -120,7 +120,7 @@
 <enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.0.beta1/SpechtLite.zip"
 sparkle:version="150"
 sparkle:shortVersionString="0.6.0.beta1"
-sparkle:dsaSignature="MC0CFFsm+LgkGXWpKIOUp/xtkqP3GtVrAhUAnom/TE3vvDRuI560DhO8/HNSqFM="
+sparkle:dsaSignature="MCwCFCTzbLsxRZUss/NRtQnTRj+EZuOSAhRZ+5E0RhqvXnz0ZpgCfbY9BzFJNA=="
 length="7488913"
 type="application/octet-stream" />
 </item>
