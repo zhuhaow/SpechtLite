@@ -1,4 +1,6 @@
 #!/bin/sh
 
+set -e
+
 carthage bootstrap --no-use-binaries --platform mac
 cp Cartfile.resolved Carthage

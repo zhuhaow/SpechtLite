@@ -1,5 +1,7 @@
 #!/bin/bash
 set -e
+set -o pipefail
+
 for file in "dsaparam.pem" "dsa_priv.pem" "dsa_pub.pem"; do
   if [ -e "$file" ]; then
     echo "There's already a $file here! Move it aside or be more careful!"

@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+set -e
+set -o pipefail
+
 echo "Generating appcast file..."
 
 ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\"), nil, '-').result" > appcast/latestappcast.xml
