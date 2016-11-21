@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+<title>SpechtLite</title>
+<link>https://zhuhaow.github.io/SpechtLite/latestappcast.xml</link>
+<description>The infomation of the lastest SpechtLite.</description>
+<language>en</language>
+<item>
+<title>SpechtLite 0.5.0</title>
+<pubDate>2016-11-21T12:22:05+00:00</pubDate>
+<description><![CDATA[
+<h2>0.5.0</h2>
+
+<h3>Changed</h3>
+
+<ul>
+<li>Update NEKit to 0.7.3</li>
+<li>Bug fix and refinement</li>
+</ul>
+
+<h2>0.4.9</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Correctly handle empty line in list files.</li>
+</ul>
+
+<h2>0.4.8</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Parse error when HTTP header contains non-ascii characters.</li>
+</ul>
+
+<h2>0.4.7</h2>
+
+<h3>Added</h3>
+
+<ul>
+<li>Add &quot;Help&quot; in menu.</li>
+</ul>
+
+<h2>0.4.6</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Now the privilege permission dialog will only appear for the first time you try to set system proxy. You may have to authorize SpechteLite again.</li>
+</ul>
+
+<h2>0.4.5</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Fixed a bug that remove configuration is not removed in the menu after reloading.</li>
+</ul>
+
+<h2>0.4.4</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Now the config names will be sorted correctly.</li>
+</ul>
+
+<h2>0.4.3</h2>
+
+<h3>Changed</h3>
+
+<ul>
+<li>Now the config names will be sorted.</li>
+</ul>
+
+<h2>0.4.2</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Fixed a bug when the http request has no header field the parsing of the header fails.</li>
+</ul>
+
+<h2>0.4.1</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>SOCKS5 proxy can handle requests with IP address correctly now.</li>
+</ul>
+
+<h2>0.4.0</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li><code>IPRange</code> now can handle <code>/32</code> IP correctly.</li>
+<li>SOCKS5 proxy can handle client supports more than one auth method.</li>
+</ul>
+
+<h3>Added</h3>
+
+<ul>
+<li>SOCSK5 adapter support!</li>
+</ul>
+
+]]>
+</description>
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.5.0/SpechtLite.zip"
+sparkle:version="144"
+sparkle:shortVersionString="0.5.0"
+sparkle:dsaSignature="MC0CFGv1TDNRzZZU05AliXCJwZ97M/71AhUAitfq+TNvQP28jmQhBSGKatraQ+k="
+length="7350290"
+type="application/octet-stream" />
+</item>
+</channel>
+</rss>
