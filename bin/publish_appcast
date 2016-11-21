@@ -10,13 +10,13 @@ echo "Not able to build on non-tag commit"
 else
 echo "Generating appcast file..."
 
-if [[ "$TRAVIS_TAG" =~ "^([0-9]+\.?)+(\.|-)[a-z]+[0-9]*$" ]]
+if [[ "$TRAVIS_TAG" =~ ^([0-9]+\.?)+(\.|-)[a-z]+[0-9]*$ ]]
 then
-ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\"), nil, '-').result" > appcast/devappcast.xml
+ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/devappcast.xml.erb\"), nil, '-').result" > appcast/devappcast.xml
 else
-ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\"), nil, '-').result" > appcast/stableappcast.xml
-ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\"), nil, '-').result" > appcast/latestappcast.xml
-ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\"), nil, '-').result" > appcast/devappcast.xml
+ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/stableappcast.xml.erb\"), nil, '-').result" > appcast/stableappcast.xml
+ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/stableappcast.xml.erb\"), nil, '-').result" > appcast/latestappcast.xml
+ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/devappcast.xml.erb\"), nil, '-').result" > appcast/devappcast.xml
 fi
 
 echo "Validate signature..."

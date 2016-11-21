@@ -116,7 +116,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		36A719641D5C2F0000DC35F5 /* appcast.xml.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = appcast.xml.erb; sourceTree = "<group>"; };
+		36A719641D5C2F0000DC35F5 /* stableappcast.xml.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stableappcast.xml.erb; sourceTree = "<group>"; };
 		36A719661D5C4A0B00DC35F5 /* generate_keys */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate_keys; sourceTree = "<group>"; };
 		36A719671D5C4A6E00DC35F5 /* sign_update */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = sign_update; sourceTree = "<group>"; };
 		36A719691D5C4AB900DC35F5 /* bootstrap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = bootstrap; sourceTree = "<group>"; };
@@ -154,6 +154,7 @@
 		36B2ACE21DE0979C00BD2C3D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		36B2ACE41DE2EA4A00BD2C3D /* LoggerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerManager.swift; sourceTree = "<group>"; };
 		36B2ACE61DE33A5600BD2C3D /* UpdaterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdaterManager.swift; sourceTree = "<group>"; };
+		36B2ACE81DE34D8F00BD2C3D /* devappcast.xml.erb */ = {isa = PBXFileReference; lastKnownFileType = text; path = devappcast.xml.erb; sourceTree = "<group>"; };
 		36BA0BEF1D599FF40074BEBF /* SpechtLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpechtLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BA0BF21D599FF40074BEBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36BA0BF41D599FF40074BEBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -224,7 +225,8 @@
 		36A719611D5C2ED500DC35F5 /* appcast */ = {
 			isa = PBXGroup;
 			children = (
-				36A719641D5C2F0000DC35F5 /* appcast.xml.erb */,
+				36A719641D5C2F0000DC35F5 /* stableappcast.xml.erb */,
+				36B2ACE81DE34D8F00BD2C3D /* devappcast.xml.erb */,
 			);
 			path = appcast;
 			sourceTree = "<group>";

@@ -1,0 +1,26 @@
+<%- git = `sh /etc/profile; which git`.strip -%>
+<%- version = `#{git} describe --tags --always --abbrev=0`.strip -%>
+<%- build_number = `#{git} rev-list HEAD --count`.strip -%>
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+<title>SpechtLite</title>
+<link>https://zhuhaow.github.io/SpechtLite/stableappcast.xml</link>
+<description>The stable channel of SpechtLite.</description>
+<language>en</language>
+<item>
+<title>SpechtLite <%= version %></title>
+<pubDate><%= DateTime.now() %></pubDate>
+<description><![CDATA[
+<%= `ruby bin/compile_changelog.rb` %>
+]]>
+</description>
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/<%= version %>/SpechtLite.zip"
+sparkle:version="<%= build_number %>"
+sparkle:shortVersionString="<%= version %>"
+sparkle:dsaSignature="<%= `./bin/sign_update SpechtLite.zip cert/dsa_priv.pem`.strip %>"
+length="<%= `stat -f%z SpechtLite.zip`.strip %>"
+type="application/octet-stream" />
+</item>
+</channel>
+</rss>
