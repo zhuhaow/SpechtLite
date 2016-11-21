@@ -3,9 +3,19 @@
 set -e
 set -o pipefail
 
+if [ -z "$TRAVIS_TAG" ]
+then
+echo "Not able to build on non-tag commit"
+
+else
 echo "Generating appcast file..."
 
-ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\"), nil, '-').result" > appcast/latestappcast.xml
+if [[ "$TRAVIS_TAG" =~ "^([0-9]+\.?)+(\.|-)[a-z]+[0-9]*$" ]]
+then
+ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\"), nil, '-').result" > appcast/devappcast.xml
+else
+ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\"), nil, '-').result" > appcast/stableappcast.xml
+fi
 
 echo "Validate signature..."
 echo "The MD5 of archive:"
@@ -31,3 +41,4 @@ git -c user.name="Travis CI" commit -m "Publish appcast"
 git push --force --quiet https://$GITHUB_API_KEY@github.com/zhuhaow/SpechtLite.git gh-pages > /dev/null 2>&1
 
 echo "Done ^_^"
+fi

@@ -35,7 +35,7 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>SUFeedURL</key>
-	<string>https://zhuhaow.github.io/SpechtLite/latestappcast.xml</string>
+	<string>https://zhuhaow.github.io/SpechtLite/stableappcast.xml</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
 </dict>
