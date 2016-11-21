@@ -28,18 +28,9 @@ cat cert/dsa_pub.pem
 
 openssl dgst -sha1 -binary < SpechtLite.zip | openssl dgst -dss1 -verify cert/dsa_pub.pem -signature signature
 
-# remove all redundant files
-# find . -not -name "appcast" -not -name ".git" -maxdepth 1 -print0 | xargs -0 rm -rf --
-# copy appcast files to tmp folder
-mkdir $HOME/tmp
-cp -r appcast/. $HOME/tmp/
-rm -rf appcast/
-
-echo "Publish appcast file..."
-# push update
-git fetch origin gh-pages
-git checkout FETCH_HEAD
-cp -rf $HOME/tmp/. .
+git clone --depth=1 --branch=gh-pages https://github.com/zhuhaow/SpechtLite.git SpechtLiteSite
+cp -rf appcast/. SpechtLiteSite/
+cd SpechtLiteSite
 git add .
 git -c user.name="Travis CI" commit -m "Publish appcast"
 git push --force --quiet https://$GITHUB_API_KEY@github.com/zhuhaow/SpechtLite.git gh-pages > /dev/null 2>&1
