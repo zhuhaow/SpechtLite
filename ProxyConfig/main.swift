@@ -3,10 +3,10 @@ import SystemConfiguration
 
 let version = "0.2.0"
 
-func main(args: [String]) {
+func main(_ args: [String]) {
     var port: Int = 0
     var flag: Bool = false
-
+    
     if args.count > 2 {
         guard let _port = Int(args[1]) else {
             print("ERROR: port is invalid.")
@@ -27,34 +27,34 @@ func main(args: [String]) {
         print("Usage: ProxyConfig <port> <enable/disable>")
         exit(EXIT_FAILURE)
     }
-
-    var authRef: AuthorizationRef = nil
-    let authFlags: AuthorizationFlags = [.Defaults, .ExtendRights, .InteractionAllowed, .PreAuthorize]
-
+    
+    var authRef: AuthorizationRef? = nil
+    let authFlags: AuthorizationFlags = [.extendRights, .interactionAllowed, .preAuthorize]
+    
     let authErr = AuthorizationCreate(nil, nil, authFlags, &authRef)
-
+    
     guard authErr == noErr else {
         print("Error: Failed to create administration authorization due to error \(authErr).")
         exit(EXIT_FAILURE)
     }
-
+    
     guard authRef != nil else {
         print("Error: No authorization has been granted to modify network configuration.")
         exit(EXIT_FAILURE)
     }
-
-    if let prefRef = SCPreferencesCreateWithAuthorization(nil, "SpechtLite", nil, authRef),
+    
+    if let prefRef = SCPreferencesCreateWithAuthorization(nil, "SpechtLite" as CFString, nil, authRef),
         let sets = SCPreferencesGetValue(prefRef, kSCPrefNetworkServices) {
-
+        
         for key in sets.allKeys {
-            let dict = sets.objectForKey(key)
-            let hardware = (dict?["Interface"])?["Hardware"] as? String
+            let dict = sets.object(forKey: key) as? NSDictionary
+            let hardware = ((dict?["Interface"]) as? NSDictionary)?["Hardware"] as? String
             if hardware == "AirPort" || hardware == "Ethernet" {
                 let ip = flag ? "127.0.0.1" : ""
-                let port0 = flag ? port ?? 9090 : 0
-                let port1 = flag ? (port ?? 9090) + 1 : 0
+                let port0 = flag ? port : 0
+                let port1 = flag ? port + 1 : 0
                 let enableInt = flag ? 1 : 0
-                let proxySettings: CFDictionary = [
+                let settings = [
                     kCFNetworkProxiesHTTPProxy as String : ip,
                     kCFNetworkProxiesHTTPPort as String : port0,
                     kCFNetworkProxiesHTTPEnable as String : enableInt,
@@ -65,27 +65,28 @@ func main(args: [String]) {
                     kCFNetworkProxiesSOCKSPort as String : port1,
                     kCFNetworkProxiesSOCKSEnable as String : enableInt,
                     kCFNetworkProxiesExceptionsList as String : [
-                        "192.168.0.0/16",
+                        "192.168.0.0/16":
                         "10.0.0.0/8",
-                        "172.16.0.0/12",
+                        "172.16.0.0/12":
                         "127.0.0.1",
-                        "localhost",
+                        "localhost":
                         "*.local"
                     ]
-                ]
-
+                ] as [String : Any]
+                let proxySettings = settings as CFDictionary
+                
                 let path = "/\(kSCPrefNetworkServices)/\(key)/\(kSCEntNetProxies)"
-                SCPreferencesPathSetValue(prefRef, path, proxySettings)
+                SCPreferencesPathSetValue(prefRef, path as CFString, proxySettings)
             }
         }
-
+        
         SCPreferencesCommitChanges(prefRef)
         SCPreferencesApplyChanges(prefRef)
     }
-
-    AuthorizationFree(authRef, .Defaults)
-
+    
+    AuthorizationFree(authRef!, AuthorizationFlags())
+    
     exit(EXIT_SUCCESS)
 }
 
-main(Process.arguments)
+main(CommandLine.arguments)

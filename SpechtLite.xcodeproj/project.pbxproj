@@ -45,6 +45,8 @@
 		36B2ACE31DE0979C00BD2C3D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2ACE21DE0979C00BD2C3D /* Utils.swift */; };
 		36B2ACE51DE2EA4A00BD2C3D /* LoggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2ACE41DE2EA4A00BD2C3D /* LoggerManager.swift */; };
 		36B2ACE71DE33A5600BD2C3D /* UpdaterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2ACE61DE33A5600BD2C3D /* UpdaterManager.swift */; };
+		36B2ACEA1DE355C600BD2C3D /* Resolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B2ACE91DE355C600BD2C3D /* Resolver.framework */; };
+		36B2ACEB1DE355C600BD2C3D /* Resolver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36B2ACE91DE355C600BD2C3D /* Resolver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36BA0BF31D599FF40074BEBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BA0BF21D599FF40074BEBF /* AppDelegate.swift */; };
 		36BA0BF51D599FF40074BEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF41D599FF40074BEBF /* Assets.xcassets */; };
 		36BA0BF81D599FF40074BEBF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF61D599FF40074BEBF /* MainMenu.xib */; };
@@ -97,6 +99,7 @@
 				36A719891D5C5B9200DC35F5 /* MMDB.framework in Embed Frameworks */,
 				36A7198D1D5C5B9200DC35F5 /* Sodium.framework in Embed Frameworks */,
 				36A719931D5C5B9200DC35F5 /* Yaml.framework in Embed Frameworks */,
+				36B2ACEB1DE355C600BD2C3D /* Resolver.framework in Embed Frameworks */,
 				36A719911D5C5B9200DC35F5 /* tun2socks.framework in Embed Frameworks */,
 				36A7198B1D5C5B9200DC35F5 /* NEKit.framework in Embed Frameworks */,
 				36A719831D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework in Embed Frameworks */,
@@ -155,6 +158,7 @@
 		36B2ACE41DE2EA4A00BD2C3D /* LoggerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerManager.swift; sourceTree = "<group>"; };
 		36B2ACE61DE33A5600BD2C3D /* UpdaterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdaterManager.swift; sourceTree = "<group>"; };
 		36B2ACE81DE34D8F00BD2C3D /* devappcast.xml.erb */ = {isa = PBXFileReference; lastKnownFileType = text; path = devappcast.xml.erb; sourceTree = "<group>"; };
+		36B2ACE91DE355C600BD2C3D /* Resolver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Resolver.framework; path = Build/Mac/Resolver.framework; sourceTree = "<group>"; };
 		36BA0BEF1D599FF40074BEBF /* SpechtLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpechtLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BA0BF21D599FF40074BEBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36BA0BF41D599FF40074BEBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 				36A719881D5C5B9200DC35F5 /* MMDB.framework in Frameworks */,
 				36A7198C1D5C5B9200DC35F5 /* Sodium.framework in Frameworks */,
 				36A719921D5C5B9200DC35F5 /* Yaml.framework in Frameworks */,
+				36B2ACEA1DE355C600BD2C3D /* Resolver.framework in Frameworks */,
 				36A719901D5C5B9200DC35F5 /* tun2socks.framework in Frameworks */,
 				36A7198A1D5C5B9200DC35F5 /* NEKit.framework in Frameworks */,
 				36A719821D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework in Frameworks */,
@@ -207,6 +212,7 @@
 		36A7195D1D5B6EDB00DC35F5 /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
+				36B2ACE91DE355C600BD2C3D /* Resolver.framework */,
 				36A719731D5C5B9200DC35F5 /* CocoaAsyncSocket.framework */,
 				36A719741D5C5B9200DC35F5 /* CocoaLumberjack.framework */,
 				36A719751D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework */,
@@ -416,12 +422,12 @@
 					36BA0BEE1D599FF40074BEBF = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = H5443445N6;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					C8A7E1451D66FCD300E713F5 = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -771,7 +777,7 @@
 				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.osx.SpechtLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -792,7 +798,7 @@
 				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.osx.SpechtLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -802,7 +808,7 @@
 				CODE_SIGN_IDENTITY = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -812,7 +818,7 @@
 				CODE_SIGN_IDENTITY = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

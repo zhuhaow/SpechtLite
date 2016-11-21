@@ -14,14 +14,14 @@ class MenuBarController: NSObject, NSMenuDelegate {
         configurationManager.reloadAllConfigurationFiles()
         
         let icon = NSImage(named: "StatusIcon")!
-        icon.template = true
-        barItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
+        icon.isTemplate = true
+        barItem = NSStatusBar.system().statusItem(withLength: -1)
         barItem.image = icon
         barItem.menu = NSMenu()
         barItem.menu!.delegate = self
     }
     
-    func menuNeedsUpdate(menu: NSMenu) {
+    func menuNeedsUpdate(_ menu: NSMenu) {
         menu.removeAllItems()
         
         configurationManager.enumerateInOrder { name, valid in
@@ -29,13 +29,13 @@ class MenuBarController: NSObject, NSMenuDelegate {
             menu.addItem(item)
         }
         
-        menu.addItem(NSMenuItem.separatorItem())
+        menu.addItem(NSMenuItem.separator())
         
-        menu.addItemWithTitle("Stop proxy server", action: #selector(stopProxyServerClicked(_:)), keyEquivalent: "d").target = self
-        menu.addItemWithTitle("Open config folder", action: #selector(openConfigFolderClicked(_:)), keyEquivalent: "c").target = self
-        menu.addItemWithTitle("Reload config", action: #selector(reloadConfigClicked(_:)), keyEquivalent: "r").target = self
+        menu.addItem(withTitle: "Stop proxy server", action: #selector(stopProxyServerClicked(_:)), keyEquivalent: "d").target = self
+        menu.addItem(withTitle: "Open config folder", action: #selector(openConfigFolderClicked(_:)), keyEquivalent: "c").target = self
+        menu.addItem(withTitle: "Reload config", action: #selector(reloadConfigClicked(_:)), keyEquivalent: "r").target = self
         
-        menu.addItem(NSMenuItem.separatorItem())
+        menu.addItem(NSMenuItem.separator())
         
         let proxyItem = NSMenuItem(title: "Set as system proxy", action: #selector(setAsSystemProxyClicked(_:)), keyEquivalent: "")
         proxyItem.target = self
@@ -44,7 +44,7 @@ class MenuBarController: NSObject, NSMenuDelegate {
         }
         menu.addItem(proxyItem)
         
-        menu.addItemWithTitle("Copy shell export command", action: #selector(copyShellExportCommandClicked(_:)), keyEquivalent: "").target = self
+        menu.addItem(withTitle: "Copy shell export command", action: #selector(copyShellExportCommandClicked(_:)), keyEquivalent: "").target = self
         
         let lanItem = NSMenuItem(title: "Allow Clients From Lan", action: #selector(allowClientsFromLanClicked(_:)), keyEquivalent: "")
         lanItem.target = self
@@ -53,9 +53,9 @@ class MenuBarController: NSObject, NSMenuDelegate {
         }
         menu.addItem(lanItem)
         
-        menu.addItemWithTitle("Speed test", action: #selector(speedTestClicked(_:)), keyEquivalent: "").target = self
+        menu.addItem(withTitle: "Speed test", action: #selector(speedTestClicked(_:)), keyEquivalent: "").target = self
         
-        menu.addItem(NSMenuItem.separatorItem())
+        menu.addItem(NSMenuItem.separator())
         
         let autostartItem = NSMenuItem(title: "Autostart at login", action: #selector(autostartAtLoginClicked(_:)), keyEquivalent: "")
         autostartItem.target = self
@@ -71,17 +71,17 @@ class MenuBarController: NSObject, NSMenuDelegate {
         }
         menu.addItem(devItem)
         
-        menu.addItemWithTitle("Check for updates", action: #selector(checkForUpdatesClicked(_:)), keyEquivalent: "u").target = self
-        menu.addItemWithTitle("Show log", action: #selector(showLogFileClicked(_:)), keyEquivalent: "").target = self
-        menu.addItemWithTitle("Help", action: #selector(helpClicked(_:)), keyEquivalent: "").target = self
-        menu.addItemWithTitle("About", action: #selector(aboutClicked(_:)), keyEquivalent: "").target = self
+        menu.addItem(withTitle: "Check for updates", action: #selector(checkForUpdatesClicked(_:)), keyEquivalent: "u").target = self
+        menu.addItem(withTitle: "Show log", action: #selector(showLogFileClicked(_:)), keyEquivalent: "").target = self
+        menu.addItem(withTitle: "Help", action: #selector(helpClicked(_:)), keyEquivalent: "").target = self
+        menu.addItem(withTitle: "About", action: #selector(aboutClicked(_:)), keyEquivalent: "").target = self
         
-        menu.addItem(NSMenuItem.separatorItem())
+        menu.addItem(NSMenuItem.separator())
         
-        menu.addItemWithTitle("Exit", action: #selector(exitClicked(_:)), keyEquivalent: "q").target = self
+        menu.addItem(withTitle: "Exit", action: #selector(exitClicked(_:)), keyEquivalent: "q").target = self
     }
     
-    func buildMenuItemForManager(name: String, valid: Bool) -> NSMenuItem {
+    func buildMenuItemForManager(_ name: String, valid: Bool) -> NSMenuItem {
         let item = NSMenuItem(title: name, action: #selector(configurationClicked(_:)), keyEquivalent: "")
         item.target = self
         
@@ -96,101 +96,101 @@ class MenuBarController: NSObject, NSMenuDelegate {
         return item
     }
     
-    func configurationClicked(sender: NSMenuItem) {
+    func configurationClicked(_ sender: NSMenuItem) {
         configurationManager.toggleConfiguration(sender.title)
     }
     
-    func stopProxyServerClicked(sender: AnyObject) {
+    func stopProxyServerClicked(_ sender: AnyObject) {
         configurationManager.stopProxyServer()
     }
     
-    func openConfigFolderClicked(sender: AnyObject) {
+    func openConfigFolderClicked(_ sender: AnyObject) {
         configurationManager.openConfigFolder()
     }
     
-    func reloadConfigClicked(sender: AnyObject) {
+    func reloadConfigClicked(_ sender: AnyObject) {
         configurationManager.reloadAllConfigurationFiles()
     }
     
-    func setAsSystemProxyClicked(sender: AnyObject) {
+    func setAsSystemProxyClicked(_ sender: AnyObject) {
         Preference.setUpSystemProxy = !Preference.setUpSystemProxy
         setUpSystemProxy()
     }
     
-    func copyShellExportCommandClicked(sender: AnyObject) {
-        let pasteboard = NSPasteboard.generalPasteboard()
+    func copyShellExportCommandClicked(_ sender: AnyObject) {
+        let pasteboard = NSPasteboard.general()
         pasteboard.clearContents()
         pasteboard.setString("export https_proxy=http://127.0.0.1:\(configurationManager.currentProxyPort);export http_proxy=http://127.0.0.1:\(configurationManager.currentProxyPort)", forType: NSStringPboardType)
     }
     
-    func allowClientsFromLanClicked(sender: AnyObject) {
+    func allowClientsFromLanClicked(_ sender: AnyObject) {
         Preference.allowFromLan = !Preference.allowFromLan
         configurationManager.restartCurrentProxyServer()
     }
     
-    func speedTestClicked(sender: AnyObject) {
-        let t1 = NSDate().timeIntervalSince1970
-        let proxySessionConfiguration = NSURLSessionConfiguration.ephemeralSessionConfiguration()
+    func speedTestClicked(_ sender: AnyObject) {
+        let t1 = Date().timeIntervalSince1970
+        let proxySessionConfiguration = URLSessionConfiguration.ephemeral
         proxySessionConfiguration.connectionProxyDictionary = [
-            kCFNetworkProxiesHTTPSEnable: 1,
-            kCFNetworkProxiesHTTPSPort: configurationManager.currentProxyPort,
-            kCFNetworkProxiesHTTPSProxy: "127.0.0.1"
+            kCFNetworkProxiesHTTPSEnable as AnyHashable: 1,
+            kCFNetworkProxiesHTTPSPort as AnyHashable: configurationManager.currentProxyPort,
+            kCFNetworkProxiesHTTPSProxy as AnyHashable: "127.0.0.1"
         ]
-        let urlSession = NSURLSession(configuration: proxySessionConfiguration)
-        let task = urlSession.dataTaskWithURL(NSURL(string: "https://www.google.com/generate_204")!) {
+        let urlSession = URLSession(configuration: proxySessionConfiguration)
+        let task = urlSession.dataTask(with: URL(string: "https://www.google.com/generate_204")!, completionHandler: {
             (data, response, error) in
             let notification = NSUserNotification()
             notification.soundName = NSUserNotificationDefaultSoundName
             notification.title = "Speed Test"
-            if let res = response as? NSHTTPURLResponse where res.statusCode == 204 {
-                let time = Int((NSDate().timeIntervalSince1970 - t1) * 1000)
+            if let res = response as? HTTPURLResponse, res.statusCode == 204 {
+                let time = Int((Date().timeIntervalSince1970 - t1) * 1000)
                 notification.informativeText = "Response time: \(time)ms"
             } else {
                 print("HTTP Request Failed")
-                print(error)
+                print(error!)
                 notification.informativeText = "Speed test failed!"
             }
-            NSUserNotificationCenter.defaultUserNotificationCenter().deliverNotification(notification)
-        }
+            NSUserNotificationCenter.default.deliver(notification)
+        }) 
         task.resume()
     }
     
-    func useDevChannelClicked(sender: AnyObject) {
+    func useDevChannelClicked(_ sender: AnyObject) {
         Preference.useDevChannel = !Preference.useDevChannel
         UpdaterManager.setUpAutoUpdate()
     }
     
-    func autostartAtLoginClicked(sender: AnyObject) {
+    func autostartAtLoginClicked(_ sender: AnyObject) {
         Preference.autostart = !Preference.autostart
         func setUpAutostart() {
             if Preference.autostart {
-                Autostart.enable()
+                _ = Autostart.enable()
             } else {
-                Autostart.disable()
+                _ = Autostart.disable()
             }
         }
     }
     
-    func showLogFileClicked(sender: AnyObject) {
-        if let logfile = (LoggerManager.logger as? DDFileLogger)?.logFileManager?.sortedLogFilePaths()?.first as? String {
-            NSWorkspace.sharedWorkspace().openFile(logfile)
+    func showLogFileClicked(_ sender: AnyObject) {
+        if let logfile = (LoggerManager.logger as? DDFileLogger)?.logFileManager?.sortedLogFilePaths?.first {
+            NSWorkspace.shared().openFile(logfile)
         }
     }
     
-    func checkForUpdatesClicked(sender: AnyObject) {
-        SUUpdater.sharedUpdater().checkForUpdates(sender)
+    func checkForUpdatesClicked(_ sender: AnyObject) {
+        SUUpdater.shared().checkForUpdates(sender)
     }
     
-    func aboutClicked(sender: AnyObject) {
-        NSApplication.sharedApplication().activateIgnoringOtherApps(true)
-        NSApplication.sharedApplication().orderFrontStandardAboutPanel(sender)
+    func aboutClicked(_ sender: AnyObject) {
+        NSApplication.shared().activate(ignoringOtherApps: true)
+        NSApplication.shared().orderFrontStandardAboutPanel(sender)
     }
     
-    func helpClicked(sender: AnyObject) {
-        NSWorkspace.sharedWorkspace().openURL(NSURL(string: "https://github.com/zhuhaow/SpechtLite")!)
+    func helpClicked(_ sender: AnyObject) {
+        NSWorkspace.shared().open(URL(string: "https://github.com/zhuhaow/SpechtLite")!)
     }
     
-    func exitClicked(sender: AnyObject) {
+    func exitClicked(_ sender: AnyObject) {
         NSApp.terminate(sender)
     }
     
