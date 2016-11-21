@@ -1,3 +1,8 @@
+## 0.6.0.beta1
+
+### Changed
+- Convert to swift 3.
+
 ## 0.5.1
 
 ### Added
