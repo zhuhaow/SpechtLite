@@ -5,7 +5,7 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel>
 <title>SpechtLite</title>
-<% if /^([0-9]+\.?)+(\.|-)[a-z]+[0-9]*$/ =~ version %>
+<% if /^([0-9]+\.?)+(\.|-)[a-z]+[0-9]*$/.match version %>
 <link>https://zhuhaow.github.io/SpechtLite/devappcast.xml</link>
 <description>The dev channel of SpechtLite.</description>
 <% else %>d
