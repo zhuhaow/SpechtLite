@@ -16,6 +16,7 @@ ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\"), nil, 
 else
 ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\"), nil, '-').result" > appcast/stableappcast.xml
 ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\"), nil, '-').result" > appcast/latestappcast.xml
+ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\"), nil, '-').result" > appcast/devappcast.xml
 fi
 
 echo "Validate signature..."
