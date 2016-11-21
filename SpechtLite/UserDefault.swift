@@ -1,23 +1,23 @@
 import Foundation
 
 class UserDefault {
-    static func setString(value: String?, forKey: String) {
-        NSUserDefaults.standardUserDefaults().setObject(value, forKey: forKey)
+    static func setString(_ value: String?, forKey: String) {
+        UserDefaults.standard.set(value, forKey: forKey)
     }
 
-    static func stringForKey(key: String) -> String? {
-        return NSUserDefaults.standardUserDefaults().objectForKey(key) as? String
+    static func stringForKey(_ key: String) -> String? {
+        return UserDefaults.standard.object(forKey: key) as? String
     }
 
-    static func setBool(value: Bool, forKey: String) {
-        NSUserDefaults.standardUserDefaults().setBool(value, forKey: forKey)
+    static func setBool(_ value: Bool, forKey: String) {
+        UserDefaults.standard.set(value, forKey: forKey)
     }
 
-    static func boolForKey(key: String) -> Bool {
-        return NSUserDefaults.standardUserDefaults().boolForKey(key)
+    static func boolForKey(_ key: String) -> Bool {
+        return UserDefaults.standard.bool(forKey: key)
     }
 
     static func synchronize() {
-        NSUserDefaults.standardUserDefaults().synchronize()
+        UserDefaults.standard.synchronize()
     }
 }

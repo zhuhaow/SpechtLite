@@ -11,40 +11,40 @@ class ConfigurationManager {
     var currentProxies: [ProxyServer] = []
     
     var configFolder: String {
-        let path = (NSHomeDirectory() as NSString).stringByAppendingPathComponent(Opt.configurationFolder)
+        let path = (NSHomeDirectory() as NSString).appendingPathComponent(Opt.configurationFolder)
         var isDir: ObjCBool = false
-        let exist = NSFileManager.defaultManager().fileExistsAtPath(path, isDirectory: &isDir)
-        if exist && !isDir {
-            try! NSFileManager.defaultManager().removeItemAtPath(path)
-            try! NSFileManager.defaultManager().createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil)
+        let exist = FileManager.default.fileExists(atPath: path, isDirectory: &isDir)
+        if exist && !isDir.boolValue {
+            try! FileManager.default.removeItem(atPath: path)
+            try! FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
         }
         if !exist {
-            try! NSFileManager.defaultManager().createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil)
+            try! FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
         }
         return path
     }
     
-    private init() {}
+    fileprivate init() {}
     
     func openConfigFolder() {
-        NSWorkspace.sharedWorkspace().openFile(configFolder)
+        NSWorkspace.shared().openFile(configFolder)
     }
     
-    func reloadAllConfigurationFiles(runDefault: Bool = true) {
+    func reloadAllConfigurationFiles(_ runDefault: Bool = true) {
         configurations.removeAll()
         
-        let paths = try! NSFileManager.defaultManager().contentsOfDirectoryAtPath(configFolder).filter {
+        let paths = try! FileManager.default.contentsOfDirectory(atPath: configFolder).filter {
             ($0 as NSString).pathExtension == "yaml"
         }
         
         for path in paths {
-            let name = ((path as NSString).lastPathComponent as NSString).stringByDeletingPathExtension
+            let name = ((path as NSString).lastPathComponent as NSString).deletingPathExtension
             
-            let fullpath = (configFolder as NSString).stringByAppendingPathComponent(path)
+            let fullpath = (configFolder as NSString).appendingPathComponent(path)
             
             var content: String
             do {
-                content = try String(contentsOfFile: fullpath, encoding: NSUTF8StringEncoding)
+                content = try String(contentsOfFile: fullpath, encoding: String.Encoding.utf8)
             } catch let error {
                 Utils.alertError("Error when loading config file: \(fullpath). \(error)")
                 configurations[name] = ("", false)
@@ -65,11 +65,11 @@ class ConfigurationManager {
         
         stopProxyServer()
         if runDefault {
-            runDefaultConfiguration()
+            _ = runDefaultConfiguration()
         }
     }
     
-    func toggleConfiguration(name: String) {
+    func toggleConfiguration(_ name: String) {
         if name == currentConfiguration {
             stopProxyServer()
             return
@@ -77,10 +77,10 @@ class ConfigurationManager {
         
         stopProxyServer()
         
-        runConfiguration(name)
+        _ = runConfiguration(name)
     }
     
-    func runConfiguration(name: String) -> Bool {
+    func runConfiguration(_ name: String) -> Bool {
         guard let config = configurations[name] else {
             return false
         }
@@ -96,8 +96,8 @@ class ConfigurationManager {
         currentProxyPort = configuration.proxyPort ?? 9090
         
         let address = Preference.allowFromLan ? nil : IPv4Address(fromString: "127.0.0.1")
-        let httpServer = GCDHTTPProxyServer(address: address, port: Port(port: UInt16(currentProxyPort)))
-        let socks5Server = GCDSOCKS5ProxyServer(address: address, port: Port(port: UInt16(currentProxyPort + 1)))
+        let httpServer = GCDHTTPProxyServer(address: address, port: NEKit.Port(port: UInt16(currentProxyPort)))
+        let socks5Server = GCDSOCKS5ProxyServer(address: address, port: NEKit.Port(port: UInt16(currentProxyPort + 1)))
         
         do {
             try httpServer.start()
@@ -132,7 +132,7 @@ class ConfigurationManager {
         }
         
         stopProxyServer()
-        runConfiguration(configName)
+        _ = runConfiguration(configName)
     }
     
     func saveCurrentConfigurationToDefaults() {
@@ -147,9 +147,9 @@ class ConfigurationManager {
         return runConfiguration(configName)
     }
     
-    func enumerateInOrder(block: (name: String, enabled: Bool) -> Void) {
-        for name in configurations.keys.sort() {
-            block(name: name, enabled: configurations[name]!.1)
+    func enumerateInOrder(_ block: (_ name: String, _ enabled: Bool) -> Void) {
+        for name in configurations.keys.sorted() {
+            block(name, configurations[name]!.1)
         }
     }
 

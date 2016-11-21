@@ -1,16 +1,16 @@
 import Foundation
 
-public class ProxyHelper {
+open class ProxyHelper {
 
     static let kProxyConfigPath = "/Library/Application Support/SpechtLite/ProxyConfig"
     static let kVersion = "0.2.0"
 
-    public static func checkVersion() -> Bool {
-        let task = NSTask()
+    open static func checkVersion() -> Bool {
+        let task = Process()
         task.launchPath = kProxyConfigPath
         task.arguments = ["version"]
 
-        let pipe = NSPipe()
+        let pipe = Pipe()
         task.standardOutput = pipe
         let fd = pipe.fileHandleForReading
         task.launch()
@@ -21,17 +21,17 @@ public class ProxyHelper {
             return false
         }
 
-        let res = String(data: fd.readDataToEndOfFile(), encoding: NSUTF8StringEncoding) ?? ""
-        if res.containsString(kVersion) {
+        let res = String(data: fd.readDataToEndOfFile(), encoding: String.Encoding.utf8) ?? ""
+        if res.contains(kVersion) {
             return true
         }
         return false
     }
 
-    public static func install() -> Bool {
-        let fileManager = NSFileManager.defaultManager()
-        if !fileManager.fileExistsAtPath(kProxyConfigPath) || !checkVersion() {
-            let scriptPath = "\(NSBundle.mainBundle().resourcePath!)/install_proxy_helper.sh"
+    open static func install() -> Bool {
+        let fileManager = FileManager.default
+        if !fileManager.fileExists(atPath: kProxyConfigPath) || !checkVersion() {
+            let scriptPath = "\(Bundle.main.resourcePath!)/install_proxy_helper.sh"
             let appleScriptStr = "do shell script \"bash \(scriptPath)\" with administrator privileges"
             let appleScript = NSAppleScript(source: appleScriptStr)
             var dict: NSDictionary?
@@ -44,8 +44,8 @@ public class ProxyHelper {
         return true
     }
 
-    public static func setUpSystemProxy(port: Int, enabled: Bool) -> Bool {
-        let task = NSTask()
+    open static func setUpSystemProxy(_ port: Int, enabled: Bool) -> Bool {
+        let task = Process()
         task.launchPath = kProxyConfigPath
         task.arguments = [String(port), enabled ? "enable" : "disable"]
 

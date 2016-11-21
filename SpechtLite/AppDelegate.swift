@@ -4,7 +4,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     var menuController: MenuBarController!
     
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         UpdaterManager.setUpAutoUpdate()
         
         LoggerManager.setUpFileLogger()
@@ -16,14 +16,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    func applicationWillTerminate(aNotification: NSNotification) {
+    func applicationWillTerminate(_ aNotification: Notification) {
         if Preference.setUpSystemProxy {
-            ProxyHelper.setUpSystemProxy(0, enabled: false)
+            _ = ProxyHelper.setUpSystemProxy(0, enabled: false)
         }
         ConfigurationManager.singletonInstance.stopProxyServer()
-    }
-    
-    func terminate(sender: AnyObject? = nil) {
-        NSApp.terminate(self)
     }
 }
