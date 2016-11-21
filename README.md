@@ -23,7 +23,7 @@ The core of SpechtLite consists just a few lines of code invoking [NEKit](https:
 
 Note there is no fancy GUI configuration panel. But no worry, you simply need some YAML files to get everything running. 
 
-If you do need a fancy GUI, consider some commercial alternatives such as the Mac version of [Surge](http://surge.run).
+If you do need a fancy GUI, consider some commercial alternatives such as the Mac version of [Surge](http://nssurge.com).
 
 **[Wingy](https://itunes.apple.com/cn/app/wingy-mian-fei-banvpn-ke-hu/id1148026741?mt=8) is a free app built with NEKit available on App Store for your iDevice.** Note Wingy is not created by or affiliated with me.
 
@@ -157,7 +157,7 @@ It's best if you can leave an issue relating to NEKit at [NEKit issues](https://
 
 Here it is. [Specht](https://github.com/zhuhaow/Specht). It is still free and open source. The difference is that Specht takes full advantage of Network Extension.
 
-**td;lr**
+**tl;dr**
 
 As you can infer from the name of NEKit, it is designed for developing app based on [Network Extension](https://developer.apple.com/library/ios/documentation/NetworkExtension/Reference/Network_Extension_Framework_Reference/). 
 
