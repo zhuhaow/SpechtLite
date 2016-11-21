@@ -15,6 +15,7 @@ then
 ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\"), nil, '-').result" > appcast/devappcast.xml
 else
 ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\"), nil, '-').result" > appcast/stableappcast.xml
+ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/appcast.xml.erb\"), nil, '-').result" > appcast/latestappcast.xml
 fi
 
 echo "Validate signature..."
@@ -28,14 +29,17 @@ cat cert/dsa_pub.pem
 openssl dgst -sha1 -binary < SpechtLite.zip | openssl dgst -dss1 -verify cert/dsa_pub.pem -signature signature
 
 # remove all redundant files
-find . -not -name "appcast" -not -name ".git" -maxdepth 1 -print0 | xargs -0 rm -rf --
-# copy appcast files to root
-cp -r appcast/. .
+# find . -not -name "appcast" -not -name ".git" -maxdepth 1 -print0 | xargs -0 rm -rf --
+# copy appcast files to tmp folder
+mkdir $HOME/tmp
+cp -r appcast/. $HOME/tmp/
 rm -rf appcast/
 
 echo "Publish appcast file..."
 # push update
-git checkout --orphan gh-pages
+git fetch origin gh-pages
+git checkout FETCH_HEAD
+cp -rf $HOME/tmp/. .
 git add .
 git -c user.name="Travis CI" commit -m "Publish appcast"
 git push --force --quiet https://$GITHUB_API_KEY@github.com/zhuhaow/SpechtLite.git gh-pages > /dev/null 2>&1
