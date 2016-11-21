@@ -62,8 +62,14 @@ class MenuBarController: NSObject, NSMenuDelegate {
         if Preference.autostart {
             autostartItem.state = NSOnState
         }
-        
         menu.addItem(autostartItem)
+        
+        let devItem = NSMenuItem(title: "Use dev channel", action: #selector(useDevChannelClicked(_:)), keyEquivalent: "")
+        devItem.target = self
+        if Preference.useDevChannel {
+            devItem.state = NSOnState
+        }
+        menu.addItem(devItem)
         
         menu.addItemWithTitle("Check for updates", action: #selector(checkForUpdatesClicked(_:)), keyEquivalent: "u").target = self
         menu.addItemWithTitle("Show log", action: #selector(showLogFileClicked(_:)), keyEquivalent: "").target = self
@@ -147,6 +153,11 @@ class MenuBarController: NSObject, NSMenuDelegate {
             NSUserNotificationCenter.defaultUserNotificationCenter().deliverNotification(notification)
         }
         task.resume()
+    }
+    
+    func useDevChannelClicked(sender: AnyObject) {
+        Preference.useDevChannel = !Preference.useDevChannel
+        UpdaterManager.setUpAutoUpdate()
     }
     
     func autostartAtLoginClicked(sender: AnyObject) {

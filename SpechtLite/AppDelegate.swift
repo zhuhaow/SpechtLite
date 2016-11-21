@@ -1,13 +1,11 @@
 import Cocoa
-import NEKit
-import Sparkle
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     var menuController: MenuBarController!
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        setUpAutoUpdate()
+        UpdaterManager.setUpAutoUpdate()
         
         LoggerManager.setUpFileLogger()
 
@@ -16,14 +14,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if Preference.setUpSystemProxy {
             menuController.setUpSystemProxy()
         }
-    }
-    
-    func setUpAutoUpdate() {
-        let updater = SUUpdater.sharedUpdater()
-        // force to update since this app is very likely to be buggy.
-        updater.automaticallyChecksForUpdates = true
-        // check for updates every hour
-        updater.updateCheckInterval = 3600
     }
     
     func applicationWillTerminate(aNotification: NSNotification) {

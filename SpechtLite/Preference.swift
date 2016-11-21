@@ -36,4 +36,13 @@ class Preference {
             UserDefault.setBool(newValue, forKey: "allowFromLan")
         }
     }
+    
+    static var useDevChannel: Bool {
+        get {
+            return UserDefault.boolForKey("useDevChannel")
+        }
+        set {
+            UserDefault.setBool(newValue, forKey: "useDevChannel")
+        }
+    }
 }

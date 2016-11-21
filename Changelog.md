@@ -1,3 +1,8 @@
+## 0.5.1
+
+### Added
+- Dev channel
+
 ## 0.5.0
 
 ### Changed

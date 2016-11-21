@@ -44,6 +44,7 @@
 		36B2ACE01DE096AC00BD2C3D /* Opt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2ACDF1DE096AC00BD2C3D /* Opt.swift */; };
 		36B2ACE31DE0979C00BD2C3D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2ACE21DE0979C00BD2C3D /* Utils.swift */; };
 		36B2ACE51DE2EA4A00BD2C3D /* LoggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2ACE41DE2EA4A00BD2C3D /* LoggerManager.swift */; };
+		36B2ACE71DE33A5600BD2C3D /* UpdaterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2ACE61DE33A5600BD2C3D /* UpdaterManager.swift */; };
 		36BA0BF31D599FF40074BEBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BA0BF21D599FF40074BEBF /* AppDelegate.swift */; };
 		36BA0BF51D599FF40074BEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF41D599FF40074BEBF /* Assets.xcassets */; };
 		36BA0BF81D599FF40074BEBF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF61D599FF40074BEBF /* MainMenu.xib */; };
@@ -152,6 +153,7 @@
 		36B2ACDF1DE096AC00BD2C3D /* Opt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Opt.swift; sourceTree = "<group>"; };
 		36B2ACE21DE0979C00BD2C3D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		36B2ACE41DE2EA4A00BD2C3D /* LoggerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerManager.swift; sourceTree = "<group>"; };
+		36B2ACE61DE33A5600BD2C3D /* UpdaterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdaterManager.swift; sourceTree = "<group>"; };
 		36BA0BEF1D599FF40074BEBF /* SpechtLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpechtLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BA0BF21D599FF40074BEBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36BA0BF41D599FF40074BEBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				36B2ACDF1DE096AC00BD2C3D /* Opt.swift */,
 				36B2ACE21DE0979C00BD2C3D /* Utils.swift */,
 				36B2ACE41DE2EA4A00BD2C3D /* LoggerManager.swift */,
+				36B2ACE61DE33A5600BD2C3D /* UpdaterManager.swift */,
 			);
 			path = SpechtLite;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				36A719EC1D617A4A00DC35F5 /* Autostart.swift in Sources */,
 				36B2ACE31DE0979C00BD2C3D /* Utils.swift in Sources */,
 				36B2ACE51DE2EA4A00BD2C3D /* LoggerManager.swift in Sources */,
+				36B2ACE71DE33A5600BD2C3D /* UpdaterManager.swift in Sources */,
 				36B2ACE01DE096AC00BD2C3D /* Opt.swift in Sources */,
 				36A719BF1D5F0A9400DC35F5 /* Preference.swift in Sources */,
 				36BA0BF31D599FF40074BEBF /* AppDelegate.swift in Sources */,
