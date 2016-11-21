@@ -1,7 +1,8 @@
-## Unreleased
+## 0.5.0
 
 ### Changed
 - Update NEKit to 0.7.3
+- Bug fix and refinement
 
 ## 0.4.9
 
