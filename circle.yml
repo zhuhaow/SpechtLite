@@ -4,7 +4,7 @@ machine:
 dependencies:
   pre:
     - echo "2.3.1" > .ruby-version
-  post:
+  override:
     - bin/bootstrap-if-needed
   cache_directories:
     - "Carthage"
