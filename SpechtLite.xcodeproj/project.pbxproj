@@ -14,8 +14,6 @@
 		36A719811D5C5B9200DC35F5 /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719741D5C5B9200DC35F5 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36A719821D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719751D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework */; };
 		36A719831D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719751D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		36A719841D5C5B9200DC35F5 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719761D5C5B9200DC35F5 /* CommonCrypto.framework */; };
-		36A719851D5C5B9200DC35F5 /* CommonCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719761D5C5B9200DC35F5 /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36A719861D5C5B9200DC35F5 /* lwip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719771D5C5B9200DC35F5 /* lwip.framework */; };
 		36A719871D5C5B9200DC35F5 /* lwip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719771D5C5B9200DC35F5 /* lwip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36A719881D5C5B9200DC35F5 /* MMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A719781D5C5B9200DC35F5 /* MMDB.framework */; };
@@ -91,7 +89,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				36A719851D5C5B9200DC35F5 /* CommonCrypto.framework in Embed Frameworks */,
 				36A719811D5C5B9200DC35F5 /* CocoaLumberjack.framework in Embed Frameworks */,
 				36A7197F1D5C5B9200DC35F5 /* CocoaAsyncSocket.framework in Embed Frameworks */,
 				36A719871D5C5B9200DC35F5 /* lwip.framework in Embed Frameworks */,
@@ -129,7 +126,6 @@
 		36A719731D5C5B9200DC35F5 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Build/Mac/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 		36A719741D5C5B9200DC35F5 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Build/Mac/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		36A719751D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjackSwift.framework; path = Build/Mac/CocoaLumberjackSwift.framework; sourceTree = "<group>"; };
-		36A719761D5C5B9200DC35F5 /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Build/Mac/CommonCrypto.framework; sourceTree = "<group>"; };
 		36A719771D5C5B9200DC35F5 /* lwip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = lwip.framework; path = Build/Mac/lwip.framework; sourceTree = "<group>"; };
 		36A719781D5C5B9200DC35F5 /* MMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MMDB.framework; path = Build/Mac/MMDB.framework; sourceTree = "<group>"; };
 		36A719791D5C5B9200DC35F5 /* NEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NEKit.framework; path = Build/Mac/NEKit.framework; sourceTree = "<group>"; };
@@ -184,7 +180,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36A719841D5C5B9200DC35F5 /* CommonCrypto.framework in Frameworks */,
 				36A719801D5C5B9200DC35F5 /* CocoaLumberjack.framework in Frameworks */,
 				36A7197E1D5C5B9200DC35F5 /* CocoaAsyncSocket.framework in Frameworks */,
 				36A719861D5C5B9200DC35F5 /* lwip.framework in Frameworks */,
@@ -216,7 +211,6 @@
 				36A719731D5C5B9200DC35F5 /* CocoaAsyncSocket.framework */,
 				36A719741D5C5B9200DC35F5 /* CocoaLumberjack.framework */,
 				36A719751D5C5B9200DC35F5 /* CocoaLumberjackSwift.framework */,
-				36A719761D5C5B9200DC35F5 /* CommonCrypto.framework */,
 				36A719771D5C5B9200DC35F5 /* lwip.framework */,
 				36A719781D5C5B9200DC35F5 /* MMDB.framework */,
 				36A719791D5C5B9200DC35F5 /* NEKit.framework */,
