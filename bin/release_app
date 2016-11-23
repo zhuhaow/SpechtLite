@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+set -e
+
+gem install gym github-markup redcarpet --no-ri --no-rdoc
+gym
+ditto -c -k --sequesterRsrc --keepParent SpechtLite.app SpechtLite.zip
+
+export GOPATH=$HOME/golang
+export PATH=$PATH:$GOPATH/bin
+github-release release \
+  --user zhuhaow \
+  --repo SpechtLite \
+  --tag $CIRCLE_TAG \
+  --name $CIRCLE_TAG \
+  --description $CIRCLE_TAG
+
+echo $DSA_PRIVATE_KEY | base64 -D > cert/dsa_priv.pem > /dev/null 2>&1
+
+bin/publish_appcast
