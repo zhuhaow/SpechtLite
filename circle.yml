@@ -10,4 +10,4 @@ dependencies:
     - "Carthage"
 test:
   override:
-    - xcodebuild -project SpechtLite.xcodeproj -scheme "SpechtLite" build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty
+    - set -o pipeline && xcodebuild -project SpechtLite.xcodeproj -scheme "SpechtLite" build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty
