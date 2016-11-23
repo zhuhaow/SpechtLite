@@ -11,3 +11,9 @@ dependencies:
 test:
   override:
     - set -o pipefail && xcodebuild -project SpechtLite.xcodeproj -scheme "SpechtLite" build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty
+deployment:
+  release:
+    tag: /.*/
+    owner: zhuhaow
+    commands:
+      - bin/release_app
