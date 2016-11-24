@@ -2,6 +2,10 @@
 
 set -e
 
+echo $P12_CERT | base64 -D > cert/cert.p12 > /dev/null 2>&1
+sudo security unlock-keychain -p circle circle.keychain
+sudo security import cert/cert.p12 -k circle.keychain -T /usr/bin/codesign
+
 gem install gym github-markup redcarpet --no-ri --no-rdoc
 gym
 ditto -c -k --sequesterRsrc --keepParent SpechtLite.app SpechtLite.zip
