@@ -33,7 +33,7 @@ git clone --depth=1 --branch=gh-pages https://github.com/zhuhaow/SpechtLite.git 
 cp -rf appcast/. SpechtLiteSite/
 cd SpechtLiteSite
 git add .
-git -c user.name="Circle CI" commit -m "Publish appcast"
+git -c user.name="Circle CI" commit -m "Publish appcast [ci skip]"
 git push --force --quiet https://$GITHUB_TOKEN@github.com/zhuhaow/SpechtLite.git gh-pages > /dev/null 2>&1
 
 echo "Done ^_^"
