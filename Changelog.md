@@ -1,3 +1,9 @@
+## 0.6.0.beta9
+
+### Fixed
+- Fix shadowsocks.
+- Fix log.
+
 ## 0.6.0.beta1
 
 ### Changed
