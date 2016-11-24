@@ -2,7 +2,7 @@
 
 set -e
 
-echo $P12_CERT | base64 -D > cert/cert.p12 > /dev/null 2>&1
+echo $P12_CERT | base64 -D > cert/cert.p12
 sudo security unlock-keychain -p circle circle.keychain
 sudo security import cert/cert.p12 -k circle.keychain -T /usr/bin/codesign
 
@@ -19,6 +19,6 @@ github-release release \
   --name $CIRCLE_TAG \
   --description $CIRCLE_TAG
 
-echo $DSA_PRIVATE_KEY | base64 -D > cert/dsa_priv.pem > /dev/null 2>&1
+echo $DSA_PRIVATE_KEY | base64 -D > cert/dsa_priv.pem
 
 bin/publish_appcast
