@@ -12,12 +12,20 @@ ditto -c -k --sequesterRsrc --keepParent SpechtLite.app SpechtLite.zip
 
 export GOPATH=$HOME/golang
 export PATH=$PATH:$GOPATH/bin
+go get github.com/aktau/github-release
 github-release release \
   --user zhuhaow \
   --repo SpechtLite \
   --tag $CIRCLE_TAG \
   --name $CIRCLE_TAG \
   --description $CIRCLE_TAG
+
+github-release upload \
+  --user zhuhaow \
+  --repo SpechtLite \
+  --tag $CIRCLE_TAG \
+  --name SpechtLite.zip \
+  --file SpechtLite.zip
 
 echo $DSA_PRIVATE_KEY | base64 -D > cert/dsa_priv.pem
 
