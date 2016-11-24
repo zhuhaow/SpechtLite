@@ -2,15 +2,21 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel>
 <title>SpechtLite</title>
-
 <link>https://zhuhaow.github.io/SpechtLite/devappcast.xml</link>
 <description>The dev channel of SpechtLite.</description>
-
 <language>en</language>
 <item>
-<title>SpechtLite 0.6.0.beta1</title>
-<pubDate>2016-11-21T15:27:45+00:00</pubDate>
+<title>SpechtLite 0.6.0.beta7</title>
+<pubDate>2016-11-23T21:45:11-08:00</pubDate>
 <description><![CDATA[
+<h2>0.6.0.beta1</h2>
+
+<h3>Changed</h3>
+
+<ul>
+<li>Convert to swift 3.</li>
+</ul>
+
 <h2>0.5.1</h2>
 
 <h3>Added</h3>
@@ -117,11 +123,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.0.beta1/SpechtLite.zip"
-sparkle:version="150"
-sparkle:shortVersionString="0.6.0.beta1"
-sparkle:dsaSignature="MCwCFCTzbLsxRZUss/NRtQnTRj+EZuOSAhRZ+5E0RhqvXnz0ZpgCfbY9BzFJNA=="
-length="7488913"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.0.beta7/SpechtLite.zip"
+sparkle:version="86"
+sparkle:shortVersionString="0.6.0.beta7"
+sparkle:dsaSignature="MC0CFFYaDZxqtHSkqGpYyh0jrcGu3+XNAhUAk8wIS/moXY0nfdgseJTRJJxYcTE="
+length="11055264"
 type="application/octet-stream" />
 </item>
 </channel>
