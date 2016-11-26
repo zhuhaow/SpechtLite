@@ -6,9 +6,17 @@
 <description>The dev channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.6.0.beta10</title>
-<pubDate>2016-11-24T06:22:29-08:00</pubDate>
+<title>SpechtLite 0.6.0.beta11</title>
+<pubDate>2016-11-26T05:23:38-08:00</pubDate>
 <description><![CDATA[
+<h2>0.6.0.beta11</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Fix a very rare crash when processing DNS requests.</li>
+</ul>
+
 <h2>0.6.0.beta9</h2>
 
 <h3>Fixed</h3>
@@ -132,11 +140,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.0.beta10/SpechtLite.zip"
-sparkle:version="176"
-sparkle:shortVersionString="0.6.0.beta10"
-sparkle:dsaSignature="MC0CFH9sZbcoGBch+MthQRxnML2WCMLeAhUAtAQ8Ui+76NE2qGuuuZHQfAzdXkg="
-length="11056902"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.0.beta11/SpechtLite.zip"
+sparkle:version="177"
+sparkle:shortVersionString="0.6.0.beta11"
+sparkle:dsaSignature="MC0CFQCnuyIP/jW1DWE5it0TsNtr84ivxAIUJSiW94jK9CjjEnXC8qZHDWlz64s="
+length="11058114"
 type="application/octet-stream" />
 </item>
 </channel>
