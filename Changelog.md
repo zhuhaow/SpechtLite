@@ -1,3 +1,8 @@
+## 0.6.0.beta11
+
+### Fixed
+- Fix a very rare crash when processing DNS requests.
+
 ## 0.6.0.beta9
 
 ### Fixed
