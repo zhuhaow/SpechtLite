@@ -1,3 +1,8 @@
+## 0.6.0.beta13
+
+### Fixed
+- Correct ProxyConfig version
+
 ## 0.6.0.beta12
 
 ### Fixed
