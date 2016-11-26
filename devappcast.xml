@@ -6,9 +6,18 @@
 <description>The dev channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.6.0.beta11</title>
-<pubDate>2016-11-26T05:23:38-08:00</pubDate>
+<title>SpechtLite 0.6.0.beta12</title>
+<pubDate>2016-11-26T06:07:52-08:00</pubDate>
 <description><![CDATA[
+<h2>0.6.0.beta12</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Setting proxy won&#39;t error out proxy panel in system preference.</li>
+<li>Unset system proxy will set port number to nil.</li>
+</ul>
+
 <h2>0.6.0.beta11</h2>
 
 <h3>Fixed</h3>
@@ -140,11 +149,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.0.beta11/SpechtLite.zip"
-sparkle:version="177"
-sparkle:shortVersionString="0.6.0.beta11"
-sparkle:dsaSignature="MC0CFQCnuyIP/jW1DWE5it0TsNtr84ivxAIUJSiW94jK9CjjEnXC8qZHDWlz64s="
-length="11058114"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.0.beta12/SpechtLite.zip"
+sparkle:version="178"
+sparkle:shortVersionString="0.6.0.beta12"
+sparkle:dsaSignature="MC0CFA+UtebnleUMc/0vx8mkRvchQp95AhUAnD44/JXMtalhZK+yqylxhc6xH+A="
+length="11062367"
 type="application/octet-stream" />
 </item>
 </channel>
