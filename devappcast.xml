@@ -6,9 +6,17 @@
 <description>The dev channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.6.0.beta12</title>
-<pubDate>2016-11-26T06:07:52-08:00</pubDate>
+<title>SpechtLite 0.6.0.beta13</title>
+<pubDate>2016-11-26T07:11:59-08:00</pubDate>
 <description><![CDATA[
+<h2>0.6.0.beta13</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Correct ProxyConfig version</li>
+</ul>
+
 <h2>0.6.0.beta12</h2>
 
 <h3>Fixed</h3>
@@ -149,11 +157,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.0.beta12/SpechtLite.zip"
-sparkle:version="178"
-sparkle:shortVersionString="0.6.0.beta12"
-sparkle:dsaSignature="MC0CFA+UtebnleUMc/0vx8mkRvchQp95AhUAnD44/JXMtalhZK+yqylxhc6xH+A="
-length="11062367"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.0.beta13/SpechtLite.zip"
+sparkle:version="180"
+sparkle:shortVersionString="0.6.0.beta13"
+sparkle:dsaSignature="MCwCFBEmGwW/Mx18CgEsGqUZFfexznNUAhQ6VWV6QB8nasD45cBOSLT4gpLdww=="
+length="11062334"
 type="application/octet-stream" />
 </item>
 </channel>
