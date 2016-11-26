@@ -1,3 +1,9 @@
+## 0.6.0.beta12
+
+### Fixed
+- Setting proxy won't error out proxy panel in system preference.
+- Unset system proxy will set port number to nil.
+
 ## 0.6.0.beta11
 
 ### Fixed
