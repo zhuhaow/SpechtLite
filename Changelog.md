@@ -1,3 +1,8 @@
+## 0.6.0.beta14
+
+### Added
+- Add support for OTA, use "ota: true" to enable it.
+
 ## 0.6.0.beta13
 
 ### Fixed
