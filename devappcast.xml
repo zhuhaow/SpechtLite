@@ -6,9 +6,17 @@
 <description>The dev channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.6.0.beta13</title>
-<pubDate>2016-11-26T07:11:59-08:00</pubDate>
+<title>SpechtLite 0.6.0.beta14</title>
+<pubDate>2016-11-27T03:40:14-08:00</pubDate>
 <description><![CDATA[
+<h2>0.6.0.beta14</h2>
+
+<h3>Added</h3>
+
+<ul>
+<li>Add support for OTA, use &quot;ota: true&quot; to enable it.</li>
+</ul>
+
 <h2>0.6.0.beta13</h2>
 
 <h3>Fixed</h3>
@@ -157,11 +165,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.0.beta13/SpechtLite.zip"
-sparkle:version="180"
-sparkle:shortVersionString="0.6.0.beta13"
-sparkle:dsaSignature="MCwCFBEmGwW/Mx18CgEsGqUZFfexznNUAhQ6VWV6QB8nasD45cBOSLT4gpLdww=="
-length="11062334"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.0.beta14/SpechtLite.zip"
+sparkle:version="181"
+sparkle:shortVersionString="0.6.0.beta14"
+sparkle:dsaSignature="MC0CFFxY4mO3JywFSwc+uUjsuhMP+U2dAhUAmOqmOBQW3F8C6R/1NhTAF5+sH+k="
+length="11062627"
 type="application/octet-stream" />
 </item>
 </channel>
