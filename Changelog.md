@@ -1,3 +1,8 @@
+## 0.6.0.beta15
+
+### Fixed
+- Fix OTA support.
+
 ## 0.6.0.beta14
 
 ### Added
