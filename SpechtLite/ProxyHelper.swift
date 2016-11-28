@@ -3,7 +3,7 @@ import Foundation
 open class ProxyHelper {
 
     static let kProxyConfigPath = "/Library/Application Support/SpechtLite/ProxyConfig"
-    static let kVersion = "0.3.0"
+    static let kVersion = "0.4.0"
 
     open static func checkVersion() -> Bool {
         let task = Process()

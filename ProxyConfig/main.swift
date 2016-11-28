@@ -1,7 +1,7 @@
 import Foundation
 import SystemConfiguration
 
-let version = "0.3.0"
+let version = "0.4.0"
 
 func main(_ args: [String]) {
     var port: Int = 0
