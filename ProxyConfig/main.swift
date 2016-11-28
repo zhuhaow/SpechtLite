@@ -68,9 +68,16 @@ func main(_ args: [String]) {
                     proxySettings[kCFNetworkProxiesHTTPPort as String] = nil
                     proxySettings[kCFNetworkProxiesHTTPSPort as String] = nil
                     proxySettings[kCFNetworkProxiesSOCKSPort as String] = nil
-
                 }
-
+                proxySettings[kCFNetworkProxiesExceptionsList as String] = [
+                    "192.168.0.0/16",
+                    "10.0.0.0/8",
+                    "172.16.0.0/12",
+                    "127.0.0.1",
+                    "localhost",
+                    "*.local"
+                    ] as AnyObject
+                
                 let path = "/\(kSCPrefNetworkServices)/\(key)/\(kSCEntNetProxies)"
                 SCPreferencesPathSetValue(prefRef, path as CFString, proxySettings as CFDictionary)
             }
