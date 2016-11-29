@@ -6,18 +6,10 @@
 <description>The dev channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.6.0.beta15</title>
-<pubDate>2016-11-27T06:53:45-08:00</pubDate>
+<title>SpechtLite 0.6.0</title>
+<pubDate>2016-11-28T20:37:43-08:00</pubDate>
 <description><![CDATA[
-<h2>0.6.0.beta15</h2>
-
-<h3>Fixed</h3>
-
-<ul>
-<li>Fix OTA support.</li>
-</ul>
-
-<h2>0.6.0.beta14</h2>
+<h2>0.6.0</h2>
 
 <h3>Added</h3>
 
@@ -25,46 +17,16 @@
 <li>Add support for OTA, use &quot;ota: true&quot; to enable it.</li>
 </ul>
 
-<h2>0.6.0.beta13</h2>
-
-<h3>Fixed</h3>
-
-<ul>
-<li>Correct ProxyConfig version</li>
-</ul>
-
-<h2>0.6.0.beta12</h2>
-
-<h3>Fixed</h3>
-
-<ul>
-<li>Setting proxy won&#39;t error out proxy panel in system preference.</li>
-<li>Unset system proxy will set port number to nil.</li>
-</ul>
-
-<h2>0.6.0.beta11</h2>
-
-<h3>Fixed</h3>
-
-<ul>
-<li>Fix a very rare crash when processing DNS requests.</li>
-</ul>
-
-<h2>0.6.0.beta9</h2>
-
-<h3>Fixed</h3>
-
-<ul>
-<li>Fix shadowsocks.</li>
-<li>Fix log.</li>
-</ul>
-
-<h2>0.6.0.beta1</h2>
-
 <h3>Changed</h3>
 
 <ul>
 <li>Convert to swift 3.</li>
+</ul>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Unset system proxy will set port number to nil.</li>
 </ul>
 
 <h2>0.5.1</h2>
@@ -173,11 +135,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.0.beta15/SpechtLite.zip"
-sparkle:version="182"
-sparkle:shortVersionString="0.6.0.beta15"
-sparkle:dsaSignature="MCsCFHdEID0Y+m3wTu1/2KcYosJonTT8AhMifyT+RRQZ6gbauUbMjn+15Fe2"
-length="11062437"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.0/SpechtLite.zip"
+sparkle:version="185"
+sparkle:shortVersionString="0.6.0"
+sparkle:dsaSignature="MC0CFDKRZulVuDqd8MnBKrBnzyuOyo5VAhUAol2XR6cskefr9aIJkOeZjkSQyYs="
+length="8702251"
 type="application/octet-stream" />
 </item>
 </channel>
