@@ -1,39 +1,13 @@
-## 0.6.0.beta15
-
-### Fixed
-- Fix OTA support.
-
-## 0.6.0.beta14
+## 0.6.0
 
 ### Added
 - Add support for OTA, use "ota: true" to enable it.
 
-## 0.6.0.beta13
-
-### Fixed
-- Correct ProxyConfig version
-
-## 0.6.0.beta12
-
-### Fixed
-- Setting proxy won't error out proxy panel in system preference.
-- Unset system proxy will set port number to nil.
-
-## 0.6.0.beta11
-
-### Fixed
-- Fix a very rare crash when processing DNS requests.
-
-## 0.6.0.beta9
-
-### Fixed
-- Fix shadowsocks.
-- Fix log.
-
-## 0.6.0.beta1
-
 ### Changed
 - Convert to swift 3.
+
+### Fixed
+- Unset system proxy will set port number to nil.
 
 ## 0.5.1
 
