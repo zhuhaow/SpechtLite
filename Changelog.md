@@ -1,3 +1,8 @@
+## 0.6.1.beta2
+
+### Fixed
+- Shadowsocks should work now.
+
 ## 0.6.1.beta1
 
 ### Fixed
