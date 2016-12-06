@@ -1,3 +1,8 @@
+## 0.6.1.beta1
+
+### Fixed
+- Some bugs.
+
 ## 0.6.0
 
 ### Added
