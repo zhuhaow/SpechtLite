@@ -6,9 +6,17 @@
 <description>The dev channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.6.1.beta1</title>
-<pubDate>2016-12-05T20:13:50-08:00</pubDate>
+<title>SpechtLite 0.6.1.beta11</title>
+<pubDate>2016-12-07T11:30:43+00:00</pubDate>
 <description><![CDATA[
+<h2>0.6.1.beta2</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Shadowsocks should work now.</li>
+</ul>
+
 <h2>0.6.1.beta1</h2>
 
 <h3>Fixed</h3>
@@ -143,11 +151,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.1.beta1/SpechtLite.zip"
-sparkle:version="186"
-sparkle:shortVersionString="0.6.1.beta1"
-sparkle:dsaSignature="MCwCFDGgoImBcmMxr/lDBTzBpvR6XbioAhQXMeJkaE6daK7P3RUmUYxjgcyAwg=="
-length="8698629"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.1.beta11/SpechtLite.zip"
+sparkle:version="197"
+sparkle:shortVersionString="0.6.1.beta11"
+sparkle:dsaSignature="MCwCFBjGXzXdLPdbAvW6+pdUbwLu+halAhQWjgFIkoxM+bohPVhlYtJcqVHH+w=="
+length="8697435"
 type="application/octet-stream" />
 </item>
 </channel>
