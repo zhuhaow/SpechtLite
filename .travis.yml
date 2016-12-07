@@ -22,7 +22,7 @@ before_deploy:
   -P ""
 - "[ -f $(git rev-parse --git-dir)/shallow ] && git fetch --unshallow"
 - gem install gym github-markup redcarpet --no-ri --no-rdoc
-- gym
+- gym --verbose
 - ditto -c -k --sequesterRsrc --keepParent SpechtLite.app SpechtLite.zip
 deploy:
   provider: releases
