@@ -19,6 +19,7 @@ before_deploy:
 - security unlock-keychain -p mysecretpassword build.keychain
 - security set-keychain-settings -t 3600 -u build.keychain
 - security import cert/MacDistribution.p12 -k build.keychain -T /usr/bin/codesign -P ""
+- "security set-key-partition-list -S apple-tool:,apple: -s -k mysecretpassword build.keychain"
 - "[ -f $(git rev-parse --git-dir)/shallow ] && git fetch --unshallow"
 - gem install gym github-markup redcarpet --no-ri --no-rdoc
 - gym
