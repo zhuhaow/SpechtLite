@@ -6,6 +6,7 @@ cache:
   directories:
   - Carthage
 install:
+- gem install xcpretty
 - bin/bootstrap-if-needed
 script:
 - xcodebuild -project SpechtLite.xcodeproj -scheme "SpechtLite" build CODE_SIGN_IDENTITY=""
