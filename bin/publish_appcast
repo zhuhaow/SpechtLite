@@ -3,14 +3,14 @@
 set -e
 set -o pipefail
 
-if [ -z "$CIRCLE_TAG" ]
+if [ -z "$TRAVIS_TAG" ]
 then
 echo "Not able to build on non-tag commit"
 
 else
 echo "Generating appcast file..."
 
-if [[ "$CIRCLE_TAG" =~ ^([0-9]+\.?)+(\.|-)[a-z]+[0-9]*$ ]]
+if [[ "$TRAVIC_TAG" =~ ^([0-9]+\.?)+(\.|-)[a-z]+[0-9]*$ ]]
 then
 ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/devappcast.xml.erb\"), nil, '-').result" > appcast/devappcast.xml
 else
@@ -33,7 +33,7 @@ git clone --depth=1 --branch=gh-pages https://github.com/zhuhaow/SpechtLite.git 
 cp -rf appcast/. SpechtLiteSite/
 cd SpechtLiteSite
 git add .
-git -c user.name="Circle CI" commit -m "Publish appcast [ci skip]"
+git -c user.name="TRAVIS CI" commit -m "Publish appcast [ci skip]"
 git push --force --quiet https://$GITHUB_TOKEN@github.com/zhuhaow/SpechtLite.git gh-pages > /dev/null 2>&1
 
 echo "Done ^_^"
