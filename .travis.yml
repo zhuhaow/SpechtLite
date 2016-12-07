@@ -6,16 +6,17 @@ cache:
 install:
 - bin/bootstrap-if-needed
 script:
-- xcodebuild -project SpechtLite.xcodeproj -scheme "SpechtLite" build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty
+- xcodebuild -project SpechtLite.xcodeproj -scheme "SpechtLite" build CODE_SIGN_IDENTITY=""
+  CODE_SIGNING_REQUIRED=NO | xcpretty
 before_deploy:
-- openssl aes-256-cbc -K $encrypted_f333a4d93d89_key -iv $encrypted_f333a4d93d89_iv -in secret.tar.enc -out cert/secret.tar -d
+- openssl aes-256-cbc -K $encrypted_f333a4d93d89_key -iv $encrypted_f333a4d93d89_iv
+  -in secret.tar.enc -out cert/secret.tar -d
 - tar xvf cert/secret.tar
 - security create-keychain -p mysecretpassword build.keychain
 - security default-keychain -s build.keychain
 - security unlock-keychain -p mysecretpassword build.keychain
 - security import cert/MacDistribution.p12 -k build.keychain -T /usr/bin/codesign
   -P ""
-# unshallow repository
 - "[ -f $(git rev-parse --git-dir)/shallow ] && git fetch --unshallow"
 - gem install gym github-markup redcarpet --no-ri --no-rdoc
 - gym
@@ -31,3 +32,6 @@ deploy:
     tags: true
 after_deploy:
 - bin/publish_appcast
+env:
+  global:
+    secure: g0sfjKq7v5PZopMdYkCY+8fStbfSXiaHLW8M8VaaB0XqP57akQaEhPbusV03tLDw99STvI+0Nt8y3x+4LXB+bRGJlfPLiRjZu0h5iLQSUcB34WZzPHsgIs3Cy3ZIz1HYp71jRjmvUonmtFMFkCeBBh7elzPEsqZBLPafnayH7ws0QrKGdhDLho9Am0akBk49c1MbBG5kzdPbUMuRf2AgYpUopIJ/ZXQs6/RGGNWOK4yYT9rUtmcQgzt62V4Y5KEgt4jIW2pEEFi3GocGgAhskfbiGE4YUzKEFaQhVNjbPcc4GVQPlykeED77M14ndQBPJx4TTfDip7wAtYnBh3oiup8UXnNAqP/tmnJDkrCroDj00QS2GUU5GUr9aH4tLijYrCynbtTCiF02WUGnZSdkGN+3Rf6n04BNKqL0E879Pk+KKBLF/xXG7T9GQ4s5vHOZ0dyQz68VCWPpMNPlBZQ93QGk+KIS0Zjut8JlI12Stsv6yeoYdqN//oPNAgg16vouKsRHCytH02IvR278ELXrEAbEaWihyoDsBYNsCk6kuI0o0PArqogxYInrpkaUSZa7bmoCiScEBziJvg3N7MTMHeWvT9pz4uJElFuMHEGp5SPdN6JgSk+RkKnIaY0AMVuTn+5S5gLFkaj8wH2ahvwMKIPE6sG1eujfrBg0tRosq9U=
