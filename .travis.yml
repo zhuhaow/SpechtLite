@@ -12,17 +12,15 @@ script:
 - xcodebuild -project SpechtLite.xcodeproj -scheme "SpechtLite" build CODE_SIGN_IDENTITY=""
   CODE_SIGNING_REQUIRED=NO | xcpretty
 before_deploy:
-- openssl aes-256-cbc -K $encrypted_f333a4d93d89_key -iv $encrypted_f333a4d93d89_iv
-  -in secret.tar.enc -out cert/secret.tar -d
+- openssl aes-256-cbc -K $encrypted_f333a4d93d89_key -iv $encrypted_f333a4d93d89_iv -in secret.tar.enc -out cert/secret.tar -d
 - tar xvf cert/secret.tar
 - security create-keychain -p mysecretpassword build.keychain
 - security default-keychain -s build.keychain
 - security unlock-keychain -p mysecretpassword build.keychain
-- security import cert/MacDistribution.p12 -k build.keychain -T /usr/bin/codesign
-  -P ""
+- security import cert/MacDistribution.p12 -k build.keychain -T /usr/bin/codesign -P ""
 - "[ -f $(git rev-parse --git-dir)/shallow ] && git fetch --unshallow"
 - gem install gym github-markup redcarpet --no-ri --no-rdoc
-- gym --verbose
+- gym
 - ditto -c -k --sequesterRsrc --keepParent SpechtLite.app SpechtLite.zip
 deploy:
   provider: releases
