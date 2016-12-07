@@ -1,5 +1,7 @@
 language: objective-c
 osx_image: xcode8.1
+rvm:
+  - 2.3.1
 cache:
   directories:
   - Carthage
