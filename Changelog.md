@@ -1,3 +1,8 @@
+## 0.6.1.beta14
+
+### Fixed
+- Fix autostart at login. You probably need to re-enabled it.
+
 ## 0.6.1.beta13
 
 ### Fixed

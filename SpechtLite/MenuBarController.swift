@@ -151,7 +151,7 @@ class MenuBarController: NSObject, NSMenuDelegate {
                 notification.informativeText = "Speed test failed!"
             }
             NSUserNotificationCenter.default.deliver(notification)
-        }) 
+        })
         task.resume()
     }
     
@@ -162,12 +162,10 @@ class MenuBarController: NSObject, NSMenuDelegate {
     
     func autostartAtLoginClicked(_ sender: AnyObject) {
         Preference.autostart = !Preference.autostart
-        func setUpAutostart() {
-            if Preference.autostart {
-                _ = Autostart.enable()
-            } else {
-                _ = Autostart.disable()
-            }
+        if Preference.autostart {
+            _ = Autostart.enable()
+        } else {
+            _ = Autostart.disable()
         }
     }
     
