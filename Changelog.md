@@ -1,3 +1,8 @@
+## 0.6.1.beta15
+
+### Fixed
+- Fix `DNSFail` rule.
+
 ## 0.6.1.beta14
 
 ### Fixed
