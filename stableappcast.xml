@@ -6,9 +6,17 @@
 <description>The stable channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.6.1.beta12</title>
-<pubDate>2016-12-07T12:05:13+00:00</pubDate>
+<title>SpechtLite 0.6.1.beta13</title>
+<pubDate>2016-12-08T04:40:15+00:00</pubDate>
 <description><![CDATA[
+<h2>0.6.1.beta13</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Fix some circumstances when connection is not disconnected correctly.</li>
+</ul>
+
 <h2>0.6.1.beta2</h2>
 
 <h3>Fixed</h3>
@@ -151,11 +159,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.1.beta12/SpechtLite.zip"
-sparkle:version="198"
-sparkle:shortVersionString="0.6.1.beta12"
-sparkle:dsaSignature="MCwCFHKS8A97rboFURcQBvbxjcyP5SIoAhRa7V78KvUoNmGXc9lBbdyR53mbMw=="
-length="8699068"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.1.beta13/SpechtLite.zip"
+sparkle:version="199"
+sparkle:shortVersionString="0.6.1.beta13"
+sparkle:dsaSignature="MCwCFCopr83p2vv2y1536GUlApu7f2zAAhRXldq6ph3VM9ARAMb1THEFZpKzIw=="
+length="8699165"
 type="application/octet-stream" />
 </item>
 </channel>
