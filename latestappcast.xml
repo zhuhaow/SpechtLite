@@ -6,47 +6,24 @@
 <description>The stable channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.6.1.beta15</title>
-<pubDate>2016-12-08T06:49:08+00:00</pubDate>
+<title>SpechtLite 0.7.0</title>
+<pubDate>2016-12-08T07:52:16+00:00</pubDate>
 <description><![CDATA[
-<h2>0.6.1.beta15</h2>
+<h2>0.7.0</h2>
 
 <h3>Fixed</h3>
 
 <ul>
 <li>Fix <code>DNSFail</code> rule.</li>
-</ul>
-
-<h2>0.6.1.beta14</h2>
-
-<h3>Fixed</h3>
-
-<ul>
 <li>Fix autostart at login. You probably need to re-enabled it.</li>
-</ul>
-
-<h2>0.6.1.beta13</h2>
-
-<h3>Fixed</h3>
-
-<ul>
 <li>Fix some circumstances when connection is not disconnected correctly.</li>
+<li>Fix some other bugs.</li>
 </ul>
 
-<h2>0.6.1.beta2</h2>
-
-<h3>Fixed</h3>
+<h3>Changed</h3>
 
 <ul>
-<li>Shadowsocks should work now.</li>
-</ul>
-
-<h2>0.6.1.beta1</h2>
-
-<h3>Fixed</h3>
-
-<ul>
-<li>Some bugs.</li>
+<li>Now <code>SpeedAdapter</code> won&#39;t log events of children adapters.</li>
 </ul>
 
 <h2>0.6.0</h2>
@@ -175,11 +152,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.6.1.beta15/SpechtLite.zip"
-sparkle:version="201"
-sparkle:shortVersionString="0.6.1.beta15"
-sparkle:dsaSignature="MC0CFQCy1/5cG8QhwC6PohIbr9SAg3HfmAIUb1VxsZMlDMtuOjvf9GwAljPBbeo="
-length="8699214"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.7.0/SpechtLite.zip"
+sparkle:version="204"
+sparkle:shortVersionString="0.7.0"
+sparkle:dsaSignature="MCwCFEr5dKxpcW9QdA53WBO5YsxHzBQIAhQ+MRuOOVdPpd6p+8aSWn8Q+Ujj5A=="
+length="8694568"
 type="application/octet-stream" />
 </item>
 </channel>
