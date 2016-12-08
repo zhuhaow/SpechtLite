@@ -10,7 +10,7 @@ echo "Not able to build on non-tag commit"
 else
 echo "Generating appcast file..."
 
-if [[ "$TRAVIC_TAG" =~ ^([0-9]+\.?)+(\.|-)[a-z]+[0-9]*$ ]]
+if [[ "$TRAVIS_TAG" =~ ^([0-9]+\.?)+(\.|-)[a-z]+[0-9]*$ ]]
 then
 ruby -rerb -rdate -e "puts ERB.new(File.read(\"appcast/devappcast.xml.erb\"), nil, '-').result" > appcast/devappcast.xml
 else
