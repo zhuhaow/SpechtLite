@@ -1,27 +1,13 @@
-## 0.6.1.beta15
+## 0.7.0
 
 ### Fixed
 - Fix `DNSFail` rule.
-
-## 0.6.1.beta14
-
-### Fixed
 - Fix autostart at login. You probably need to re-enabled it.
-
-## 0.6.1.beta13
-
-### Fixed
 - Fix some circumstances when connection is not disconnected correctly.
+- Fix some other bugs.
 
-## 0.6.1.beta2
-
-### Fixed
-- Shadowsocks should work now.
-
-## 0.6.1.beta1
-
-### Fixed
-- Some bugs.
+### Changed
+- Now `SpeedAdapter` won't log events of children adapters.
 
 ## 0.6.0
 
