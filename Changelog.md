@@ -1,3 +1,8 @@
+## 0.6.1.beta13
+
+### Fixed
+- Fix some circumstances when connection is not disconnected correctly.
+
 ## 0.6.1.beta2
 
 ### Fixed
