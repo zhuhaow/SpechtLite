@@ -2,6 +2,7 @@
 
 ### Fixed
 - Fix crash when OTA is enabled for shadowsocks.
+- Fix that the system proxy setting is not updated when switching to a profile with different ports.
 
 ## 0.7.0
 

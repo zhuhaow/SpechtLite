@@ -93,6 +93,7 @@ class ConfigurationManager {
         
         try! configuration.load(fromConfigString: config.0)
         RuleManager.currentManager = configuration.ruleManager
+        let previousProxyPort = currentProxyPort
         currentProxyPort = configuration.proxyPort ?? 9090
         
         let address = Preference.allowFromLan ? nil : IPv4Address(fromString: "127.0.0.1")
@@ -108,10 +109,17 @@ class ConfigurationManager {
             socks5Server.stop()
             return false
         }
-
+        
         currentConfiguration = name
         currentProxies.append(httpServer)
         currentProxies.append(socks5Server)
+        
+        if previousProxyPort != currentProxyPort && Preference.setUpSystemProxy {
+            if !ProxyHelper.setUpSystemProxy(currentProxyPort, enabled: true) {
+                Utils.alertError("Failed to change system proxy settings.")
+                Preference.setUpSystemProxy = false
+            }
+        }
         
         saveCurrentConfigurationToDefaults()
         return true
@@ -152,5 +160,5 @@ class ConfigurationManager {
             block(name, configurations[name]!.1)
         }
     }
-
+    
 }
