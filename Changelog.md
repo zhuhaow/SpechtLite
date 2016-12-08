@@ -1,4 +1,4 @@
-## Unreleased
+## 0.7.1
 
 ### Fixed
 - Fix crash when OTA is enabled for shadowsocks.
