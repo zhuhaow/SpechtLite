@@ -23,7 +23,7 @@
 <h3>Changed</h3>
 
 <ul>
-<li>Now <code>SpeedAdapter</code> won&#39;t log events of children adapters.</li>
+<li>Now <code>SpeedAdapter</code> won&#39;t log events of child adapters.</li>
 </ul>
 
 <h2>0.6.0</h2>
