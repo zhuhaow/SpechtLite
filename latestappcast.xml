@@ -6,9 +6,18 @@
 <description>The stable channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.7.0</title>
-<pubDate>2016-12-08T07:52:16+00:00</pubDate>
+<title>SpechtLite 0.7.1</title>
+<pubDate>2016-12-08T11:17:51+00:00</pubDate>
 <description><![CDATA[
+<h2>0.7.1</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Fix crash when OTA is enabled for shadowsocks.</li>
+<li>Fix that the system proxy setting is not updated when switching to a profile with different ports.</li>
+</ul>
+
 <h2>0.7.0</h2>
 
 <h3>Fixed</h3>
@@ -152,11 +161,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.7.0/SpechtLite.zip"
-sparkle:version="204"
-sparkle:shortVersionString="0.7.0"
-sparkle:dsaSignature="MCwCFEr5dKxpcW9QdA53WBO5YsxHzBQIAhQ+MRuOOVdPpd6p+8aSWn8Q+Ujj5A=="
-length="8694568"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.7.1/SpechtLite.zip"
+sparkle:version="209"
+sparkle:shortVersionString="0.7.1"
+sparkle:dsaSignature="MC4CFQCeWIMJ/ZAaLOHsqcKEp2rDO8pQIQIVAL0CIVSh5ZZeOX/oNZKaIgGqbZpD"
+length="8700884"
 type="application/octet-stream" />
 </item>
 </channel>
