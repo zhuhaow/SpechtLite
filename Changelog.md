@@ -7,7 +7,7 @@
 - Fix some other bugs.
 
 ### Changed
-- Now `SpeedAdapter` won't log events of children adapters.
+- Now `SpeedAdapter` won't log events of child adapters.
 
 ## 0.6.0
 
