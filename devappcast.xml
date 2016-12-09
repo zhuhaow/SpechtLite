@@ -6,9 +6,23 @@
 <description>The dev channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.7.1</title>
-<pubDate>2016-12-08T11:17:51+00:00</pubDate>
+<title>SpechtLite 0.8.0.beta1</title>
+<pubDate>2016-12-09T13:22:22+00:00</pubDate>
 <description><![CDATA[
+<h2>0.8.0.beta1</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>SOCKS5 will work correctly in some circumstances.</li>
+</ul>
+
+<h3>Changed</h3>
+
+<ul>
+<li>The whole thread model is changed.</li>
+</ul>
+
 <h2>0.7.1</h2>
 
 <h3>Fixed</h3>
@@ -161,11 +175,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.7.1/SpechtLite.zip"
-sparkle:version="209"
-sparkle:shortVersionString="0.7.1"
-sparkle:dsaSignature="MC0CFQCCYv4hWoWU9KBgoK16zmg4Svl1zwIURCst3d634lwxH8W+2blYT3bzgys="
-length="8700884"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.8.0.beta1/SpechtLite.zip"
+sparkle:version="210"
+sparkle:shortVersionString="0.8.0.beta1"
+sparkle:dsaSignature="MCwCFEfI7/jNytWSEf2pEdMyI7OBUpCNAhRF6JbutC+GEY7F6MSXkDCB1wZSFw=="
+length="8677948"
 type="application/octet-stream" />
 </item>
 </channel>
