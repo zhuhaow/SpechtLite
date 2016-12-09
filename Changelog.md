@@ -1,3 +1,8 @@
+## 0.8.0.beta3
+
+### Fixed
+- Fix that when the request is an IP address it will not be processed correctly.
+
 ## 0.8.0.beta2
 
 ### Changed
