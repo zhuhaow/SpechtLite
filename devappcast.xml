@@ -6,9 +6,17 @@
 <description>The dev channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.8.0.beta1</title>
-<pubDate>2016-12-09T13:22:22+00:00</pubDate>
+<title>SpechtLite 0.8.0.beta2</title>
+<pubDate>2016-12-09T13:47:26+00:00</pubDate>
 <description><![CDATA[
+<h2>0.8.0.beta2</h2>
+
+<h3>Changed</h3>
+
+<ul>
+<li>Set DNS timeout to 1 second.</li>
+</ul>
+
 <h2>0.8.0.beta1</h2>
 
 <h3>Fixed</h3>
@@ -175,11 +183,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.8.0.beta1/SpechtLite.zip"
-sparkle:version="210"
-sparkle:shortVersionString="0.8.0.beta1"
-sparkle:dsaSignature="MCwCFEfI7/jNytWSEf2pEdMyI7OBUpCNAhRF6JbutC+GEY7F6MSXkDCB1wZSFw=="
-length="8677948"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.8.0.beta2/SpechtLite.zip"
+sparkle:version="211"
+sparkle:shortVersionString="0.8.0.beta2"
+sparkle:dsaSignature="MC0CFQCqJ5OCDLudOvWiiZbVRchh6OCnEQIUf9AYdMzN4+qgDl5DUer9FdD6pV8="
+length="8679925"
 type="application/octet-stream" />
 </item>
 </channel>
