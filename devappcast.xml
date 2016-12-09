@@ -6,9 +6,17 @@
 <description>The dev channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.8.0.beta2</title>
-<pubDate>2016-12-09T13:47:26+00:00</pubDate>
+<title>SpechtLite 0.8.0.beta3</title>
+<pubDate>2016-12-09T15:08:05+00:00</pubDate>
 <description><![CDATA[
+<h2>0.8.0.beta3</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Fix that when the request is an IP address it will not be processed correctly.</li>
+</ul>
+
 <h2>0.8.0.beta2</h2>
 
 <h3>Changed</h3>
@@ -183,11 +191,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.8.0.beta2/SpechtLite.zip"
-sparkle:version="211"
-sparkle:shortVersionString="0.8.0.beta2"
-sparkle:dsaSignature="MC0CFQCqJ5OCDLudOvWiiZbVRchh6OCnEQIUf9AYdMzN4+qgDl5DUer9FdD6pV8="
-length="8679925"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.8.0.beta3/SpechtLite.zip"
+sparkle:version="212"
+sparkle:shortVersionString="0.8.0.beta3"
+sparkle:dsaSignature="MCwCFGMEE90q81bcLPD/kh8aIY99E6f3AhRDAumBgMC5DTXXK3oBO4eJzbCC7A=="
+length="8680540"
 type="application/octet-stream" />
 </item>
 </channel>
