@@ -1,3 +1,9 @@
+## 0.8.0.beta2
+
+### Changed
+
+- Set DNS timeout to 1 second.
+
 ## 0.8.0.beta1
 
 ### Fixed
