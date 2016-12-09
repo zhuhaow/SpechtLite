@@ -1,3 +1,11 @@
+## 0.8.0.beta1
+
+### Fixed
+- SOCKS5 will work correctly in some circumstances.
+
+### Changed
+- The whole thread model is changed.
+
 ## 0.7.1
 
 ### Fixed
