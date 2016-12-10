@@ -1,21 +1,12 @@
-## 0.8.0.beta3
+## 0.8.0
 
-### Fixed
-- Fix that when the request is an IP address it will not be processed correctly.
-
-## 0.8.0.beta2
+Everything should be much more faster.
 
 ### Changed
-
 - Set DNS timeout to 1 second.
-
-## 0.8.0.beta1
 
 ### Fixed
 - SOCKS5 will work correctly in some circumstances.
-
-### Changed
-- The whole thread model is changed.
 
 ## 0.7.1
 
