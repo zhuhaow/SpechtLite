@@ -6,9 +6,17 @@
 <description>The stable channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.8.0</title>
-<pubDate>2016-12-10T11:37:41+00:00</pubDate>
+<title>SpechtLite 0.8.1</title>
+<pubDate>2016-12-11T07:41:51+00:00</pubDate>
 <description><![CDATA[
+<h2>0.8.1</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Fixed a bug in SOCKS5 proxy when dealing with IP-based requests.</li>
+</ul>
+
 <h2>0.8.0</h2>
 
 <p>Everything should be much more faster.</p>
@@ -177,11 +185,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.8.0/SpechtLite.zip"
-sparkle:version="213"
-sparkle:shortVersionString="0.8.0"
-sparkle:dsaSignature="MCwCFBVcwLq019S3SZmJyd3CAh3WhazGAhRKuJ0yXcCKm5eZ38HARkCmTvBAcg=="
-length="8684298"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.8.1/SpechtLite.zip"
+sparkle:version="214"
+sparkle:shortVersionString="0.8.1"
+sparkle:dsaSignature="MCwCFBA2Jz592mssY8Ye7pEshDx/vEFCAhQGmKhstlFzoH3a1hkATOcI7geipg=="
+length="8686224"
 type="application/octet-stream" />
 </item>
 </channel>
