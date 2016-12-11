@@ -1,3 +1,8 @@
+## 0.8.1
+
+### Fixed
+- Fixed a bug in SOCKS5 proxy when dealing with IP-based requests.
+
 ## 0.8.0
 
 Everything should be much more faster.
