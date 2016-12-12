@@ -6,9 +6,25 @@
 <description>The dev channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.8.1</title>
-<pubDate>2016-12-11T07:41:52+00:00</pubDate>
+<title>SpechtLite 0.9.0.beta2</title>
+<pubDate>2016-12-12T15:31:45+00:00</pubDate>
 <description><![CDATA[
+<h2>0.9.0.beta2</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Fixed that &quot;Show log&quot; won&#39;t show log.&#39;.</li>
+</ul>
+
+<h2>0.9.0.beta1</h2>
+
+<h3>Changed</h3>
+
+<ul>
+<li>Whole UI is rewrote with ReactiveCocoa.</li>
+</ul>
+
 <h2>0.8.1</h2>
 
 <h3>Fixed</h3>
@@ -185,11 +201,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.8.1/SpechtLite.zip"
-sparkle:version="214"
-sparkle:shortVersionString="0.8.1"
-sparkle:dsaSignature="MC0CFB/ZMJup63xtCADghm02JL2FH56EAhUAjYnuWsvHW6fyoYjudlAjIIaanvk="
-length="8686224"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.9.0.beta2/SpechtLite.zip"
+sparkle:version="218"
+sparkle:shortVersionString="0.9.0.beta2"
+sparkle:dsaSignature="MCwCFEQrJ10TajEJXDe3JXL9GSiOGQFcAhQLKhhg2X3C13i8kSnzoMpbSGW7eg=="
+length="9295321"
 type="application/octet-stream" />
 </item>
 </channel>
