@@ -44,10 +44,14 @@ open class ProxyHelper {
         return true
     }
 
-    open static func setUpSystemProxy(_ port: Int, enabled: Bool) -> Bool {
+    open static func setUpSystemProxy(port: UInt16?) -> Bool {
         let task = Process()
         task.launchPath = kProxyConfigPath
-        task.arguments = [String(port), enabled ? "enable" : "disable"]
+        if let port = port {
+            task.arguments = [String(port), "enable"]
+        } else {
+            task.arguments = ["0", "disable"]
+        }
 
         task.launch()
 

@@ -5,21 +5,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var menuController: MenuBarController!
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        UpdaterManager.setUpAutoUpdate()
+        PreferenceManager.setup()
+        UpdateManager.setup()
+        ProxySettingManager.setup()
+        ProfileManager.setup()
         
-        LoggerManager.setUpFileLogger()
-
         menuController = MenuBarController()
-    
-        if Preference.setUpSystemProxy {
-            menuController.setUpSystemProxy()
-        }
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
-        if Preference.setUpSystemProxy {
-            _ = ProxyHelper.setUpSystemProxy(0, enabled: false)
-        }
-        ConfigurationManager.singletonInstance.stopProxyServer()
+        ProfileManager.stopProxyServer()
     }
 }

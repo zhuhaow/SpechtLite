@@ -1,3 +1,8 @@
+## 0.9.0.beta1
+
+### Changed
+- Whole UI is rewrote with ReactiveCocoa.
+
 ## 0.8.1
 
 ### Fixed
