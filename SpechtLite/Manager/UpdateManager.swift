@@ -5,7 +5,7 @@ import ReactiveSwift
 class UpdateManager {
     static let useDevChannel: MutableProperty<Bool> = MutableProperty(false)
     
-    static func setup() {
+    static func setUp() {
         let updater = SUUpdater.shared()!
         // force to update since this app is very likely to be buggy.
         updater.automaticallyChecksForUpdates = true

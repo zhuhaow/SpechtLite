@@ -4,7 +4,7 @@ import ReactiveSwift
 class ProxySettingManager {
     static let setAsSystemProxy: MutableProperty<Bool> = MutableProperty(false)
     
-    static func setup() {
+    static func setUp() {
         setAsSystemProxy.producer.combineLatest(with: ProfileManager.currentProxyPort.producer).startWithValues { enabled, port in
             var port = port
             if !enabled {

@@ -8,7 +8,7 @@ class PreferenceManager {
     static let useDevChannelKey = "useDevChannel"
     static let autostartKey = "autostart"
     
-    static func setup() {
+    static func setUp() {
         let defaults = UserDefaults.standard
         ProfileManager.currentProfile.swap(defaults.string(forKey: defaultProfileKey))
         ProfileManager.allowFromLan.swap(defaults.bool(forKey: allowFromLanKey))

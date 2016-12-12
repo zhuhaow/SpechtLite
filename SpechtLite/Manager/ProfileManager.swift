@@ -27,7 +27,7 @@ class ProfileManager {
         return path
     }
     
-    static func setup() {
+    static func setUp() {
         reloadAllProfileFiles()
         
         profiles.producer.startWithValues { _ in
