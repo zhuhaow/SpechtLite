@@ -5,6 +5,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var menuController: MenuBarController!
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        LoggerManager.setup()
         PreferenceManager.setup()
         UpdateManager.setup()
         ProxySettingManager.setup()

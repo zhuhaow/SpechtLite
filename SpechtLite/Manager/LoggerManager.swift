@@ -5,7 +5,7 @@ import NEKit
 class LoggerManager {
     static var logger: DDLogger!
     
-    static func setUpFileLogger() {
+    static func setup() {
         DDLog.add(DDTTYLogger.sharedInstance(), with: .info)
         
         let logger = DDFileLogger()
