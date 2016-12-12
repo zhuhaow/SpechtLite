@@ -1,4 +1,4 @@
-## Unreleased
+## 0.9.0.beta2
 
 ### Fixed
 - Fixed that "Show log" won't show log.'.
