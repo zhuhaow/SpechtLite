@@ -6,9 +6,17 @@
 <description>The dev channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.9.0.beta3</title>
-<pubDate>2016-12-13T03:28:37+00:00</pubDate>
+<title>SpechtLite 0.9.0.beta4</title>
+<pubDate>2016-12-13T05:14:59+00:00</pubDate>
 <description><![CDATA[
+<h2>0.9.0.beta4</h2>
+
+<h3>Changed</h3>
+
+<ul>
+<li>Speed test now use gstatic.com instead of google.com.</li>
+</ul>
+
 <h2>0.9.0.beta3</h2>
 
 <h3>Changed</h3>
@@ -209,11 +217,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.9.0.beta3/SpechtLite.zip"
-sparkle:version="219"
-sparkle:shortVersionString="0.9.0.beta3"
-sparkle:dsaSignature="MCwCFCI466eOX0GOjPp0S3FS+EZmo1SYAhQbh7n/PoTbCwA7Jo3HZHuC06jLxg=="
-length="9296388"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.9.0.beta4/SpechtLite.zip"
+sparkle:version="220"
+sparkle:shortVersionString="0.9.0.beta4"
+sparkle:dsaSignature="MC0CFHxoQDSiHy4gcTR2U4dczUynlBk8AhUAoomBOLcVeIjYkNNmBX+xaIv2/zw="
+length="9294769"
 type="application/octet-stream" />
 </item>
 </channel>
