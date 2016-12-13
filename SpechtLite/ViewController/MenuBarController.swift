@@ -176,6 +176,7 @@ class MenuBarController: NSObject, NSMenuDelegate {
     
     override init() {
         let icon = NSImage(named: "StatusIcon")!
+        icon.isTemplate = true
         barItem = NSStatusBar.system().statusItem(withLength: -1)
         barItem.image = icon
         barItem.menu = NSMenu()
@@ -183,10 +184,6 @@ class MenuBarController: NSObject, NSMenuDelegate {
         super.init()
         
         barItem.menu!.delegate = self
-        
-        ProfileManager.currentProfile.producer.map { $0 != nil }.startWithValues { [weak self] in
-            self?.barItem.image?.isTemplate = $0
-        }
     }
     
     func menuNeedsUpdate(_ menu: NSMenu) {

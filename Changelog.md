@@ -1,3 +1,8 @@
+## 0.9.0.beta3
+
+### Changed
+- Do not change status bar icon when proxy servers are stopped.
+
 ## 0.9.0.beta2
 
 ### Fixed
