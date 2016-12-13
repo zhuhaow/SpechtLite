@@ -91,7 +91,7 @@ class MenuBarController: NSObject, NSMenuDelegate {
             }
             
             let urlSession = URLSession(configuration: proxySessionConfiguration)
-            let request = URLRequest(url: URL(string: "https://www.google.com/generate_204")!)
+            let request = URLRequest(url: URL(string: "https://www.gstatic.com/generate_204")!)
             urlSession.reactive.data(with: request).startWithResult {
                 let notification = NSUserNotification()
                 notification.soundName = NSUserNotificationDefaultSoundName

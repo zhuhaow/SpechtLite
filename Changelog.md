@@ -1,3 +1,8 @@
+## 0.9.0.beta4
+
+### Changed
+- Speed test now use gstatic.com instead of google.com.
+
 ## 0.9.0.beta3
 
 ### Changed
