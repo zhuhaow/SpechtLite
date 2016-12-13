@@ -1,3 +1,8 @@
+## 0.9.0.beta5
+
+### Fixed
+- Fixed a thread error when showing an error modal.
+
 ## 0.9.0.beta4
 
 ### Changed

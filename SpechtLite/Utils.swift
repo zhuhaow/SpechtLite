@@ -2,8 +2,10 @@ import Cocoa
 
 class Utils {
     static func alertError(_ errorDescription: String) {
-        let alert = NSAlert()
-        alert.messageText = errorDescription
-        alert.runModal()
+        DispatchQueue.main.sync {
+            let alert = NSAlert()
+            alert.messageText = errorDescription
+            alert.runModal()
+        }
     }
 }
