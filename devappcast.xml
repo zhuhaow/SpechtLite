@@ -6,9 +6,17 @@
 <description>The dev channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.9.0.beta2</title>
-<pubDate>2016-12-12T15:31:45+00:00</pubDate>
+<title>SpechtLite 0.9.0.beta3</title>
+<pubDate>2016-12-13T03:28:37+00:00</pubDate>
 <description><![CDATA[
+<h2>0.9.0.beta3</h2>
+
+<h3>Changed</h3>
+
+<ul>
+<li>Do not change status bar icon when proxy servers are stopped.</li>
+</ul>
+
 <h2>0.9.0.beta2</h2>
 
 <h3>Fixed</h3>
@@ -201,11 +209,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.9.0.beta2/SpechtLite.zip"
-sparkle:version="218"
-sparkle:shortVersionString="0.9.0.beta2"
-sparkle:dsaSignature="MCwCFEQrJ10TajEJXDe3JXL9GSiOGQFcAhQLKhhg2X3C13i8kSnzoMpbSGW7eg=="
-length="9295321"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.9.0.beta3/SpechtLite.zip"
+sparkle:version="219"
+sparkle:shortVersionString="0.9.0.beta3"
+sparkle:dsaSignature="MCwCFCI466eOX0GOjPp0S3FS+EZmo1SYAhQbh7n/PoTbCwA7Jo3HZHuC06jLxg=="
+length="9296388"
 type="application/octet-stream" />
 </item>
 </channel>
