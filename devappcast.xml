@@ -6,9 +6,25 @@
 <description>The dev channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.9.0.beta4</title>
-<pubDate>2016-12-13T05:14:59+00:00</pubDate>
+<title>SpechtLite 0.9.0.beta7</title>
+<pubDate>2016-12-14T03:59:06+00:00</pubDate>
 <description><![CDATA[
+<h2>0.9.0.beta7</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Fixed a bug relating to reject rule.</li>
+</ul>
+
+<h2>0.9.0.beta5</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Fixed a thread error when showing an error modal.</li>
+</ul>
+
 <h2>0.9.0.beta4</h2>
 
 <h3>Changed</h3>
@@ -217,11 +233,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.9.0.beta4/SpechtLite.zip"
-sparkle:version="220"
-sparkle:shortVersionString="0.9.0.beta4"
-sparkle:dsaSignature="MC0CFHxoQDSiHy4gcTR2U4dczUynlBk8AhUAoomBOLcVeIjYkNNmBX+xaIv2/zw="
-length="9294769"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.9.0.beta7/SpechtLite.zip"
+sparkle:version="226"
+sparkle:shortVersionString="0.9.0.beta7"
+sparkle:dsaSignature="MC0CFQCSSJ2cPQtecYKzDKxgz0ZKPh7bDgIUMrEwxBAn/S/v3nLLkZtdxnFB+y8="
+length="9296509"
 type="application/octet-stream" />
 </item>
 </channel>
