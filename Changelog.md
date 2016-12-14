@@ -1,4 +1,4 @@
-## 0.9.0.beta6
+## 0.9.0.beta7
 
 ### Fixed
 - Fixed a bug relating to reject rule.
