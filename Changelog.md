@@ -1,3 +1,8 @@
+## 0.9.0.beta6
+
+### Fixed
+- Fixed a bug relating to reject rule.
+
 ## 0.9.0.beta5
 
 ### Fixed
