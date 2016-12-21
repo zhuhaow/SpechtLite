@@ -6,8 +6,8 @@
 <description>The dev channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.10.0.beta1</title>
-<pubDate>2016-12-21T13:08:08+00:00</pubDate>
+<title>SpechtLite 0.10.0.beta2</title>
+<pubDate>2016-12-21T14:28:54+00:00</pubDate>
 <description><![CDATA[
 <h2>0.10.0.beta1</h2>
 
@@ -21,7 +21,7 @@
 <h3>Added</h3>
 
 <ul>
-<li>Add support for <code>simple_http</code> and <code>tls1.2_ticket_auth</code> for SSR.</li>
+<li>Add support for <code>http_simple</code> and <code>tls1.2_ticket_auth</code> for SSR.</li>
 </ul>
 
 <h2>0.9.0</h2>
@@ -216,11 +216,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.0.beta1/SpechtLite.zip"
-sparkle:version="228"
-sparkle:shortVersionString="0.10.0.beta1"
-sparkle:dsaSignature="MC0CFBvtmsbMeV6YQ+iCnqfa4GW2HtP4AhUAqdsH/gBDPukVTaoOWCfL5Sodhok="
-length="9296957"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.0.beta2/SpechtLite.zip"
+sparkle:version="229"
+sparkle:shortVersionString="0.10.0.beta2"
+sparkle:dsaSignature="MC0CFQCS7Gd1OlUriL73sjH4/ytfoc4PmwIUYiGcZp+hYj2UronIH9LTwYjSiyU="
+length="9296931"
 type="application/octet-stream" />
 </item>
 </channel>
