@@ -5,7 +5,7 @@
 - **`ota: true` is obsolete, use the configuration of ShadowsocksR (`obfs: verify_sha1`) instead.**
 
 ### Added
-- Add support for `simple_http` and `tls1.2_ticket_auth` for SSR.
+- Add support for `http_simple` and `tls1.2_ticket_auth` for SSR.
 
 ## 0.9.0
 
