@@ -6,16 +6,25 @@
 <description>The dev channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.10.0.beta2</title>
-<pubDate>2016-12-21T14:28:54+00:00</pubDate>
+<title>SpechtLite 0.10.0.beta4</title>
+<pubDate>2016-12-21T15:12:16+00:00</pubDate>
 <description><![CDATA[
+<h2>0.10.0.beta3</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Fixed error in changelog.</li>
+<li>Fixed error in alert info.</li>
+</ul>
+
 <h2>0.10.0.beta1</h2>
 
 <h3>Changed</h3>
 
 <ul>
 <li>SpechtLite will be more tolerent of illegal URLs.</li>
-<li><strong><code>ota: true</code> is obsolete, use the configuration of ShadowsocksR (<code>obfs: verify_sha1</code>) instead.</strong></li>
+<li><strong><code>ota: true</code> is obsolete, use the configuration of ShadowsocksR (<code>protocol: verify_sha1</code>) instead.</strong></li>
 </ul>
 
 <h3>Added</h3>
@@ -216,11 +225,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.0.beta2/SpechtLite.zip"
-sparkle:version="229"
-sparkle:shortVersionString="0.10.0.beta2"
-sparkle:dsaSignature="MC0CFQCS7Gd1OlUriL73sjH4/ytfoc4PmwIUYiGcZp+hYj2UronIH9LTwYjSiyU="
-length="9296931"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.0.beta4/SpechtLite.zip"
+sparkle:version="231"
+sparkle:shortVersionString="0.10.0.beta4"
+sparkle:dsaSignature="MCwCFCog7ECMgiIV6f68HsMsQEljUv6WAhRVGKX+lIRSimakzn1ZzpY6YV/5yA=="
+length="9347284"
 type="application/octet-stream" />
 </item>
 </channel>
