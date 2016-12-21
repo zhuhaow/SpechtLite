@@ -6,9 +6,25 @@
 <description>The stable channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.8.1</title>
-<pubDate>2016-12-11T07:41:51+00:00</pubDate>
+<title>SpechtLite 0.9.0</title>
+<pubDate>2016-12-21T12:39:32+00:00</pubDate>
 <description><![CDATA[
+<h2>0.9.0</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Fixed a bug relating to reject rule.</li>
+<li>Fixed a thread error when showing an error modal.</li>
+</ul>
+
+<h3>Changed</h3>
+
+<ul>
+<li>Speed test now use gstatic.com instead of google.com.</li>
+<li>Whole UI is rewrote with ReactiveCocoa.</li>
+</ul>
+
 <h2>0.8.1</h2>
 
 <h3>Fixed</h3>
@@ -185,11 +201,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.8.1/SpechtLite.zip"
-sparkle:version="214"
-sparkle:shortVersionString="0.8.1"
-sparkle:dsaSignature="MCwCFGrdvfEU+xhjW6ZktfPdb5yMaSzqAhQOonrd1h7NBCgkVZqTnn/WHeVaRg=="
-length="8686224"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.9.0/SpechtLite.zip"
+sparkle:version="227"
+sparkle:shortVersionString="0.9.0"
+sparkle:dsaSignature="MCwCFEqMHjyTG0Q6gf80WZxwiC0pbFJJAhQJDXZ0ZQvdQ12HBOLRp7YcBbja2Q=="
+length="9298444"
 type="application/octet-stream" />
 </item>
 </channel>
