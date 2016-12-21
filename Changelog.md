@@ -1,8 +1,14 @@
+## 0.10.0.beta3
+
+### Fixed
+- Fixed error in changelog.
+- Fixed error in alert info.
+
 ## 0.10.0.beta1
 
 ### Changed
 - SpechtLite will be more tolerent of illegal URLs.
-- **`ota: true` is obsolete, use the configuration of ShadowsocksR (`obfs: verify_sha1`) instead.**
+- **`ota: true` is obsolete, use the configuration of ShadowsocksR (`protocol: verify_sha1`) instead.**
 
 ### Added
 - Add support for `http_simple` and `tls1.2_ticket_auth` for SSR.
