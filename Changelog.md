@@ -1,31 +1,11 @@
-## 0.9.0.beta7
+## 0.9.0
 
 ### Fixed
 - Fixed a bug relating to reject rule.
-
-## 0.9.0.beta5
-
-### Fixed
 - Fixed a thread error when showing an error modal.
-
-## 0.9.0.beta4
 
 ### Changed
 - Speed test now use gstatic.com instead of google.com.
-
-## 0.9.0.beta3
-
-### Changed
-- Do not change status bar icon when proxy servers are stopped.
-
-## 0.9.0.beta2
-
-### Fixed
-- Fixed that "Show log" won't show log.'.
-
-## 0.9.0.beta1
-
-### Changed
 - Whole UI is rewrote with ReactiveCocoa.
 
 ## 0.8.1
