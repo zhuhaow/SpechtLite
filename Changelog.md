@@ -1,3 +1,8 @@
+## 0.10.0.beta5
+
+### Fixed
+- Fixed that ssr with `tls1.2_ticket_auth` will stop unexpectly sometimes.
+
 ## 0.10.0.beta3
 
 ### Fixed
