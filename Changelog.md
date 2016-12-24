@@ -1,3 +1,8 @@
+## 0.10.0.beta6
+
+### Fixed
+- Fixed that sometimes http proxy will stop unexpectly.
+
 ## 0.10.0.beta5
 
 ### Fixed

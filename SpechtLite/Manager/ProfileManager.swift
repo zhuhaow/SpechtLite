@@ -100,7 +100,7 @@ class ProfileManager {
         RuleManager.currentManager = configuration.ruleManager
         let newPort = UInt16(configuration.proxyPort ?? Opt.defaultProxyPort)
         
-        let address = allowFromLan.value ? nil : IPv4Address(fromString: "127.0.0.1")
+        let address = allowFromLan.value ? nil : IPAddress(fromString: "127.0.0.1")
         let httpServer = GCDHTTPProxyServer(address: address, port: NEKit.Port(port: newPort))
         let socks5Server = GCDSOCKS5ProxyServer(address: address, port: NEKit.Port(port: newPort + 1))
         
