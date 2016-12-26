@@ -6,9 +6,17 @@
 <description>The dev channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.10.0.beta6</title>
-<pubDate>2016-12-24T13:22:16+00:00</pubDate>
+<title>SpechtLite 0.10.0.beta7</title>
+<pubDate>2016-12-26T06:39:52+00:00</pubDate>
 <description><![CDATA[
+<h2>0.10.0.beta7</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>IP range with mask will be handled correctly.</li>
+</ul>
+
 <h2>0.10.0.beta6</h2>
 
 <h3>Fixed</h3>
@@ -241,11 +249,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.0.beta6/SpechtLite.zip"
-sparkle:version="233"
-sparkle:shortVersionString="0.10.0.beta6"
-sparkle:dsaSignature="MCwCFAtSDr1fY1+vLIV4yJQQ7Y9dyw71AhQWmKE7eI2fRXkIks+CCOSKD86A0g=="
-length="9378796"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.0.beta7/SpechtLite.zip"
+sparkle:version="237"
+sparkle:shortVersionString="0.10.0.beta7"
+sparkle:dsaSignature="MC0CFCLsoSTzo7esgi3WC4PvB1t+ezUYAhUAj+hEEKJn6nd98MwMKtDJXovNyFo="
+length="9377334"
 type="application/octet-stream" />
 </item>
 </channel>
