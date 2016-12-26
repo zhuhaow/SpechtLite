@@ -1,3 +1,8 @@
+## 0.10.0.beta7
+
+### Fixed
+- IP range with mask will be handled correctly.
+
 ## 0.10.0.beta6
 
 ### Fixed
