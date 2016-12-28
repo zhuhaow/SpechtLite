@@ -1,25 +1,4 @@
-## 0.10.0.beta7
-
-### Fixed
-- IP range with mask will be handled correctly.
-
-## 0.10.0.beta6
-
-### Fixed
-- Fixed that sometimes http proxy will stop unexpectly.
-
-## 0.10.0.beta5
-
-### Fixed
-- Fixed that ssr with `tls1.2_ticket_auth` will stop unexpectly sometimes.
-
-## 0.10.0.beta3
-
-### Fixed
-- Fixed error in changelog.
-- Fixed error in alert info.
-
-## 0.10.0.beta1
+## 0.10.0
 
 ### Changed
 - SpechtLite will be more tolerent of illegal URLs.
