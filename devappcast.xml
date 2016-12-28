@@ -6,43 +6,10 @@
 <description>The dev channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.10.0.beta7</title>
-<pubDate>2016-12-26T06:39:52+00:00</pubDate>
+<title>SpechtLite 0.10.0</title>
+<pubDate>2016-12-28T14:08:54+00:00</pubDate>
 <description><![CDATA[
-<h2>0.10.0.beta7</h2>
-
-<h3>Fixed</h3>
-
-<ul>
-<li>IP range with mask will be handled correctly.</li>
-</ul>
-
-<h2>0.10.0.beta6</h2>
-
-<h3>Fixed</h3>
-
-<ul>
-<li>Fixed that sometimes http proxy will stop unexpectly.</li>
-</ul>
-
-<h2>0.10.0.beta5</h2>
-
-<h3>Fixed</h3>
-
-<ul>
-<li>Fixed that ssr with <code>tls1.2_ticket_auth</code> will stop unexpectly sometimes.</li>
-</ul>
-
-<h2>0.10.0.beta3</h2>
-
-<h3>Fixed</h3>
-
-<ul>
-<li>Fixed error in changelog.</li>
-<li>Fixed error in alert info.</li>
-</ul>
-
-<h2>0.10.0.beta1</h2>
+<h2>0.10.0</h2>
 
 <h3>Changed</h3>
 
@@ -249,11 +216,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.0.beta7/SpechtLite.zip"
-sparkle:version="237"
-sparkle:shortVersionString="0.10.0.beta7"
-sparkle:dsaSignature="MC0CFCLsoSTzo7esgi3WC4PvB1t+ezUYAhUAj+hEEKJn6nd98MwMKtDJXovNyFo="
-length="9377334"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.0/SpechtLite.zip"
+sparkle:version="239"
+sparkle:shortVersionString="0.10.0"
+sparkle:dsaSignature="MCwCFDF4EMfxZvhzQVNx3ZFEB8K7EWo1AhRJ4apT249VHB8SnCAAM32CUukOyg=="
+length="9385736"
 type="application/octet-stream" />
 </item>
 </channel>
