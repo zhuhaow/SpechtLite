@@ -72,6 +72,10 @@ adapter:
     # Shadowsocks encryption methods are not fully tested, please report if there is anything not working.
     method: AES-128-CFB
     password: ss_password
+    # Currently support: origin and verify_sha1
+    protocol: origin
+    # Currently support: origin, http_simple and tls1.2_ticket_auth
+    obfs: origin
   - id: adapter4
     type: socks5
     host: socks5.server
