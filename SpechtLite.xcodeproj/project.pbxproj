@@ -55,10 +55,8 @@
 		36BA0BF51D599FF40074BEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF41D599FF40074BEBF /* Assets.xcassets */; };
 		36BA0BF81D599FF40074BEBF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF61D599FF40074BEBF /* MainMenu.xib */; };
 		C83FB9621D753D3300718382 /* SPObserverFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83FB9611D753D3300718382 /* SPObserverFactory.swift */; };
-		C859077D1D67195B0046F665 /* ProxyConfig in Resources */ = {isa = PBXBuildFile; fileRef = C8A7E1461D66FCD300E713F5 /* ProxyConfig */; };
 		C8A7E13D1D66FC8E00E713F5 /* install_proxy_helper.sh in Resources */ = {isa = PBXBuildFile; fileRef = C8A7E13B1D66FC8E00E713F5 /* install_proxy_helper.sh */; };
 		C8A7E13E1D66FC8E00E713F5 /* ProxyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A7E13C1D66FC8E00E713F5 /* ProxyHelper.swift */; };
-		C8A7E1491D66FCD300E713F5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A7E1481D66FCD300E713F5 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,11 +67,18 @@
 			remoteGlobalIDString = 36A719D81D6178E500DC35F5;
 			remoteInfo = SpechtLiteLaunchHelper;
 		};
-		3629507C1D6B4536001A30F6 /* PBXContainerItemProxy */ = {
+		36B6A3311E2635FE002B5B1D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 36BA0BE71D599FF40074BEBF /* Project object */;
+			containerPortal = 36B6A32D1E2635FE002B5B1D /* ProxyConfig.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 36B6A3231E263590002B5B1D;
+			remoteInfo = ProxyConfig;
+		};
+		36B6A3331E26360A002B5B1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36B6A32D1E2635FE002B5B1D /* ProxyConfig.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = C8A7E1451D66FCD300E713F5;
+			remoteGlobalIDString = 36B6A3221E263590002B5B1D;
 			remoteInfo = ProxyConfig;
 		};
 /* End PBXContainerItemProxy section */
@@ -112,15 +117,6 @@
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C8A7E1441D66FCD300E713F5 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -167,6 +163,7 @@
 		36B2ACE61DE33A5600BD2C3D /* UpdateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateManager.swift; sourceTree = "<group>"; };
 		36B2ACE81DE34D8F00BD2C3D /* devappcast.xml.erb */ = {isa = PBXFileReference; lastKnownFileType = text; path = devappcast.xml.erb; sourceTree = "<group>"; };
 		36B2ACE91DE355C600BD2C3D /* Resolver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Resolver.framework; path = Carthage/Build/Mac/Resolver.framework; sourceTree = "<group>"; };
+		36B6A32D1E2635FE002B5B1D /* ProxyConfig.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProxyConfig.xcodeproj; path = ProxyConfig/ProxyConfig.xcodeproj; sourceTree = "<group>"; };
 		36BA0BEF1D599FF40074BEBF /* SpechtLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpechtLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BA0BF21D599FF40074BEBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36BA0BF41D599FF40074BEBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -176,8 +173,6 @@
 		C83FB9611D753D3300718382 /* SPObserverFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPObserverFactory.swift; sourceTree = "<group>"; };
 		C8A7E13B1D66FC8E00E713F5 /* install_proxy_helper.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_proxy_helper.sh; sourceTree = "<group>"; };
 		C8A7E13C1D66FC8E00E713F5 /* ProxyHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyHelper.swift; sourceTree = "<group>"; };
-		C8A7E1461D66FCD300E713F5 /* ProxyConfig */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProxyConfig; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8A7E1481D66FCD300E713F5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,13 +204,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C8A7E1431D66FCD300E713F5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -223,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = ViewModel;
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
@@ -258,7 +245,6 @@
 				3621B9621DFD8BBD0003ABB3 /* ProxySettingManager.swift */,
 				36B2ACE61DE33A5600BD2C3D /* UpdateManager.swift */,
 			);
-			name = Manager;
 			path = Manager;
 			sourceTree = "<group>";
 		};
@@ -267,7 +253,6 @@
 			children = (
 				36B2ACDB1DE0947C00BD2C3D /* MenuBarController.swift */,
 			);
-			name = ViewController;
 			path = ViewController;
 			sourceTree = "<group>";
 		};
@@ -276,7 +261,6 @@
 			children = (
 				C8A7E13B1D66FC8E00E713F5 /* install_proxy_helper.sh */,
 			);
-			name = script;
 			path = script;
 			sourceTree = "<group>";
 		};
@@ -331,12 +315,20 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		36B6A32E1E2635FE002B5B1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36B6A3321E2635FE002B5B1D /* ProxyConfig */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		36BA0BE61D599FF40074BEBF = {
 			isa = PBXGroup;
 			children = (
+				36B6A32D1E2635FE002B5B1D /* ProxyConfig.xcodeproj */,
 				3621B9511DFCDF560003ABB3 /* Frameworks */,
 				36BA0BF01D599FF40074BEBF /* Products */,
-				C8A7E1471D66FCD300E713F5 /* ProxyConfig */,
 				36BA0BF11D599FF40074BEBF /* SpechtLite */,
 				36A719DA1D6178E500DC35F5 /* SpechtLiteLaunchHelper */,
 				36A719611D5C2ED500DC35F5 /* appcast */,
@@ -357,7 +349,6 @@
 			children = (
 				36BA0BEF1D599FF40074BEBF /* SpechtLite.app */,
 				36A719D91D6178E500DC35F5 /* SpechtLiteLaunchHelper.app */,
-				C8A7E1461D66FCD300E713F5 /* ProxyConfig */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -379,14 +370,6 @@
 				36B2ACE21DE0979C00BD2C3D /* Utils.swift */,
 			);
 			path = SpechtLite;
-			sourceTree = "<group>";
-		};
-		C8A7E1471D66FCD300E713F5 /* ProxyConfig */ = {
-			isa = PBXGroup;
-			children = (
-				C8A7E1481D66FCD300E713F5 /* main.swift */,
-			);
-			path = ProxyConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,30 +409,13 @@
 			buildRules = (
 			);
 			dependencies = (
+				36B6A3341E26360A002B5B1D /* PBXTargetDependency */,
 				3629507B1D6B4536001A30F6 /* PBXTargetDependency */,
-				3629507D1D6B4536001A30F6 /* PBXTargetDependency */,
 			);
 			name = SpechtLite;
 			productName = SpechtLite;
 			productReference = 36BA0BEF1D599FF40074BEBF /* SpechtLite.app */;
 			productType = "com.apple.product-type.application";
-		};
-		C8A7E1451D66FCD300E713F5 /* ProxyConfig */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C8A7E14A1D66FCD300E713F5 /* Build configuration list for PBXNativeTarget "ProxyConfig" */;
-			buildPhases = (
-				C8A7E1421D66FCD300E713F5 /* Sources */,
-				C8A7E1431D66FCD300E713F5 /* Frameworks */,
-				C8A7E1441D66FCD300E713F5 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ProxyConfig;
-			productName = ProxyConfig;
-			productReference = C8A7E1461D66FCD300E713F5 /* ProxyConfig */;
-			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
@@ -473,10 +439,6 @@
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
-					C8A7E1451D66FCD300E713F5 = {
-						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0810;
-					};
 				};
 			};
 			buildConfigurationList = 36BA0BEA1D599FF40074BEBF /* Build configuration list for PBXProject "SpechtLite" */;
@@ -490,14 +452,29 @@
 			mainGroup = 36BA0BE61D599FF40074BEBF;
 			productRefGroup = 36BA0BF01D599FF40074BEBF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 36B6A32E1E2635FE002B5B1D /* Products */;
+					ProjectRef = 36B6A32D1E2635FE002B5B1D /* ProxyConfig.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
-				36BA0BEE1D599FF40074BEBF /* SpechtLite */,
 				36A719D81D6178E500DC35F5 /* SpechtLiteLaunchHelper */,
-				C8A7E1451D66FCD300E713F5 /* ProxyConfig */,
+				36BA0BEE1D599FF40074BEBF /* SpechtLite */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		36B6A3321E2635FE002B5B1D /* ProxyConfig */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = ProxyConfig;
+			remoteRef = 36B6A3311E2635FE002B5B1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		36A719D71D6178E500DC35F5 /* Resources */ = {
@@ -513,7 +490,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C859077D1D67195B0046F665 /* ProxyConfig in Resources */,
 				C8A7E13D1D66FC8E00E713F5 /* install_proxy_helper.sh in Resources */,
 				36A719721D5C4B5600DC35F5 /* dsa_pub.pem in Resources */,
 				36A719F51D63FB3500DC35F5 /* Credits.rtf in Resources */,
@@ -612,14 +588,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C8A7E1421D66FCD300E713F5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C8A7E1491D66FCD300E713F5 /* main.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -628,10 +596,10 @@
 			target = 36A719D81D6178E500DC35F5 /* SpechtLiteLaunchHelper */;
 			targetProxy = 3629507A1D6B4536001A30F6 /* PBXContainerItemProxy */;
 		};
-		3629507D1D6B4536001A30F6 /* PBXTargetDependency */ = {
+		36B6A3341E26360A002B5B1D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C8A7E1451D66FCD300E713F5 /* ProxyConfig */;
-			targetProxy = 3629507C1D6B4536001A30F6 /* PBXContainerItemProxy */;
+			name = ProxyConfig;
+			targetProxy = 36B6A3331E26360A002B5B1D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -850,26 +818,6 @@
 			};
 			name = Release;
 		};
-		C8A7E14B1D66FCD300E713F5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		C8A7E14C1D66FCD300E713F5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -896,15 +844,6 @@
 			buildConfigurations = (
 				36BA0BFD1D599FF40074BEBF /* Debug */,
 				36BA0BFE1D599FF40074BEBF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C8A7E14A1D66FCD300E713F5 /* Build configuration list for PBXNativeTarget "ProxyConfig" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C8A7E14B1D66FCD300E713F5 /* Debug */,
-				C8A7E14C1D66FCD300E713F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
