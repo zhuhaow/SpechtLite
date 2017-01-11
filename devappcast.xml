@@ -6,9 +6,18 @@
 <description>The dev channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.10.0</title>
-<pubDate>2016-12-28T14:08:54+00:00</pubDate>
+<title>SpechtLite 0.10.1</title>
+<pubDate>2017-01-11T10:03:32+00:00</pubDate>
 <description><![CDATA[
+<h2>0.10.1</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Unset system proxy when SpechtLite quits. @metacodes.</li>
+<li>Autostart should work now.</li>
+</ul>
+
 <h2>0.10.0</h2>
 
 <h3>Changed</h3>
@@ -216,11 +225,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.0/SpechtLite.zip"
-sparkle:version="239"
-sparkle:shortVersionString="0.10.0"
-sparkle:dsaSignature="MCwCFDF4EMfxZvhzQVNx3ZFEB8K7EWo1AhRJ4apT249VHB8SnCAAM32CUukOyg=="
-length="9385736"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.1/SpechtLite.zip"
+sparkle:version="251"
+sparkle:shortVersionString="0.10.1"
+sparkle:dsaSignature="MCwCFCih8O2AJR0Jwj/TaftuFLLI977TAhQPRQ8nGOxXrgUKVhs9eTKpoFl4ZQ=="
+length="7978634"
 type="application/octet-stream" />
 </item>
 </channel>
