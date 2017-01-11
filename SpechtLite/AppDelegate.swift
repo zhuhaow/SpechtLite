@@ -10,6 +10,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         UpdateManager.setUp()
         ProxySettingManager.setUp()
         ProfileManager.setUp()
+        AutostartManager.setUp()
 
         menuController = MenuBarController()
     }

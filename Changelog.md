@@ -2,6 +2,7 @@
 
 ### Fixed
 - Unset system proxy when SpechtLite quits. @metacodes.
+- Autostart should work now.
 
 ## 0.10.0
 
