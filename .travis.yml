@@ -22,8 +22,8 @@ before_deploy:
 - "security set-key-partition-list -S apple-tool:,apple: -s -k mysecretpassword build.keychain"
 - "[ -f $(git rev-parse --git-dir)/shallow ] && git fetch --unshallow"
 - gem install github-markup redcarpet --no-ri --no-rdoc
-- gem install gym --version 1.12.1
-- gym
+- gem install gym
+- fastlane gym SpechtLite
 - ditto -c -k --sequesterRsrc --keepParent SpechtLite.app SpechtLite.zip
 deploy:
   provider: releases
