@@ -6,9 +6,17 @@
 <description>The stable channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.10.1</title>
-<pubDate>2017-01-11T10:03:32+00:00</pubDate>
+<title>SpechtLite 0.10.2</title>
+<pubDate>2017-01-11T10:17:48+00:00</pubDate>
 <description><![CDATA[
+<h2>0.10.2</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Now helper will be installed correctly.</li>
+</ul>
+
 <h2>0.10.1</h2>
 
 <h3>Fixed</h3>
@@ -225,11 +233,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.1/SpechtLite.zip"
-sparkle:version="251"
-sparkle:shortVersionString="0.10.1"
-sparkle:dsaSignature="MCwCFGmqGjdWermQg8f2nEtz43RnkA5bAhRIeAfqDwErs2i3ZtxDiayjcRLM5Q=="
-length="7978634"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.2/SpechtLite.zip"
+sparkle:version="252"
+sparkle:shortVersionString="0.10.2"
+sparkle:dsaSignature="MCwCFDhkNHnOZBBvg8Q/tyR8JK36dgCLAhRu7ixZZALyQlMQJufS6tPwX31VBQ=="
+length="9419182"
 type="application/octet-stream" />
 </item>
 </channel>
