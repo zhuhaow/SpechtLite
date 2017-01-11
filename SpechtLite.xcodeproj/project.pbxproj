@@ -51,6 +51,7 @@
 		36B2ACE71DE33A5600BD2C3D /* UpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2ACE61DE33A5600BD2C3D /* UpdateManager.swift */; };
 		36B2ACEA1DE355C600BD2C3D /* Resolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B2ACE91DE355C600BD2C3D /* Resolver.framework */; };
 		36B2ACEB1DE355C600BD2C3D /* Resolver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36B2ACE91DE355C600BD2C3D /* Resolver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36B6A3371E263BA3002B5B1D /* ProxyConfig in Resources */ = {isa = PBXBuildFile; fileRef = 36B6A3321E2635FE002B5B1D /* ProxyConfig */; };
 		36BA0BF31D599FF40074BEBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BA0BF21D599FF40074BEBF /* AppDelegate.swift */; };
 		36BA0BF51D599FF40074BEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF41D599FF40074BEBF /* Assets.xcassets */; };
 		36BA0BF81D599FF40074BEBF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BA0BF61D599FF40074BEBF /* MainMenu.xib */; };
@@ -490,6 +491,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36B6A3371E263BA3002B5B1D /* ProxyConfig in Resources */,
 				C8A7E13D1D66FC8E00E713F5 /* install_proxy_helper.sh in Resources */,
 				36A719721D5C4B5600DC35F5 /* dsa_pub.pem in Resources */,
 				36A719F51D63FB3500DC35F5 /* Credits.rtf in Resources */,

@@ -1,3 +1,8 @@
+## 0.10.2
+
+### Fixed
+- Now helper will be installed correctly.
+
 ## 0.10.1
 
 ### Fixed
