@@ -1,3 +1,8 @@
+## 0.10.1
+
+### Fixed
+- Unset system proxy when SpechtLite quits. @metacodes.
+
 ## 0.10.0
 
 ### Changed
