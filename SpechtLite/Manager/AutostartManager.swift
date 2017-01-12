@@ -8,7 +8,7 @@ class AutostartManager {
     static let autostartAtLogin: MutableProperty<Bool> = MutableProperty(false)
     
     static func setUp() {
-        autostartAtLogin.producer.startWithValues {
+        autostartAtLogin.signal.observeValues {
             _ = $0 ? enable() : disable()
         }
     }

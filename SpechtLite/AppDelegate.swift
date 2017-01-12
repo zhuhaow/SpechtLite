@@ -6,11 +6,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         LoggerManager.setUp()
-        PreferenceManager.setUp()
         UpdateManager.setUp()
         ProxySettingManager.setUp()
         ProfileManager.setUp()
         AutostartManager.setUp()
+        PreferenceManager.setUp()
 
         menuController = MenuBarController()
     }

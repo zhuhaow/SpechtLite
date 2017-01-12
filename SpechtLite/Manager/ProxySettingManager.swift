@@ -5,7 +5,7 @@ class ProxySettingManager {
     static let setAsSystemProxy: MutableProperty<Bool> = MutableProperty(false)
 
     static func setUp() {
-        setAsSystemProxy.producer.combineLatest(with: ProfileManager.currentProxyPort.producer).startWithValues { enabled, port in
+        setAsSystemProxy.signal.combineLatest(with: ProfileManager.currentProxyPort.signal).observeValues { enabled, port in
             var port = port
             if !enabled {
                 port = nil
