@@ -30,15 +30,15 @@ class ProfileManager {
     static func setUp() {
         reloadAllProfileFiles()
         
-        profiles.signal.observeValues { _ in
+        profiles.producer.startWithValues { _ in
             currentProfile.modify { _ in }
         }
         
-        currentProfile.signal.observeValues { name in
+        currentProfile.producer.startWithValues { name in
             runProfile(name: name)
         }
         
-        allowFromLan.signal.observeValues { _ in
+        allowFromLan.producer.startWithValues { _ in
             runProfile(name: currentProfile.value)
         }
     }
