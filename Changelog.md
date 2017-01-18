@@ -1,9 +1,4 @@
-## 0.10.3.beta2
-
-### Fixed
-- Fixed what should be fixed in beta1.
-
-## 0.10.3.beta1
+## 0.10.3
 
 ### Fixed
 - SpechtLite won't clear proxy settings anymore when starting up if `Set as system proxy` is not enabled.
