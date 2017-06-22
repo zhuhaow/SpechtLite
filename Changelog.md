@@ -1,3 +1,8 @@
+## 0.10.4
+
+### Fixed
+- Fix that the SOCKS adapter will send IP bytes in wrong order.
+
 ## 0.10.3
 
 ### Fixed
