@@ -6,9 +6,17 @@
 <description>The stable channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.10.3</title>
-<pubDate>2017-01-18T04:48:48+00:00</pubDate>
+<title>SpechtLite 0.10.4</title>
+<pubDate>2017-06-22T16:19:18+00:00</pubDate>
 <description><![CDATA[
+<h2>0.10.4</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Fix that the SOCKS adapter will send IP bytes in wrong order.</li>
+</ul>
+
 <h2>0.10.3</h2>
 
 <h3>Fixed</h3>
@@ -241,11 +249,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.3/SpechtLite.zip"
-sparkle:version="255"
-sparkle:shortVersionString="0.10.3"
-sparkle:dsaSignature="MCwCFDPhc/JPCxmg44oaPJk6sTqSbiDAAhR+hnza9TooFj6gYfq75QuyohusFQ=="
-length="9419312"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.4/SpechtLite.zip"
+sparkle:version="259"
+sparkle:shortVersionString="0.10.4"
+sparkle:dsaSignature="MCwCFGDE0W/5CKCFcTF/ApUPAkynYVUzAhQE/caloUCp9WRB34j6OoQm3/NF4g=="
+length="9838030"
 type="application/octet-stream" />
 </item>
 </channel>
