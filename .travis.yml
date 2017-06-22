@@ -6,6 +6,7 @@ cache:
   directories:
   - Carthage
 install:
+- set -eo pipefail
 - gem install xcpretty
 - bin/bootstrap-if-needed
 script:
