@@ -1,3 +1,8 @@
+## 0.10.6
+
+### Fixed
+- Updated MMBD-Swift to fix a bug.
+
 ## 0.10.5
 
 ### Changed
