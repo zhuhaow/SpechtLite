@@ -6,9 +6,17 @@
 <description>The stable channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.10.5</title>
-<pubDate>2017-06-29T14:17:26+00:00</pubDate>
+<title>SpechtLite 0.10.6</title>
+<pubDate>2017-06-29T15:49:39+00:00</pubDate>
 <description><![CDATA[
+<h2>0.10.6</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Updated MMBD-Swift to fix a bug.</li>
+</ul>
+
 <h2>0.10.5</h2>
 
 <h3>Changed</h3>
@@ -257,11 +265,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.5/SpechtLite.zip"
-sparkle:version="260"
-sparkle:shortVersionString="0.10.5"
-sparkle:dsaSignature="MCwCFGCY2LzRguJJKdreAessv4FVeUMUAhQ4/opbJ4me0DGd9nmQqwqcbvNCng=="
-length="9838862"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.6/SpechtLite.zip"
+sparkle:version="261"
+sparkle:shortVersionString="0.10.6"
+sparkle:dsaSignature="MCwCFBYBizCZU7qwAMNPMMgsD84O1TofAhQVMlJIRPu3l0SCBqDl9C5rkxIiZw=="
+length="9838008"
 type="application/octet-stream" />
 </item>
 </channel>
