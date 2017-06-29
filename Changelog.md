@@ -1,3 +1,8 @@
+## 0.10.5
+
+### Changed
+- Updated GeoIP database.
+
 ## 0.10.4
 
 ### Fixed
