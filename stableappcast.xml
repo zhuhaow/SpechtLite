@@ -6,9 +6,17 @@
 <description>The stable channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.10.4</title>
-<pubDate>2017-06-22T16:19:18+00:00</pubDate>
+<title>SpechtLite 0.10.5</title>
+<pubDate>2017-06-29T12:11:28+00:00</pubDate>
 <description><![CDATA[
+<h2>0.10.5</h2>
+
+<h3>Changed</h3>
+
+<ul>
+<li>Updated GeoIP database.</li>
+</ul>
+
 <h2>0.10.4</h2>
 
 <h3>Fixed</h3>
@@ -249,11 +257,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.4/SpechtLite.zip"
-sparkle:version="259"
-sparkle:shortVersionString="0.10.4"
-sparkle:dsaSignature="MCwCFGDE0W/5CKCFcTF/ApUPAkynYVUzAhQE/caloUCp9WRB34j6OoQm3/NF4g=="
-length="9838030"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.5/SpechtLite.zip"
+sparkle:version="260"
+sparkle:shortVersionString="0.10.5"
+sparkle:dsaSignature="MCwCFCXu7lPX0FMnC+Odkt0RiBgJ43dNAhQRrH/AsZmcVH6imrozjzCItgGC0w=="
+length="9839746"
 type="application/octet-stream" />
 </item>
 </channel>
