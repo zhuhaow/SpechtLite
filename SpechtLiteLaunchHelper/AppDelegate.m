@@ -8,16 +8,14 @@
     
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     BOOL alreadyRunning = NO;
-    BOOL isActive = NO;
     NSArray *running = [[NSWorkspace sharedWorkspace] runningApplications];
     for (NSRunningApplication *app in running) {
-        if ([[app bundleIdentifier] isEqualToString:@"me.zhuhaow.osx.SpechtLite.LaunchHelper"]) {
+        if ([[app bundleIdentifier] isEqualToString:@"me.zhuhaow.osx.SpechtLite"]) {
             alreadyRunning = YES;
-            isActive = [app isActive];
         }
     }
     
-    if (!alreadyRunning || !isActive) {
+    if (!alreadyRunning) {
         NSArray *pathComponents = [[[NSBundle mainBundle] bundlePath] pathComponents];
         pathComponents = [pathComponents subarrayWithRange:NSMakeRange(0, [pathComponents count] - 4)];
         NSString *path = [NSString pathWithComponents:pathComponents];

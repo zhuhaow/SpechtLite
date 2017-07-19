@@ -1,3 +1,8 @@
+## Unreleased
+
+### Fixed
+- Fix that the app will not auto start sometimes.
+
 ## 0.10.6
 
 ### Fixed
