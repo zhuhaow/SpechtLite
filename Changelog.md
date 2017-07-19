@@ -2,6 +2,7 @@
 
 ### Fixed
 - Fix that the app will not auto start sometimes.
+- Fix some logic in auto start.
 
 ## 0.10.6
 

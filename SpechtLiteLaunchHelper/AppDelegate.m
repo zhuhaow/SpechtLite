@@ -21,8 +21,9 @@
         NSString *path = [NSString pathWithComponents:pathComponents];
         NSString *binaryPath = [[NSBundle bundleWithPath:path] executablePath];
         [[NSWorkspace sharedWorkspace] launchApplication:binaryPath];
-        [NSApp terminate:nil];
     }
-}
     
+    [NSApp terminate:nil];
+}
+
 @end
