@@ -6,9 +6,18 @@
 <description>The stable channel of SpechtLite.</description>
 <language>en</language>
 <item>
-<title>SpechtLite 0.10.6</title>
-<pubDate>2017-06-29T15:49:40+00:00</pubDate>
+<title>SpechtLite 0.10.7</title>
+<pubDate>2017-07-19T02:14:15+00:00</pubDate>
 <description><![CDATA[
+<h2>0.10.7</h2>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>Fix that the app will not auto start sometimes.</li>
+<li>Fix some logic in auto start.</li>
+</ul>
+
 <h2>0.10.6</h2>
 
 <h3>Fixed</h3>
@@ -265,11 +274,11 @@
 
 ]]>
 </description>
-<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.6/SpechtLite.zip"
-sparkle:version="261"
-sparkle:shortVersionString="0.10.6"
-sparkle:dsaSignature="MCwCFFiQGykOag+goivvthykBpRdKZmYAhQuaDA6v91eTf8Y0K9/mxazm7Fp1A=="
-length="9838008"
+<enclosure url="https://github.com/zhuhaow/SpechtLite/releases/download/0.10.7/SpechtLite.zip"
+sparkle:version="265"
+sparkle:shortVersionString="0.10.7"
+sparkle:dsaSignature="MCwCFFinhkxQe3/CD0pPs7XGUP7IihHQAhRwkffLRJQL8I1yI7R90IIn03R74g=="
+length="9861147"
 type="application/octet-stream" />
 </item>
 </channel>
