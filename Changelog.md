@@ -1,4 +1,4 @@
-## Unreleased
+## 0.10.7
 
 ### Fixed
 - Fix that the app will not auto start sometimes.
