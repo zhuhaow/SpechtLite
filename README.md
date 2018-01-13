@@ -198,7 +198,7 @@ NEKit is licensed under BSD 3-clause, so you can build an app with it and publis
 If you know a way which guarantees that:
 
 * If an app is derived from SpechtLite it must be open sourced when it is distributed.
-* Such app can be pubished on App Store.
+* Such app can be published on App Store.
 * I can make sure that it does not use the name and icon of SpechtLite.
 
 Please do let me know.
