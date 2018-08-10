@@ -26,8 +26,6 @@ Note there is no fancy GUI configuration panel. But no worry, you simply need so
 
 If you do need a fancy GUI, consider some commercial alternatives such as the Mac version of [Surge](http://nssurge.com).
 
-**[Wingy](https://itunes.apple.com/cn/app/wingy-mian-fei-banvpn-ke-hu/id1148026741?mt=8) is a free app built with NEKit available on App Store for your iDevice.** Note Wingy is not created by or affiliated with me.
-
 ["Lite"? Is there a "Full" version?](#full)
 
 
