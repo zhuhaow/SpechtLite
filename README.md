@@ -1,6 +1,7 @@
 # SpechtLite
 
 [![Join the chat at https://gitter.im/zhuhaow/NEKit](https://badges.gitter.im/zhuhaow/NEKit.svg)](https://gitter.im/zhuhaow/NEKit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Join the chat at https://telegram.me/NEKitGroup](https://img.shields.io/badge/chat-on%20Telegram-blue.svg)](https://telegram.me/NEKitGroup) [![Build Status](https://travis-ci.org/zhuhaow/SpechtLite.svg?branch=master)](https://travis-ci.org/zhuhaow/SpechtLite) [![GitHub release](https://img.shields.io/github/release/zhuhaow/SpechtLite.svg)](https://github.com/zhuhaow/SpechtLite/releases) [![GitHub license](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fzhuhaow%2FSpechtLite.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fzhuhaow%2FSpechtLite?ref=badge_shield)
 ### A rule-based proxy app for macOS.
 
 ![Splash image](imgs/splash.png)
@@ -200,3 +201,7 @@ If you know a way which guarantees that:
 * I can make sure that it does not use the name and icon of SpechtLite.
 
 Please do let me know.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fzhuhaow%2FSpechtLite.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fzhuhaow%2FSpechtLite?ref=badge_large)
